@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Старая Русса</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+
+	<!-- авторизация -->
+	<div id="registration_client" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/close/icons_close_48.svg">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Авторизация
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Логин...">
+				</div>
+
+				<div class="password input row">
+					<input id="lock_active_password" type="password" placeholder="Пароль...">
+					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
+						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
+					</div>
+				</div>				
+
+				<div class="fast_fast_autorization row">
+					<div class='fast_autorization_third_party center row'>
+						<a class="link_about row" href="mailto:doctordania15@gmail.com">
+							<div class="link_img_google center rotate">
+								<img src="./images/google/icons8-google-30.svg">
+							</div>
+						</a>
+						<a class="link_about row" href="https://vk.com/id705993193">
+							<div class="link_img_vk center rotate">
+								<img src="./images/vk/icons8_vk_32.svg">
+							</div>
+						</a>
+					</div>
+					<div class="registration center" onclick="registration()">
+						<div>
+							ЗАРЕГИСТРИРОВАТЬСЯ!
+						</div>
+					</div>
+				</div>
+
+				<div class="button_autorization center" onclick="exit_autorization()">
+					<div>
+						ВХОД
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_mobile" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization menu_back_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/back/icons_back_24.svg">
+					</div>
+				</div>					
+				<div class="menu_close_autorization">
+					<div>
+						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Регистрация
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Номер телефона...">
+				</div>			
+				<div class="button_autorization center" onclick="code_autorization()">
+					<div>
+						Продолжить
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_mobile_code" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization menu_back_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/back/icons_back_24.svg">
+					</div>
+				</div>				
+				<div class="menu_close_autorization">
+					<div>
+						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Подтверждение
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Введите код...">
+				</div>			
+				<div class="button_autorization center" onclick="exit_autorization(); avatar()">
+					<div>
+						Продолжить
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_avatar" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/close/icons_close_48.svg">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Создание аватара
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Придумайте логин...">
+				</div>
+				<div class="email input">
+					<input type="email" placeholder="Пароль...">
+				</div>				
+
+				<div class="password input row">
+					<input id="lock_active_password" type="password" placeholder="Пароль...">
+					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
+						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
+					</div>
+				</div>	
+				</div>				
+				<div class="button_autorization center" onclick="exit_autorization()">
+					<div>
+						Готов
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>	
+
+	<!-- Основной контент -->
+	<div class="main_block">
+
+		<!-- Стартовая страница -->
+		<div class="start_construction">
+
+			<!-- Скроллинг по сайту -->
+			<div class="absolute center">
+				<div class="absolute_menu center column">
+					<div class="absolute_menu_block center" onclick="scroll_blocks_1()">
+						<div class="title_absolute_menu_block center">
+							1
+						</div>
+						<div class="text_absolute_menu_block">
+							<div class="text_center_ center">
+								<div style="color: black;">
+									Главная страница
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute_menu_block center" onclick="scroll_blocks_2()">
+						<div class="title_absolute_menu_block center">
+							2
+						</div>
+						<div class="text_absolute_menu_block">
+							<div class="text_center_ center">
+								<div style="color: black;">
+									мероприятия
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute_menu_block center" onclick="scroll_blocks_3()">
+						<div class="title_absolute_menu_block center">
+							3
+						</div>
+						<div class="text_absolute_menu_block">
+							<div class="text_center_ center">
+								<div style="color: black;">
+									Прогулка
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute_menu_block center" onclick="scroll_blocks_5()">
+						<div class="title_absolute_menu_block center">
+							4
+						</div>
+						<div class="text_absolute_menu_block">
+							<div class="text_center_ center">
+								<div style="color: black;">
+									достопамятность
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute_menu_block center" onclick="scroll_blocks_6()">
+						<div class="title_absolute_menu_block center">
+							5
+						</div>
+						<div class="text_absolute_menu_block">
+							<div class="text_center_ center">
+								<div style="color: black;">
+									Обзор / Друзья
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Ссылка на создателя -->
+			<div class="about">
+				<a class="link_about row" href="https://vk.com/id705993193">
+					<div class="link_img_vk center">
+						<img src="./images/vk/icons8_vk_32.svg">
+					</div>
+					<div class="link_text_vk center">
+						Вконтакте
+					</div>
+				</a>
+				<a class="link_about row" href="mailto:doctordania15@gmail.com">
+					<div class="link_img_google center">
+						<img src="./images/google/icons8-google-30.svg">
+					</div>
+					<div class="link_text_google center">
+						doctordania15@gmail.com
+					</div>
+				</a>
+			</div>				
+
+			<!-- Менюшка -->
+			<div class="menu_start_block">
+
+				<!-- Логотип -->
+				<div class="logotype_link center">
+					<a class="logotype" href="#">
+					   <span style="--i:1; color:#e96868">H</span>
+					   <span style="--i:2">.</span>
+					   <span style="--i:3; color:#e96868">E</span>
+					   <span style="--i:4">.</span>
+					   <span style="--i:5; color:#e96868">L</span>
+					   <span style="--i:6">.</span>
+					   <span style="--i:7; color:#e96868">L</span>
+					   <span style="--i:8">_</span>
+					   <span style="--i:9; color:#03a9f4">C</span>
+					   <span style="--i:10; color:#03a9f4">O</span>
+					   <span style="--i:11; color:#03a9f4">R</span>
+					   <span style="--i:12; color:#03a9f4">P</span>
+					   <span style="--i:13; color:#03a9f4">O</span>
+					   <span style="--i:14; color:#03a9f4">R</span>
+					   <span style="--i:15; color:#03a9f4">T</span>
+					   <span style="--i:16; color:#03a9f4">I</span>
+					   <span style="--i:17; color:#03a9f4">O</span>
+					   <span style="--i:18; color:#03a9f4">N</span>
+					   <span style="--i:19">.</span>
+					   <span style="--i:20">.</span>
+					   <span style="--i:21">.</span>
+					</a>
+				</div>
+
+				<!-- Меню -->
+				<div class="menu">
+
+					<!-- Ссылка -->
+					<div class="menu_blocks">
+						<div class="menu_blocks_title center">
+							<div>
+								События
+							</div>
+						</div>
+						<div class="menu_blocks_pluse">
+							<div class="blocks_">
+								<div id="moving_1" class="blocks_st">
+									<div class="moving_block">
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+														<div class="block_block_link">
+															<div id="time">
+																21.08.2003
+															</div>
+														</div>			
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div id="time">
+																5:00
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>	
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>		
+									</div>
+								</div>			
+								<div class="decoration">
+								</div>
+								<div class="decoration left_button">
+								</div>									
+							</div>	
+						</div>
+					</div>
+					<div class="menu_blocks">
+						<div class="menu_blocks_title center">
+							<div>
+								События
+							</div>
+						</div>
+						<div class="menu_blocks_pluse">
+							<div class="blocks_">
+								<div id="moving_2" class="blocks_st">
+									<div class="moving_block">
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>	
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>		
+									</div>
+								</div>			
+								<div class="decoration">
+								</div>
+								<div class="decoration left_button">
+								</div>									
+							</div>	
+						</div>
+					</div>
+					<div class="menu_blocks">
+						<div class="menu_blocks_title center">
+							<div>
+								События
+							</div>
+						</div>
+						<div class="menu_blocks_pluse">
+							<div class="blocks_">
+								<div id="moving_3" class="blocks_st">
+									<div class="moving_block">
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>	
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>
+										<div class="block">
+											<div class="block_position_move">
+												<div class="block_block_">
+													<div class="block_block_background one_block">
+														<div class="block_block_title">
+															Событие
+														</div>
+													</div>
+													<div class="block_block_background two_block">
+														<div class="block_block_content">
+															В этом событие произошло так много всего...2
+														</div>
+														<div class="block_block_link">
+															<div>
+																Перейти
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>		
+										</div>		
+									</div>
+								</div>			
+								<div class="decoration">
+								</div>
+								<div class="decoration left_button">
+								</div>									
+							</div>	
+						</div>
+					</div>
+					<!-- Войти -->
+					<div class="login_ center">
+						<div class="login_back" onclick="autorization()">
+							<img src="./images/icons8_exits/icons8_enter_24.svg">
+						</div>
+					</div>
+				</div>
+			</div>	
+			<!-- Описание -->
+			<div class="description center">
+				<div>
+					Город расположен при впадении реки Порусья в реку Полисть (бассейн озера Ильмень), в 99 км от Великого Новгорода (по объездной трассе), в 48 км восточнее Шимска, в 20 км западнее Парфино и в 64 км севернее Поддорья.
+				</div>
+			</div>
+			<!-- Заголовок -->
+			<div class="start_block_title center">
+				<div class="head_">
+					СТАРАЯ РУССА		    
+				</div> 
+				<div class="head_any">
+					СТАРАЯ РУССА		    
+				</div>
+			</div>
+			<!-- Спуск вниз -->
+			<div class="descent_down center">
+				<div onclick="scroll_blocks_2()">
+					<img src="./images/outlined/icons8_outlined_48.svg">
+				</div>
+			</div>
+		</div>
+
+		<!-- Мероприятия -->
+		<div class="events_construction">
+			<!-- Разделитель на видимый / не видимый -->
+			<div class="events_contr">
+				<div class="events_block_size_">
+					<!-- Меню -->
+					<div class="events_menu">
+						<!-- Поисковое меню -->
+
+						<div class="events_menu_add_left_cansel" onclick="block_close_(0)">
+							<div class="lock_poc_tok center">
+								<
+							</div>
+						</div>
+
+						<div class="events_search">
+
+							<div class="events_search_close"></div>
+
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="checkbox">
+									<div class="events_menu_text center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="checkbox">
+									<div class="events_menu_text center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="checkbox">
+									<div class="events_menu_text center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="date" style="width: 100px; color: white;">
+								</div>
+							</div>
+						</div>
+
+						<!-- Добавить -->
+						<div class="events_menu_add" onclick="fixed_dop_open()">
+							<div class="center">
+								+
+							</div>
+						</div>
+					</div>
+
+					<!-- Контент -->
+					<div class="events_contents_blocks">
+						<!-- Блок с блоками -->
+						<div id="moving_13" class="absolute_block">
+							<!-- Активная часть -->
+							<div class="absolute_flex">
+								<div class="absolute_important">
+									<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+									<div class="absolute_people">
+										<div class="absolute_people_images center">
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div class="absolute_title_block">
+											<div class="absolute_title">
+												Какое то название
+											</div>
+											<div class="absolute_information">
+												<div class="absolute_block_information">
+													Саша Ахилевич Амигоданович
+												</div>
+												<div class="dop_info">
+													<div class="dop_info_open center">
+														i
+													</div>
+													<div class="hover_open_dop_info">
+														<div class="time_dop">
+															21:15
+														</div>
+														<div class="time_dop">
+															15 дек 2015
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="absolute_content_text">
+									<div class="text_abs"></div>
+								</div>
+								<div class="absolute_images_slaider">
+									<div id="moving_5" class="img_abs">
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>	
+									</div>
+								</div>
+								<ul class="press">
+								  <li class="press-item"></li>
+								  <li class="press-item"></li>
+								  <li class="press-item"></li>
+								  <li class="press-item"></li>
+								</ul>									
+
+							<!-- Подвижный элемент -->
+								<div class="ocenka">
+									<div class="flex_ocenka">
+										<div class="shaloba">
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div class="ocenka_laik">
+											<div class="right_ocenka"></div>
+											<div class="left_ocenka"></div>
+										</div>
+									</div>
+								</div>
+							</div>								
+						</div>			
+
+
+						<div id="moving_11" class="events_contents_blocks_positon">
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>							
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(0)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>																																				
+						</div>
+					</div>
+				</div>
+				<!-- Чат -->
+				<div class="events_chat">
+					<!-- Menu -->
+					<div class="events_chat_menu">
+						<div class="events_chat_menu_information">
+							<div class="events_chat_menu_images">
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+
+								<!-- Список чатов -->
+								<div id="moving_7" class="absolute_chate_">
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>																																																						
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>
+									<div class="absolute_chat_bloks_">
+										<div class="block_chate_url">
+											<div class="block_chate_url_image center">
+												<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+											</div>
+											<div class="text_absolute_chate">
+												Название
+											</div>
+										</div>
+									</div>																		
+								</div>
+
+							</div>
+							<div class="events_chat_menu_title center">
+								Название темы:
+							</div>
+						</div>
+						<div class="events_chate_close center">
+							<div class="center">
+								i
+							</div>
+						</div>
+					</div>
+					<!-- content -->
+					<div class="events_chat_content"></div>
+					<!-- chat -->
+					<div class="events_chat_correspondence">
+						<div class="correspondence center">
+							<textarea placeholder="Напечатать сообщение..."></textarea>
+						</div>
+						<div class="chat_sumbite">
+							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Вводная информация -->		
+		<div class="paralaxs_construction">
+			<!-- Разделитель на видимый / не видимый -->
+			<div class="events_contr">
+				<div class="events_block_size_2">
+					<!-- Меню -->
+					<div class="events_menu">
+						<!-- Поисковое меню -->
+
+						<div class="events_menu_add_left_cansel center" onclick="block_close_(1)">
+							<div class="lock_poc_tok center">
+								<
+							</div>
+						</div>
+
+						<div class="events_search">
+
+							<div class="events_search_close"></div>
+
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="checkbox">
+									<div class="events_menu_text center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+							<div class="events_menu_block">
+								<div class="search_active">
+									<input type="checkbox">
+									<div class="events_menu_text center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Добавить -->
+						<div class="events_menu_add" onclick="fixed_dop_open()">
+							<div class="center">
+								+
+							</div>
+						</div>
+					</div>
+
+					<!-- Контент -->
+					<div class="events_contents_blocks">
+						<!-- Блок с блоками -->
+						<div id="moving_14" class="absolute_block">
+							<!-- Активная часть -->
+							<div class="absolute_flex">
+								<div class="absolute_important">
+									<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+									<div class="absolute_people">
+										<div class="absolute_people_images center">
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div class="absolute_title_block">
+											<div class="absolute_title">
+												Какое то название
+											</div>
+											<div class="absolute_information">
+												<div class="absolute_block_information">
+													Саша Ахилевич Амигоданович
+												</div>
+												<div class="dop_info">
+													<div class="dop_info_open center">
+														i
+													</div>
+													<div class="hover_open_dop_info">
+														<div class="time_dop">
+															21:15
+														</div>
+														<div class="time_dop">
+															15 дек 2015
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="absolute_content_text">
+									<div class="text_abs"></div>
+								</div>
+								<div class="absolute_images_slaider">
+									<div id="moving_6" class="img_abs">
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>
+										<div>
+											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										</div>	
+									</div>
+								</div>							
+							</div>
+							<!-- Подвижный элемент -->
+							<div class="ocenka">
+								<div class="flex_ocenka">
+									<div class="shaloba">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+									</div>
+									<div class="ocenka_laik">
+										<div class="right_ocenka"></div>
+										<div class="left_ocenka"></div>
+									</div>
+								</div>
+							</div>								
+						</div>			
+
+
+						<div id="moving_12" class="events_contents_blocks_positon events_contents_blocks_positon2">
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>							
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>																																				
+						</div>
+					</div>
+				</div>
+				<div class="AAAAAA">
+					<div class="map">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac00310a4bf66f8eb930db3ea03365a3b01f28d452e89b1b69b657f45dd44a4d1&amp;source=constructor" frameborder="0" seamless></iframe> 					
+					</div>
+					<div id="moving_4" class="slader_new_xuy">
+						<div class="slader_new_xuy_progolda">
+							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						</div>
+						<div class="slader_new_xuy_progolda">
+							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						</div>
+						<div class="slader_new_xuy_progolda">
+							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						</div>												
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		<!-- 4 достопремичательности-->		
+		<div class="attractions_construction">
+
+			<!-- 4 достопремичательности абсолют -->
+			<div class="absolute_inform_dostoprem">
+				<!-- menu -->
+				<div class="absolute_inform_dostoprem_menu">
+					<div class="absolute_inform_dostoprem_menu_image" onclick="function_name1()">
+						<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+					</div>
+					<div class="absolute_inform_dostoprem_menu_image">
+						<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+					</div>
+				</div>
+				<!-- content -->
+				<div class="absolute_inform_dostoprem_content">
+					<!-- foto -->
+					<div class="absolute_inform_dostoprem_content_left_">
+						<div class="absolute_inform_dostoprem_content_left_big_img">
+							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						</div>
+						<div id="moving_15" class="absolute_inform_dostoprem_content_left_mini_img">
+							<div>
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">								
+							</div>
+							<div>
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">									
+							</div>
+							<div>
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">									
+							</div>
+							<div>
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">									
+							</div>
+						</div>
+					</div>
+					<!-- descript -->
+					<div class="descript_absolute_title">
+						<div class="title_absolute_big_title">
+							hello world 
+						</div>
+						<div class="title_absolute_mini_title">
+							text text text
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="max_w_h">
+				<div class="attractions_construction_title center">
+					<div>
+						Достопремечательности
+					</div>
+				</div>
+				<!-- 6-е блока начало -->
+				<div class="attractions_mini_block">
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+					<div class="attractions_block" onclick="function_name0('Башня бога...', 'Куча Куча Куча текста','')"></div>
+				</div>
+				<!-- описание -->
+				<div class="description_attractions center">
+					<div>Старая Русса, величайший город своего времени и за его гранью!</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Обзор на город -->		
+		<div class="video_construction center">
+			<div class="left_video_cont">
+				<div class="gallery">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/eYJJVfAfVgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/J7d6zyLUWtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>					
+				<div class="poddrshka">
+					<div class="poddrcha_left">
+						<div class="title_poddrcha_left">
+							Поддержка сайта
+						</div>
+						<div id="moving_8" class="piddrcha_content">
+							<div class="img_piddrcha_content center">
+								<div class="center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="img_piddrcha_content center">
+								<div class="center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="img_piddrcha_content center">
+								<div class="center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="img_piddrcha_content center">
+								<div class="center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>										
+						</div>
+					</div>
+					<div class="poddrcha_right">
+						<div class="title_poddrcha_right">
+							Окажавшие поддержки
+						</div>
+						<div id="moving_9" class="piddrcha_content">
+							<div class="img_piddrcha_content2 center">
+								<div class="block_right">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+									<div>
+										people hell
+									</div>
+								</div>
+							</div>
+							<div class="img_piddrcha_content2 center">
+								<div class="content_izmena">
+									<div class="block_right">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div>
+											people hell
+										</div>									
+									</div>
+								</div>
+							</div>
+							<div class="img_piddrcha_content2 center">
+								<div class="content_izmena">
+									<div class="block_right">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div>
+											people hell
+										</div>									
+									</div>
+								</div>
+							</div>
+							<div class="img_piddrcha_content2 center">
+								<div class="content_izmena">
+									<div class="block_right">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div>
+											people hell
+										</div>									
+									</div>
+								</div>
+							</div>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="righr_video_cont">
+				<div class="title_vidoj_right">
+					название
+				</div>
+				<div id="moving_10" class="AAAAAAAAAA">
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>
+					<div class="content_right_cont">
+						<div class="flex_xyeta">
+							<div class="flex_xyeta_img center">
+								<div class="flex_xyeta_img_AA_">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+							</div>
+							<div class="flex_xyeta_double_right">
+								<div class="text_flex_xyeta_">
+									title name site ccalka
+								</div>
+								<div class="bit_text_flex_pop">
+									vnogo contenta cdes bydet, net
+								</div>							
+							</div>
+						</div>
+					</div>																																																						
+				</div>
+			</div>
+		</div>
+
+	<!-- redactor + dobavite -->
+		<div class="redactor_dobavite">
+			<div class="redactor_dobavite_max">
+				<!-- data_people -->
+				<div class="redactor_dobavite_data_people">
+					<div class="redactor_dobavite_data_people_img">
+						<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+					</div>
+					<div class="redactor_dobavite_data_people_text center">
+						meny zovut vitali
+					</div>
+					<div class="redactor_dobavite_data_people_text center" onclick="fixed_dop_open_cosdanie()">
+						meny zovut vitali
+					</div>
+					<div class="redactor_dobavite_data_people_text center" onclick="fixed_dop_close()">
+						close
+					</div>					
+				</div>
+				<div class="redactor_dobavite_content">
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>		
+					<div class="block events_contents_blocks_nastr">
+						<div class="block_position_move">
+							<div class="block_block_">
+								<div class="block_block_background one_block">
+									<div class="block_block_title">
+										Событие
+									</div>
+								</div>
+								<div class="block_block_background two_block">
+									<div class="block_block_content">
+										В этом событие произошло так много всего...2
+									</div>
+									<div class="block_block_link">
+										<div>
+											Перейти
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>																																																	
+				</div>
+			</div>	
+		</div>
+
+		<!-- cosdanie_content_blocka -->
+		<div class="cosdanie_content_blocka">
+			<div class="cosdanie_content_blocka_max">
+				<div class="cosdanie_content_blocka_bigi">
+					<div class="cosdanie_content_blocka_bigi_img" onclick="fixed_dop_close_cosdanie()">
+						<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+					</div>
+					<div class="cosdanie_content_blocka_bigi_text">
+						<div class="cosdanie_content_blocka_bigi_text_title">
+							title title title title title
+						</div>
+						<div class="number_vabore">
+							<div>
+								text
+							</div>
+							<div>
+								text
+							</div>
+						</div>
+						<div cosdanie_content_blocka_bigi_text_text_text>
+							description description description description
+						</div>
+					</div>
+				</div>
+				<div id="moving_16" class="max_max_max">
+					<div class="blocks_a_c_bigi_mini">
+						<div></div>
+					</div>
+					<div  class="blocks_a_c_bigi_mini">
+						<div></div>
+					</div>
+					<div  class="blocks_a_c_bigi_mini">
+						<div></div>
+					</div>	
+					<div  class="blocks_a_c_bigi_mini">
+						<div></div>
+					</div>						
+				</div>							
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/index.js"></script>		
+</body>
+</html>
