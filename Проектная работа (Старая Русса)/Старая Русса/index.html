@@ -176,90 +176,142 @@
 		<!-- Стартовая страница -->
 		<div class="start_construction">
 
-			<!-- Скроллинг по сайту -->
-			<div class="absolute center">
-				<div class="absolute_menu center column">
-					<div class="absolute_menu_block center" onclick="scroll_blocks_1()">
-						<div class="title_absolute_menu_block center">
-							1
-						</div>
-						<div class="text_absolute_menu_block">
-							<div class="text_center_ center">
-								<div style="color: black;">
-									Главная страница
-								</div>
+			<!-- --- Перемещние по сайту --- -->
+			<div class="display_flex position_center flex_column scroll">
+				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_1()">
+					<div class="display_flex position_center scroll_block_moving_number">
+						<div style="z-index: 5;">1</div>
+					</div>
+					<div class="scroll_block_moving_content">
+						<div class="display_flex position_center scroll_block_moving_content_block">
+							<div style="color: black;">
+								Главная страница
 							</div>
 						</div>
 					</div>
-					<div class="absolute_menu_block center" onclick="scroll_blocks_2()">
-						<div class="title_absolute_menu_block center">
-							2
-						</div>
-						<div class="text_absolute_menu_block">
-							<div class="text_center_ center">
-								<div style="color: black;">
-									мероприятия
-								</div>
+				</div>
+				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_2()">
+					<div class="display_flex position_center scroll_block_moving_number">
+						<div style="z-index: 5;">2</div>
+					</div>
+					<div class="scroll_block_moving_content">
+						<div class="display_flex position_center scroll_block_moving_content_block">
+							<div style="color: black;">
+								мероприятия
 							</div>
 						</div>
 					</div>
-					<div class="absolute_menu_block center" onclick="scroll_blocks_3()">
-						<div class="title_absolute_menu_block center">
-							3
-						</div>
-						<div class="text_absolute_menu_block">
-							<div class="text_center_ center">
-								<div style="color: black;">
-									Прогулка
-								</div>
+				</div>
+				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_3()">
+					<div class="display_flex position_center scroll_block_moving_number">
+						<div style="z-index: 5;">3</div>
+					</div>
+					<div class="scroll_block_moving_content">
+						<div class="display_flex position_center scroll_block_moving_content_block">
+							<div style="color: black;">
+								Прогулка
 							</div>
 						</div>
 					</div>
-					<div class="absolute_menu_block center" onclick="scroll_blocks_5()">
-						<div class="title_absolute_menu_block center">
-							4
-						</div>
-						<div class="text_absolute_menu_block">
-							<div class="text_center_ center">
-								<div style="color: black;">
-									достопамятность
-								</div>
+				</div>
+				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_5()">
+					<div class="display_flex position_center scroll_block_moving_number">
+						<div style="z-index: 5;">4</div>
+					</div>
+					<div class="scroll_block_moving_content">
+						<div class="display_flex position_center scroll_block_moving_content_block">
+							<div style="color: black;">
+								достопамятность
 							</div>
 						</div>
 					</div>
-					<div class="absolute_menu_block center" onclick="scroll_blocks_6()">
-						<div class="title_absolute_menu_block center">
-							5
-						</div>
-						<div class="text_absolute_menu_block">
-							<div class="text_center_ center">
-								<div style="color: black;">
-									Обзор / Друзья
-								</div>
+				</div>
+				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_6()">
+					<div class="display_flex position_center scroll_block_moving_number">
+						<div style="z-index: 5;">5</div>
+					</div>
+					<div class="scroll_block_moving_content">
+						<div class="display_flex position_center scroll_block_moving_content_block">
+							<div style="color: black;">
+								Обзор / Друзья
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Ссылка на создателя -->
-			<div class="about">
-				<a class="link_about row" href="https://vk.com/id705993193">
-					<div class="link_img_vk center">
-						<img src="./images/vk/icons8_vk_32.svg">
+
+			<!-- --- Глобальная переменная (модерация \ донат \ связь) --- -->
+			<!-- --- Всё работает, можно добавлять новые блоки --- -->
+			<div class="display_flex about_moderation">
+				<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
+					<div class="display_flex position_center about_icons background_blue">
+						<img class="background_white padding_five" src="./images/vk/icons8_vk_32.svg">
 					</div>
-					<div class="link_text_vk center">
-						Вконтакте
+					<div class="display_flex flex_column about_content background_white border_blue" style="justify-content: space-between;">
+						<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
+							<div class="about_content_text_title">
+								Вконтакте
+							</div>
+						</div>
+						<div class="display_flex about_content_text position_justify_end">
+							<div class="about_content_text_description">
+								модерация
+							</div>
+						</div>
 					</div>
 				</a>
-				<a class="link_about row" href="mailto:doctordania15@gmail.com">
-					<div class="link_img_google center">
-						<img src="./images/google/icons8-google-30.svg">
+				<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
+					<div class="display_flex position_center about_icons background_red">
+						<img class="padding_five background_white" src="./images/google/icons8-google-30.svg">
 					</div>
-					<div class="link_text_google center">
-						doctordania15@gmail.com
+					<div class="display_flex flex_row about_content background_white border_red">
+						<div class="display_flex flex_column" style="justify-content: space-between;">
+							<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
+								<div class="about_content_text_title ">
+									doctordania15@gmail.com
+								</div>
+							</div>
+							<div class="display_flex about_content_text position_justify_end">
+								<div class="about_content_text_description">
+									модерация
+								</div>
+							</div>
+						</div>
+						<div class="display_flex position_center about_cope">
+							<div class="display_flex position_center about_cope_img">
+								<img src="./images/copy/icons8_copy_96.svg">
+							</div>	
+						</div>
 					</div>
 				</a>
+				<div class="display_flex position_align_center switch">
+					<div class="display_flex position_center switch_block">
+						<div class="display_flex position_align_end position_justify_center switch_block_img">
+							<img src="./images/arrow/icons8_arrow_96.svg">
+						</div>
+					</div>
+					<div class="display_flex switch_block_content">
+						<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
+							<div class="display_flex position_center about_icons background_orange">
+								<img class="background_white padding_five" src="./images/boosty/Dark.svg">
+							</div>
+							<div class="display_flex flex_column about_content background_white border_orange" style="justify-content: space-between;">
+								<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
+									<div class="about_content_text_title">
+										Поддежка через boosty
+									</div>
+								</div>
+								<div class="display_flex about_content_text position_justify_end">
+									<div class="about_content_text_description">
+										модерация
+									</div>
+								</div>
+							</div>
+						</a>
+											
+					</div>
+				</div>
 			</div>				
 
 			<!-- Менюшка -->
@@ -268,27 +320,23 @@
 				<!-- Логотип -->
 				<div class="logotype_link center">
 					<a class="logotype" href="#">
-					   <span style="--i:1; color:#e96868">H</span>
-					   <span style="--i:2">.</span>
-					   <span style="--i:3; color:#e96868">E</span>
-					   <span style="--i:4">.</span>
-					   <span style="--i:5; color:#e96868">L</span>
-					   <span style="--i:6">.</span>
-					   <span style="--i:7; color:#e96868">L</span>
-					   <span style="--i:8">_</span>
-					   <span style="--i:9; color:#03a9f4">C</span>
-					   <span style="--i:10; color:#03a9f4">O</span>
-					   <span style="--i:11; color:#03a9f4">R</span>
-					   <span style="--i:12; color:#03a9f4">P</span>
-					   <span style="--i:13; color:#03a9f4">O</span>
-					   <span style="--i:14; color:#03a9f4">R</span>
-					   <span style="--i:15; color:#03a9f4">T</span>
-					   <span style="--i:16; color:#03a9f4">I</span>
-					   <span style="--i:17; color:#03a9f4">O</span>
-					   <span style="--i:18; color:#03a9f4">N</span>
-					   <span style="--i:19">.</span>
-					   <span style="--i:20">.</span>
-					   <span style="--i:21">.</span>
+
+						<span style="--i:1;">:</span>
+						<span style="--i:2;">:</span>
+						<span style="--i:3;">:</span>
+						<span style="--i:4; color:#e96868">H</span>
+						<span style="--i:5; color:#e96868">E</span>
+						<span style="--i:6; color:#e96868">L</span>
+						<span style="--i:7; color:#e96868">L</span>
+						<span style="--i:8">_</span>
+						<span style="--i:9; color:#03a9f4">C</span>
+						<span style="--i:10; color:#03a9f4">O</span>
+						<span style="--i:11; color:#03a9f4">R</span>
+						<span style="--i:11; color:#03a9f4">P</span>
+						<span style="--i:12;">:</span>
+						<span style="--i:13;">:</span>
+						<span style="--i:14;">:</span>
+						<span style="--i:15;">:</span>   
 					</a>
 				</div>
 
@@ -994,37 +1042,102 @@
 			</div>
 		</div>
 
-		<!-- Вводная информация -->		
-		<div class="paralaxs_construction">
-			<!-- Разделитель на видимый / не видимый -->
-			<div class="events_contr">
-				<div class="events_block_size_2">
-					<!-- Меню -->
-					<div class="events_menu">
-						<!-- Поисковое меню -->
 
-						<div class="events_menu_add_left_cansel center" onclick="block_close_(1)">
-							<div class="lock_poc_tok center">
-								<
+		<div class="places_to_visit">
+			<div class="places_to_visit_the_whole_block">
+
+				<div id="moving_14" class="absolute_block">
+					<!-- Активная часть -->
+					<div class="absolute_flex">
+						<div class="absolute_important">
+							<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+							<div class="absolute_people">
+								<div class="absolute_people_images center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div class="absolute_title_block">
+									<div class="absolute_title">
+										Какое то название
+									</div>
+									<div class="absolute_information">
+										<div class="absolute_block_information">
+											Саша Ахилевич Амигоданович
+										</div>
+										<div class="dop_info">
+											<div class="dop_info_open center">
+												i
+											</div>
+											<div class="hover_open_dop_info">
+												<div class="time_dop">
+													21:15
+												</div>
+												<div class="time_dop">
+													15 дек 2015
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="absolute_content_text">
+							<div class="text_abs"></div>
+						</div>
+						<div class="absolute_images_slaider">
+							<div id="moving_6" class="img_abs">
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>	
+							</div>
+						</div>							
+					</div>
+					<!-- Подвижный элемент -->
+					<div class="ocenka">
+						<div class="flex_ocenka">
+							<div class="shaloba">
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+							</div>
+							<div class="ocenka_laik">
+								<div class="right_ocenka"></div>
+								<div class="left_ocenka"></div>
+							</div>
+						</div>
+					</div>								
+				</div>	
+
+				<div class="places_to_visit_evering_content">
+					<!-- Меню -->
+					<div class="places_to_visit_menu">
+						<!-- Поисковое меню -->
+						<!-- Добавить -->
+						<div class="places_to_visit_menu_exit" onclick="fixed_dop_open()">
+							<div class="center">
+								+
 							</div>
 						</div>
 
-						<div class="events_search">
-
-							<div class="events_search_close"></div>
-
-							<div class="events_menu_block">
-								<div class="search_active">
+						<div class="places_to_visit_menu_search">
+							<div class="places_to_visit_menu_search_block">
+								<div class="places_to_visit_menu_search_block_active">
 									<input type="checkbox">
-									<div class="events_menu_text center">
+									<div class=" center">
 										Поиск по:
 									</div>
 								</div>
 							</div>
-							<div class="events_menu_block">
-								<div class="search_active">
+							<div class="places_to_visit_menu_search_block">
+								<div class="places_to_visit_menu_search_block_active">
 									<input type="checkbox">
-									<div class="events_menu_text center">
+									<div class=" center">
 										Поиск по:
 									</div>
 								</div>
@@ -1032,7 +1145,7 @@
 						</div>
 
 						<!-- Добавить -->
-						<div class="events_menu_add" onclick="fixed_dop_open()">
+						<div class="places_to_visit_menu_add" onclick="fixed_dop_open()">
 							<div class="center">
 								+
 							</div>
@@ -1040,162 +1153,100 @@
 					</div>
 
 					<!-- Контент -->
-					<div class="events_contents_blocks">
+					<div class="places_to_visit_content">
 						<!-- Блок с блоками -->
-						<div id="moving_14" class="absolute_block">
-							<!-- Активная часть -->
-							<div class="absolute_flex">
-								<div class="absolute_important">
-									<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-									<div class="absolute_people">
-										<div class="absolute_people_images center">
-											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+		
+
+
+						<div id="moving_12" class="places_to_visit_content_position">
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
 										</div>
-										<div class="absolute_title_block">
-											<div class="absolute_title">
-												Какое то название
-											</div>
-											<div class="absolute_information">
-												<div class="absolute_block_information">
-													Саша Ахилевич Амигоданович
-												</div>
-												<div class="dop_info">
-													<div class="dop_info_open center">
-														i
-													</div>
-													<div class="hover_open_dop_info">
-														<div class="time_dop">
-															21:15
-														</div>
-														<div class="time_dop">
-															15 дек 2015
-														</div>
-													</div>
-												</div>
-											</div>
+									</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти в описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
 										</div>
 									</div>
 								</div>
-								<div class="absolute_content_text">
-									<div class="text_abs"></div>
-								</div>
-								<div class="absolute_images_slaider">
-									<div id="moving_6" class="img_abs">
-										<div>
-											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										</div>
-										<div>
-											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										</div>
-										<div>
-											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										</div>
-										<div>
-											<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										</div>	
-									</div>
-								</div>							
 							</div>
-							<!-- Подвижный элемент -->
-							<div class="ocenka">
-								<div class="flex_ocenka">
-									<div class="shaloba">
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
 										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
+										</div>
 									</div>
-									<div class="ocenka_laik">
-										<div class="right_ocenka"></div>
-										<div class="left_ocenka"></div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти в описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
+										</div>
 									</div>
 								</div>
-							</div>								
-						</div>			
-
-
-						<div id="moving_12" class="events_contents_blocks_positon events_contents_blocks_positon2">
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
+							</div>						
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
 										</div>
 									</div>
-								</div>		
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти в описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
 										</div>
 									</div>
-								</div>		
-							</div>							
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти к описание
 										</div>
 									</div>
-								</div>		
-							</div>	
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
 										</div>
 									</div>
-								</div>		
-							</div>	
+								</div>
+							</div>
 							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
 								<div class="block_position_move">
 									<div class="block_block_">
@@ -1265,17 +1316,6 @@
 				<div class="AAAAAA">
 					<div class="map">
 						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac00310a4bf66f8eb930db3ea03365a3b01f28d452e89b1b69b657f45dd44a4d1&amp;source=constructor" frameborder="0" seamless></iframe> 					
-					</div>
-					<div id="moving_4" class="slader_new_xuy">
-						<div class="slader_new_xuy_progolda">
-							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-						</div>
-						<div class="slader_new_xuy_progolda">
-							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-						</div>
-						<div class="slader_new_xuy_progolda">
-							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-						</div>												
 					</div>
 				</div>
 			</div>	

@@ -60,7 +60,7 @@ function scroll_blocks_2() {
 }
 
 function scroll_blocks_3() {
-	document.querySelector('.paralaxs_construction').scrollIntoView({block: "end", behavior : "smooth"});
+	document.querySelector('.places_to_visit').scrollIntoView({block: "end", behavior : "smooth"});
 }
 
 function scroll_blocks_4() {
@@ -314,3 +314,34 @@ window.onload = function () {
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };
+
+
+
+
+let btns = document.querySelectorAll('.places_to_visit_content_block_block_background');
+let btns2 = btns.querySelectorAll('#img');
+
+btns2.forEach((btn) => {
+  btn.addEventListener('mousemove', () => {
+    getParentId(btn);
+  });
+});
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.querySelector("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000);
+}
+
+
+
