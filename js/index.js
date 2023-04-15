@@ -124,7 +124,6 @@ var spisokX = [
 		document.querySelector("#moving_2"), 
 		document.querySelector("#moving_1"),
 
-		document.querySelector("#moving_4"),
 		document.querySelector("#moving_5"),
 		document.querySelector("#moving_6"),
 		document.querySelector("#moving_8"),
@@ -317,31 +316,43 @@ window.onload = function () {
 
 
 
+var element = document.querySelectorAll('.places_to_visit_content_block_block_');
+element.forEach((blocke) => {
 
-let btns = document.querySelectorAll('.places_to_visit_content_block_block_background');
-let btns2 = btns.querySelectorAll('#img');
+	var slideIndex = 0;
+	var isDown = false;	
+	var slides = blocke.querySelectorAll('#img')
 
-btns2.forEach((btn) => {
-  btn.addEventListener('mousemove', () => {
-    getParentId(btn);
-  });
+	blocke.addEventListener('mouseover', () => {
+		console.log('pre-start')
+		isDown = true;
+	});
+
+	blocke.addEventListener('mouseleave', _ => {
+		isDown = false;
+		console.log('pre-end')
+	});
+
+	setInterval(lol, 100)
+	function lol() {
+		if (isDown == true) {
+			for (var i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			};			
+			if (slideIndex == slides.length) {slideIndex = 0};
+			console.log(slideIndex)
+			slides[Number(slideIndex)].style.display = "block";
+			slideIndex++;
+		}
+
+		if (isDown == false) {
+			for (var i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			};
+			console.log('end')
+		}	
+	}
+
 });
-
-
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.querySelector("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000);
-}
-
 
 
