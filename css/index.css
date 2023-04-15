@@ -1157,6 +1157,7 @@ input:focus {
 
 .description div {
 	width: 560px;
+	z-index: 1;
 }
 /* --- */
 
@@ -1169,7 +1170,6 @@ input:focus {
 	font-family: "Agency_FB_Cyrillic";
     font-size: 200px;
     font-weight: 900;
-    background: white;
     position: relative;
     z-index: 1;	
 }
@@ -3448,6 +3448,70 @@ input:focus {
 
 
 
+
+
+
+
+
+
+
+
+
+[class*="shaking"]
+  {
+    width: 200px;
+    height: 200px;
+  	position: absolute;
+  	animation: box_shaking 2s ease-in-out infinite alternate;    
+
+  }
+
+  
+
+
+.shaking_0{
+    left: 10%;
+    top: 50%;
+    z-index: 0;    
+}
+
+.shaking_1{
+    left: 30%;
+    top: 60%;
+    z-index: 0;    
+}
+
+.shaking_2{
+    left: 40%;
+    top: 40%;
+    z-index: 0;    
+}
+
+.shaking_3{
+    left: 50%;
+    top: 20%;
+    z-index: 0;    
+}
+
+.shaking_4{
+    left: 10%;
+    top: 50%;
+    z-index: 0;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes box_shaking {
+	0% { transform: rotate(0deg);}
+	20% { transform: rotate(30deg);}
+	40% { transform: rotate(0deg);}
+	60% { transform: rotate(25deg);}	
+	80% { transform: rotate(0deg);}
+	100% { transform: rotate(35deg);}	
+}
 
 
 

@@ -324,13 +324,11 @@ element.forEach((blocke) => {
 	var slides = blocke.querySelectorAll('#img')
 
 	blocke.addEventListener('mouseover', () => {
-		console.log('pre-start')
 		isDown = true;
 	});
 
 	blocke.addEventListener('mouseleave', _ => {
 		isDown = false;
-		console.log('pre-end')
 	});
 
 	setInterval(lol, 100)
@@ -340,7 +338,6 @@ element.forEach((blocke) => {
 				slides[i].style.display = "none";
 			};			
 			if (slideIndex == slides.length) {slideIndex = 0};
-			console.log(slideIndex)
 			slides[Number(slideIndex)].style.display = "block";
 			slideIndex++;
 		}
@@ -349,7 +346,6 @@ element.forEach((blocke) => {
 			for (var i = 0; i < slides.length; i++) {
 				slides[i].style.display = "none";
 			};
-			console.log('end')
 		}	
 	}
 
