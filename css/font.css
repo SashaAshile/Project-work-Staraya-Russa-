@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'font_arme_900'; 
+	src: url(../font/tupo-vyaz_bold.ttf); 
+}
+
+@font-face {
+	font-family: 'font_arme_600'; 
+	src: url(../font/tupo-vyaz_regular.ttf); 
+}
+
+@font-face {
+	font-family: 'header'; 
+	src: url(../font/intro.ttf); 
+}
+
+@font-face {
+	font-family: 'text_mini'; 
+	src: url(../font/ClearSans-Thin.ttf); 
+}
+
+@font-face {
+	font-family: 'text_bigi'; 
+	src: url(../font/ClearSans-Regular.ttf); 
+}
+
+@font-face {
+	font-family: 'Agency_FB_Cyrillic'; 
+	src: url(../font/Agency_FB_Cyrillic.ttf); 
+}

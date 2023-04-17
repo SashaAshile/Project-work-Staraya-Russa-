@@ -1,36 +1,5 @@
-/* Шрифты */
-@font-face {
-	font-family: 'font_arme_900'; 
-	src: url(../font/tupo-vyaz_bold.ttf); 
-}
-
-@font-face {
-	font-family: 'font_arme_600'; 
-	src: url(../font/tupo-vyaz_regular.ttf); 
-}
-
-@font-face {
-	font-family: 'header'; 
-	src: url(../font/intro.ttf); 
-}
-
-@font-face {
-	font-family: 'text_mini'; 
-	src: url(../font/ClearSans-Thin.ttf); 
-}
-
-@font-face {
-	font-family: 'text_bigi'; 
-	src: url(../font/ClearSans-Regular.ttf); 
-}
-
-@font-face {
-	font-family: 'Agency_FB_Cyrillic'; 
-	src: url(../font/Agency_FB_Cyrillic.ttf); 
-}
-/* --- */
-
 /* Основа */
+
 * {
 	box-sizing: border-box;
 }
@@ -686,6 +655,7 @@ input:focus {
 	border-radius: 100px;
 	overflow: hidden;
 	z-index: 3;
+	cursor: pointer;
 }
 
 .scroll_block_moving_number:before {
@@ -728,25 +698,25 @@ input:focus {
 
 .scroll_block_moving_content_block {
 	position: relative;
-    width: 0px;
     height: 100%;
     padding: 4px;
     padding: 0px 20px;
     z-index: 7;
     font-size: 13px;
     border: 2px dashed #243453;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(2px);
+    background: #ffffffb8;
     border-radius: 10px;
     opacity: 0;
     overflow: hidden;
     white-space: nowrap;
-    transition: width 0.3s cubic-bezier(.66,.13,.99,.74),  opacity 0s 0.3s;	
+    transform: translate(-30px, 0);
+    transition: transform 0.3s cubic-bezier(.66,.13,.99,.74),  opacity 0.3s;	
 }
 
 .scroll_block_moving:hover .scroll_block_moving_content_block {
 	opacity: 1;
-	width: 100%;
-    transition: width 0.3s cubic-bezier(.66,.13,.99,.74);	
+	transform: translateX(0);
 }
 
 
