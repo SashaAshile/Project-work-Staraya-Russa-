@@ -160,6 +160,12 @@ html, body {
 	border-radius: 5px;
 	box-shadow: 0px 5px #00f3ff, 0px 10px #2abbc2, 0px 15px #249ba1;
     border: 2px solid #00f3ff;
+    transition: box-shadow 0.2s;    
+}
+
+.persone_blocks:hover {
+	box-shadow: 0px 0px #00f3ff, 0px 0px #2abbc2, 0px 0px #249ba1;
+    transition: box-shadow 0.2s;
 }
 
 .persone_block_inside {
@@ -222,11 +228,15 @@ html, body {
 }
 
 .project:hover .project_table {
-	width: 300px;
+	width: 310px;
     height: 500px;
 	opacity: 1;
-	padding: 10px 5px;
 	transition: height 0.2s 0.4s, padding 0.2s 0.4s, width 0.2s, opacity 0.2s;
+}
+
+.project:hover .project_table_scrool {
+	padding: 10px 5px;
+	transition: padding 0.2s 0.4s;
 }
 
 .project img {
@@ -236,12 +246,11 @@ html, body {
 
 /* project_table */
 .project_table {
+	z-index: 5;
 	width: 0px;
 	height: 0px;
 	opacity: 0;
-	padding: 0px 0px;
 
-    overflow: hidden;
 	border: 2px solid #00f3ff;
 	border-radius: 5px;
 
@@ -252,6 +261,31 @@ html, body {
 	left: 0;
 	transform: translateY(90px);
 	transition: height 0.4s, padding 0.4s, width 0.4s 0.2s, opacity 0.6s 0.2s;	
+}
+
+.project_table_scrool {
+    overflow-y: scroll;
+    overflow-x: auto;
+
+	width: 100%;
+	height: 100%;
+	padding: 0px 0px;
+	transition: padding 0.4s;
+}
+
+.project_table:hover .project_table_scrool::-webkit-scrollbar {
+	width: 10px;
+	transition: width 0.3s;
+}
+
+.project_table_scrool::-webkit-scrollbar {
+    width: 0px;
+    background-color: #f9f9fd;
+    transition: width 0.3s;
+}
+
+.project_table_scrool::-webkit-scrollbar-thumb {
+	background-color: #223c50;
 }
 
 .project_table_inside {
@@ -267,6 +301,12 @@ html, body {
 	border-radius: 5px;
 	box-shadow: 0px 5px #00f3ff, 0px 10px #2abbc2, 0px 15px #249ba1;
     border: 2px solid #00f3ff;
+    transition: box-shadow 0.2s;
+}
+
+.project_blocks:hover {
+	box-shadow: 0px 0px #00f3ff, 0px 0px #2abbc2, 0px 0px #249ba1;
+    transition: box-shadow 0.2s;
 }
 
 .project_block_inside {
@@ -291,7 +331,6 @@ html, body {
 	align-items: center;
 	background: white;
     padding: 16px;
-    border: 2px dashed #00f3ff;    
 }
 
 .project_block_content {
@@ -300,6 +339,9 @@ html, body {
 	height: 100%;
 
     justify-content: flex-end;
+    align-items: flex-end;
+
+    padding-right: 10px;    
 }
 
 .project_block_name {
