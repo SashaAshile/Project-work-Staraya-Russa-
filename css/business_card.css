@@ -114,11 +114,15 @@ html, body {
 }
 
 .person:hover .person_table {
-	width: 300px;
+	width: 310px;
     height: 500px;
 	opacity: 1;
-	padding: 10px 5px;
 	transition: height 0.2s 0.4s, padding 0.2s 0.4s, width 0.2s, opacity 0.2s;
+}
+
+.person:hover .person_table_scrool {
+	padding: 10px 5px;
+	transition: padding 0.2s 0.4s;
 }
 
 .person img {
@@ -129,12 +133,11 @@ html, body {
 
 /* person_table */
 .person_table {
+	z-index: 5;
 	width: 0px;
 	height: 0px;
 	opacity: 0;
-	padding: 0px 0px;
 
-    overflow: hidden;
 	border: 2px solid #00f3ff;
 	border-radius: 5px;
 
@@ -147,9 +150,28 @@ html, body {
 	transition: height 0.4s, padding 0.4s, width 0.4s 0.2s, opacity 0.6s 0.2s;	
 }
 
-.person_table_inside {
+.person_table_scrool {
+    overflow-y: scroll;
+    overflow-x: auto;
+
 	width: 100%;
 	height: 100%;
+	padding: 0px 0px;
+	transition: padding 0.4s;
+}
+
+.person_table_scrool::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+    transform: translateX(10px);
+}
+
+.person_table_scrool::-webkit-scrollbar-thumb {
+	background-color: #223c50;
+}
+
+
+.person_table_inside {
 }
 
 .persone_blocks {
@@ -273,15 +295,10 @@ html, body {
 	transition: padding 0.4s;
 }
 
-.project_table:hover .project_table_scrool::-webkit-scrollbar {
-	width: 10px;
-	transition: width 0.3s;
-}
-
 .project_table_scrool::-webkit-scrollbar {
-    width: 0px;
+    width: 10px;
     background-color: #f9f9fd;
-    transition: width 0.3s;
+    transform: translateX(10px);
 }
 
 .project_table_scrool::-webkit-scrollbar-thumb {
@@ -289,8 +306,6 @@ html, body {
 }
 
 .project_table_inside {
-	width: 100%;
-	height: 100%;
 }
 
 .project_blocks {
