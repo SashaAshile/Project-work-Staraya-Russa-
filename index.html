@@ -177,23 +177,7 @@
 
 
 		<!-- Стартовая страница -->
-		<div class="start_construction">
-
-			<div class="shaking_0">
-				<img src="./images/back_href/element.png">
-			</div>
-			<div class="shaking_1">
-				<img src="./images/back_href/element.png">
-			</div>
-			<div class="shaking_2">
-				<img src="./images/back_href/element.png">
-			</div>
-			<div class="shaking_3">
-				<img src="./images/back_href/element.png">
-			</div>
-			<div class="shaking_4">
-				<img src="./images/back_href/element.png">
-			</div>			
+		<div class="start_construction">	
 
 			<!-- --- Перемещние по сайту --- -->
 			<div class="display_flex position_center flex_column scroll">
@@ -1040,21 +1024,34 @@
 								Название темы:
 							</div>
 						</div>
-						<div class="events_chate_close center">
-							<div class="center">
-								i
-							</div>
-						</div>
 					</div>
 					<!-- content -->
-					<div class="events_chat_content"></div>
-					<!-- chat -->
-					<div class="events_chat_correspondence">
-						<div class="correspondence center">
-							<textarea placeholder="Напечатать сообщение..."></textarea>
+					<div class="events_chat_content">
+						<!-- Изменяемая часть -->
+						<div class="chat_block position_justify_start">
+							<div class="sms_block"></div>
 						</div>
-						<div class="chat_sumbite">
-							<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+						<div class="chat_block position_justify_end">
+							<div class="sms_block"></div>							
+						</div>
+						<div class="chat_block position_justify_start">
+							<div class="sms_block"></div>							
+						</div>
+						<div class="chat_block position_justify_end">
+							<div class="sms_block"></div>
+						</div>
+					</div>
+					<!-- chat -->
+					<div class="display_flex flex_row events_chat_correspondence">
+						<textarea class="textarea correspondence" placeholder="Напечатать сообщение..." oninput="auto_height(this)"></textarea>
+						<div class="mini_message_menu">
+							<div class="mini_message_menu_block">
+								<img src="./images/free-icon-plus-2549959.png">
+							</div>
+							<div class="mini_message_menu_block">
+								<img src="./images/free-icon-smiley-3483089.png">
+							</div>
+						</div>
 						</div>
 					</div>
 				</div>

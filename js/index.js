@@ -352,3 +352,39 @@ element.forEach((blocke) => {
 });
 
 
+
+
+
+
+
+
+document.addEventListener('keydown', function(e) {
+	if (e.keyCode == 13 && e.shiftKey){
+		document.querySelector('.textarea').value += '';
+	}
+
+	if (e.keyCode == 13 && !e.shiftKey){
+	    e.preventDefault();
+
+		document.querySelector('.textarea').value = '';
+		document.querySelector(".textarea").style.height = "80px";
+	}
+});
+
+
+
+function auto_height(elem) {
+    elem.style.height = "80px";
+    document.querySelector(".textarea").style.height = "88px";
+
+    elem.style.height = (elem.scrollHeight)+"px";
+    document.querySelector(".textarea").style.height = (elem.scrollHeight)+"px";
+
+    if (elem.scrollHeight > "161"){
+    	elem.style.height = "181px";
+    	 document.querySelector(".textarea").style.height = "181px";
+    }
+}
+
+
+

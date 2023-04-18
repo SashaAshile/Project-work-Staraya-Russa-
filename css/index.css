@@ -14,6 +14,24 @@ html, body {
 }
 /* --- */
 
+textarea {
+    resize: none;
+    outline: none;    
+}
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #223c50;
+}
+
+
+
+
 /* Общие классы */
 .center {
 	display: flex;
@@ -343,6 +361,15 @@ input:focus {
 
 .position_justify_end {
 	justify-content: flex-end;
+}
+
+.position_justify_start {
+	justify-content: flex-start;
+}
+
+
+.position_align_start {
+	align-items: flex-start;
 }
 
 .position_align_end {
@@ -2067,6 +2094,25 @@ input:focus {
 .events_chat_content {
 	width: 100%;
     flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px 5px 10px 5px;
+    display: flex;
+    flex-direction: column-reverse;    
+}
+
+.chat_block {
+	display: flex;
+
+	width: 100%;
+	height: 100px;
+	margin: 10px 0px;
+}
+
+.sms_block {
+	width: 300px;
+	height: 100px;
+	background: blue;
 }
 
 .events_chat_correspondence {
@@ -2076,50 +2122,45 @@ input:focus {
 	align-items: center;
 
 	width: 100%;
-	height: 60px;
+	height: auto;
 
-    padding: 0px 10px;	
 
 	border-top: 2px dashed #243453;
 }
 
 .correspondence {
     flex-grow: 1;
-	height: 50px;
+	height: 80px;
 
-	padding: 5px;
+	padding: 3px 3px 3px 3px;
+	margin: 5px;
+	overflow-y: auto;
+
+    border: 2px solid;
+    border-radius: 5px;	
 }
 
-.correspondence textarea {
+.mini_message_menu {
+    display: flex;
+    width: 35px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mini_message_menu_block {
+	width: 30px;
+	height: 30px;
+	padding: 4px;
+	background: #cbcbcb;
+	border-radius: 100px;
+}
+
+.mini_message_menu_block img {
 	width: 100%;
 	height: 100%;
-
-	padding: 5px;
-
-	background: white;
-	border-radius: 5px;
-
-	font-family: 'text-mini';
-	font-size: 14px;
-	color: black;
-    border: 2px solid black;	
+	border-radius: 100px;
 }
-
-.chat_sumbite {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-	overflow: hidden;	
-}
-
-.chat_sumbite img{
-	width: 100%;
-	height: 100%;
-}
-
-
-
-
 
 .events_construction_title {
 	margin-top: 20px;
