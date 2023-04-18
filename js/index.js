@@ -126,8 +126,6 @@ var spisokX = [
 
 		document.querySelector("#moving_5"),
 		document.querySelector("#moving_6"),
-		document.querySelector("#moving_8"),
-		document.querySelector("#moving_9"),
 		document.querySelector("#moving_15"),		
 ]
 
@@ -320,35 +318,39 @@ var element = document.querySelectorAll('.places_to_visit_content_block_block_')
 element.forEach((blocke) => {
 
 	var slideIndex = 0;
-	var isDown = false;	
 	var slides = blocke.querySelectorAll('#img')
+	var constanta = '';
 
-	blocke.addEventListener('mouseover', () => {
-		isDown = true;
+
+	blocke.addEventListener('mouseenter', () => {
+		start_slader(slides)
+		console.log('start')
+		constanta = setInterval(start_slader, 2000, slides)
 	});
 
 	blocke.addEventListener('mouseleave', _ => {
-		isDown = false;
+		end_slader(slides);
+		console.log('end')
 	});
 
-	setInterval(lol, 100)
-	function lol() {
-		if (isDown == true) {
-			for (var i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			};			
-			if (slideIndex == slides.length) {slideIndex = 0};
-			slides[Number(slideIndex)].style.display = "block";
-			slideIndex++;
-		}
 
-		if (isDown == false) {
-			for (var i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			};
-		}	
+
+	function start_slader(slides) {
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		};			
+		if (slideIndex == slides.length) {slideIndex = 0};
+		slides[Number(slideIndex)].style.display = "block";
+		slideIndex++;
+		console.log(constanta)
 	}
 
+	function end_slader(slides) {
+		clearInterval(constanta);
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		};		
+	}
 });
 
 
