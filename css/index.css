@@ -3802,6 +3802,19 @@ img {
 	100% { transform: rotate(35deg);}	
 }
 
+.attract__card-name {
+	cursor: pointer;
+}
 
+.attract__card-name_rest {
+	color: #e0a219;
+}
 
+.attract__card-name_cafe {
+	color: #f1da8d;
+}
 
+.attract__card-name_bar {
+	font-size: 24px;
+	color: #f3c23c;
+}
