@@ -34,4 +34,4 @@ blocks.addEventListener("mouseout", function() {
 });
 
 
-
+var attractions_block = document.querySelectorAll(".attractions_block");

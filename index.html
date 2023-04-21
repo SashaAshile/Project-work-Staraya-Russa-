@@ -1386,90 +1386,246 @@
 			</div>
 
 			<div class="picnic">
-				<div class="attractions_construction_title center">
-					<div>
-						Достопремечательности
-					</div>
+				<div class="display_flex flex_row attractions_construction_title center">
+					<div style="color:#FCE38A;">Фильтр</div>
+					<div style="color:#F08A5D;"> мест</div>
+					<div style="color:#B83B5E;"> для</div>
+					<div style="color:#FFB6B9;"> наилучшего</div>
+					<div style="color:#00B8A9;"> время</div>
+					<div style="color:#6A2C70;"> провождения</div>
+					<div>:</div>
 				</div>
 				<!-- 6-е блока начало -->
 				<div class="attractions_mini_block">
-					<div class="attractions_block"></div>
-					<div class="attractions_block"></div>
-					<div class="sovet_pogoda">
-						<div class="pogoda">
-							<div class="pogoda_title">
+					<div class="attractions_block" >
+						<div class="display_flex flex_row block_absolute" style="gap:5px">
+							<div class="display_flex flex_column" style="gap: 5px;">
+								<div style="color:#e0a219;">Ресторан</div>
+								<div style="color:#f1da8d;">Кофейная</div>
+							</div>
+							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+								<div style="color:#e49445;;">или</div>
+								<div style="color:#94715f;">же</div>
+								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							</div>
+						</div>
+					</div>
+					<div class="attractions_block" >
+						<div class="display_flex flex_row block_absolute" style="gap:5px">
+							<div class="display_flex flex_column" style="gap: 5px;">
+								<div style="color:#e0a219;">Ресторан</div>
+								<div style="color:#f1da8d;">Кофейная</div>
+							</div>
+							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+								<div style="color:#e49445;;">или</div>
+								<div style="color:#94715f;">же</div>
+								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Блок с погодой -->
+					<div class="display_flex flex_column weather">
+						<div class="display_flex flex_column weather_menu">
+							<div class="weather_menu_city">
 								Старая Русса
 							</div>
-							<div class="pogoda_time_tomorrow">
-								<div>Сейчас 12:09.</div>
-								<div>Вчера в это время +13</div>
+							<div class="display_flex flex_column weather_time">
+								<div>
+									Сейчас 21 апреля, 12:09 (UTC +3)
+								</div>
+								<div>
+									Вчера в это время +13°C
+								</div>
 							</div>
-							<div class="pogoda_gr_img_poasn">
-								<div class="pagoda_gr">+14</div>
-								<div class="pagoda_img">
+							<div class="display_flex flex_row position_center weather_main_content">
+								<div class="celsius">
+									+14°C
+								</div>
+								<div class="weather_mood">
 									<img src="./images/pogoda/skc_d(1).svg">
 								</div>
-								<div>Облачно с прояснением</div>
+								<div class="display_flex flex_column weather_feeling">
+									<div>Облачно с прояснением</div>
+									<div>Ощущается как + 11°C</div>
+								</div>
 							</div>
-							<div>Ощущается как + 11</div>
-							<div class="pogoda_global_ism">
-								<div class="display_flex flex_row pogoda_global_ism_block">
-									<div class="pogoda_global_ism_block_img_vetr">
-										
+							<div class="display_flex flex_row position_center weather_information">
+								<div class="display_flex flex_row position_center weather_block_slaid">
+									<div class="display_flex position_center wind">
 									</div>
-									<div>2,7м\с</div>
+									<div>2,7м\с, СЗ</div>
 								</div>
-								<div class="display_flex flex_row pogoda_global_ism_block">
-									<div>
-										СЗ
-									</div>
-									<div class="pogoda_global_ism_block_storona">
-										
-									</div>
-								</div>
-								<div class="display_flex flex_row pogoda_global_ism_block">
-									<div class="pogoda_global_ism_block_img_rtut">
-										
+								<div class="display_flex flex_row position_center weather_block_slaid">
+									<div class="display_flex position_center water">
 									</div>
 									<div>
 										53%
 									</div>
 								</div>
-							</div>
-							<div class="display_flex flex_row" style="gap:10px">
-								<div class="display_flex flex_column">
-									<div>12:30</div>
-									<div>
-										<img src="./images/pogoda/bkn_-ra_d.svg">
+								<div class="display_flex flex_row position_center weather_block_slaid">
+									<div class="display_flex position_center mercury">
 									</div>
 									<div>
-										+13
+										754 мм рт.ст.
 									</div>
 								</div>
-								<div class="display_flex flex_column">
-									<div>12:30</div>
-									<div>
-										<img src="./images/pogoda/bkn_-ra_d.svg">
+							</div>
+							<div class="display_flex flex_row slader_weather">
+								<div class="display_flex position_center slader_weather_button" style="justify-content: flex-start;">
+									<img src="./images/outlined/icons8_outlined_24.svg" style="transform: rotate(90deg);">
+								</div>
+								<div class="slader_weather_blocks">
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
 									</div>
-									<div>
-										+13
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
 									</div>
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
+									</div>
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
+									</div>
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
+									</div>
+									<div class="display_flex flex_column weather_block" style="gap: 5px;">
+										<div>
+											12:30
+										</div>
+										<div>
+											<img src="./images/pogoda/bkn_-ra_d.svg">
+										</div>
+										<div>
+											+13°C
+										</div>
+									</div>
+								</div>
+								<div class="display_flex position_center slader_weather_button" style="justify-content: flex-end;">
+									<img src="./images/outlined/icons8_outlined_24.svg" style="transform: rotate(-90deg);">
 								</div>
 							</div>
 						</div>
-						<div>
-							<div>
-								Советуется к посещению курорт, площадь и бар.
+						<div class="display_flex flex_column you_should_go_in" style="gap:10px">
+							<div class="display_flex position_center">
+								<div class="you_should_go_in_title">
+									Советуется к посещению: 
+								</div>
 							</div>
-							<div>
-								Специальный праздник: день молодёжи!
+							<div class="you_should_go_in_blocks">
+								<div class="display_flex you_should_go_in_block">
+									<div class="display_flex flex_column">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="display_flex position_center">
+											Ресторан: Башня
+										</div>
+									</div>
+								</div>
+								<div class="display_flex you_should_go_in_block">
+									<div class="display_flex flex_column">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="display_flex position_center">
+											Кафе: Изумруд
+										</div>	
+									</div>
+								</div>
+								<div class="display_flex you_should_go_in_block">
+									<div class="display_flex flex_column">
+										<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="display_flex position_center">
+											Музей: Войны
+										</div>	
+									</div>
+								</div>								
 							</div>
 						</div>
 					</div>
-					<div class="attractions_block"></div>
-					<div class="attractions_block"></div>
-					<div class="attractions_block"></div>
-					<div class="attractions_block"></div>
+					<div class="attractions_block" >
+						<div class="display_flex flex_row block_absolute" style="gap:5px">
+							<div class="display_flex flex_column" style="gap: 5px;">
+								<div style="color:#e0a219;">Ресторан</div>
+								<div style="color:#f1da8d;">Кофейная</div>
+							</div>
+							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+								<div style="color:#e49445;;">или</div>
+								<div style="color:#94715f;">же</div>
+								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							</div>
+						</div>
+					</div>
+					<div class="attractions_block" >
+						<div class="display_flex flex_row block_absolute" style="gap:5px">
+							<div class="display_flex flex_column" style="gap: 5px;">
+								<div style="color:#e0a219;">Ресторан</div>
+								<div style="color:#f1da8d;">Кофейная</div>
+							</div>
+							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+								<div style="color:#e49445;;">или</div>
+								<div style="color:#94715f;">же</div>
+								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							</div>
+						</div>
+					</div>
+					<div class="attractions_block" >
+						<div class="display_flex flex_row block_absolute" style="gap:5px">
+							<div class="display_flex flex_column" style="gap: 5px;">
+								<div style="color:#e0a219;">Ресторан</div>
+								<div style="color:#f1da8d;">Кофейная</div>
+							</div>
+							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+								<div style="color:#e49445;;">или</div>
+								<div style="color:#94715f;">же</div>
+								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							</div>
+						</div>
+					</div>					
+					<!-- Добавить блок -->
+					<div class="display_flex position_center attractions_block_add">
+						<div></div>
+						<img src="./images/free-icon-plus-2549959.png">
+					</div>
 				</div>
 			</div>
 		</div>

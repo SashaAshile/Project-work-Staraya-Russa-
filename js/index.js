@@ -357,9 +357,6 @@ element.forEach((blocke) => {
 
 
 
-
-
-
 document.addEventListener('keydown', function(e) {
 	if (e.keyCode == 13 && e.shiftKey){
 		document.querySelector('.textarea').value += '';
@@ -389,4 +386,8 @@ function auto_height(elem) {
 }
 
 
+
+document.addEventListener('click', (e)=> {
+	console.log(e.target)
+})
 
