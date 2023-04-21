@@ -68,6 +68,7 @@ function scroll_blocks_4() {
 }
 
 function scroll_blocks_5() {
+	console.log(document.querySelector('.attractions_construction'))
 	document.querySelector('.attractions_construction').scrollIntoView({block: "end", behavior : "smooth"});
 }
 
@@ -387,8 +388,19 @@ function auto_height(elem) {
 
 
 
-document.addEventListener('click', (e)=> {
-	console.log(e.target)
-	console.log(e.target.getAttribute("id"))
-})
 
+
+ 
+let elems = document.querySelectorAll('.attract__card-name_rest');
+
+console.log(elems)
+
+for (let i = 0; i < elems.length; i++) {
+
+	elems[i].addEventListener('click', () => {
+
+		let param = elems[i].getAttribute('data-param-rest')
+
+		console.log(param)
+	})
+}
