@@ -391,16 +391,20 @@ function auto_height(elem) {
 
 
  
-let elems = document.querySelectorAll('.attract__card-name_rest');
-
-console.log(elems)
+let elems = document.querySelectorAll('.attractions_block');
 
 for (let i = 0; i < elems.length; i++) {
 
 	elems[i].addEventListener('click', () => {
 
-		let param = elems[i].getAttribute('data-param-rest')
-
-		console.log(param)
+		let param = elems[i].getAttribute('data_param_rest')
+		document.querySelector('.places_to_visit').style.display = 'flex';
+		document.querySelector('.attractions_construction').style.display = 'none';
+		
 	})
+}
+
+function exit_main(){
+	document.querySelector('.places_to_visit').style.display = 'none';
+	document.querySelector('.attractions_construction').style.display = 'flex';	
 }

@@ -171,72 +171,95 @@
 		</div>
 	</div>	
 
-	<!-- Основной контент -->
-	<div class="main_block">
+	<!-- Весь контент -->
+	<div class="display_flex flex_column">
 
-
-
-		<!-- Стартовая страница -->
-		<div class="start_construction">	
+		<!-- Главная страница -->
+		<div class="display_flex flex_column construction">	
 
 			<!-- --- Перемещние по сайту --- -->
-			<div class="display_flex position_center flex_column scroll">
-				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_1()">
-					<div class="display_flex position_center scroll_block_moving_number">
-						<div style="z-index: 5;">1</div>
+			<div class="display_flex position_center flex_column position_align_end scroll">
+				<div class="display_flex position_center scroll_" onclick="scroll(1)">
+					<div class="scroll_WH_max">
+						<div class="display_flex position_center scroll_number">
+							<img src="./images/icons8-главная.svg">
+						</div>
 					</div>
-					<div class="scroll_block_moving_content">
-						<div class="display_flex position_center scroll_block_moving_content_block">
-							<div style="color: black;">
+					<div class="scroll_next">
+						<div class="display_flex setting_position scroll_next_">
+							<div class="headers">
 								Главная страница
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_2()">
-					<div class="display_flex position_center scroll_block_moving_number">
-						<div style="z-index: 5;">2</div>
-					</div>
-					<div class="scroll_block_moving_content">
-						<div class="display_flex position_center scroll_block_moving_content_block">
-							<div style="color: black;">
-								мероприятия
+							<div class="cursive">
+								начало - начал...
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_3()">
-					<div class="display_flex position_center scroll_block_moving_number">
-						<div style="z-index: 5;">3</div>
+				<div class="display_flex position_center scroll_" onclick="scroll(1)">
+					<div class="scroll_WH_max">
+						<div class="display_flex position_center scroll_number">
+							<img src="./images/icons8-главная.svg">
+						</div>
 					</div>
-					<div class="scroll_block_moving_content">
-						<div class="display_flex position_center scroll_block_moving_content_block">
-							<div style="color: black;">
-								Прогулка
+					<div class="scroll_next">
+						<div class="display_flex setting_position scroll_next_">
+							<div class="headers">
+								Вторая страница
+							</div>
+							<div class="cursive">
+								очень прикольно!
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_5()">
-					<div class="display_flex position_center scroll_block_moving_number">
-						<div style="z-index: 5;">4</div>
+				<div class="display_flex position_center scroll_" onclick="scroll(1)">
+					<div class="scroll_WH_max">
+						<div class="display_flex position_center scroll_number">
+							<img src="./images/icons8-главная.svg">
+						</div>
 					</div>
-					<div class="scroll_block_moving_content">
-						<div class="display_flex position_center scroll_block_moving_content_block">
-							<div style="color: black;">
-								достопамятность
+					<div class="scroll_next">
+						<div class="display_flex setting_position scroll_next_">
+							<div class="headers">
+								Трерья страница
+							</div>
+							<div class="cursive">
+								лучше предыдущей!
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="display_flex position_center scroll_block_moving" onclick="scroll_blocks_6()">
-					<div class="display_flex position_center scroll_block_moving_number">
-						<div style="z-index: 5;">5</div>
+				<div class="display_flex position_center scroll_" onclick="scroll(1)">
+					<div class="scroll_WH_max">
+						<div class="display_flex position_center scroll_number">
+							<img src="./images/icons8-главная.svg">
+						</div>
 					</div>
-					<div class="scroll_block_moving_content">
-						<div class="display_flex position_center scroll_block_moving_content_block">
-							<div style="color: black;">
-								Обзор / Друзья
+					<div class="scroll_next">
+						<div class="display_flex setting_position scroll_next_">
+							<div class="headers">
+								Четвертая страница
+							</div>
+							<div class="cursive">
+								изумительно!
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="display_flex position_center scroll_" onclick="scroll(1)">
+					<div class="scroll_WH_max">
+						<div class="display_flex position_center scroll_number">
+							<img src="./images/icons8-главная.svg">
+						</div>
+					</div>
+					<div class="scroll_next">
+						<div class="display_flex setting_position scroll_next_">
+							<div class="headers">
+								Пятая страница
+							</div>
+							<div class="cursive">
+								конец - концов
 							</div>
 						</div>
 					</div>
@@ -244,57 +267,90 @@
 			</div>
 
 
-			<!-- --- Глобальная переменная (модерация \ донат \ связь) --- -->
-			<!-- --- Всё работает, можно добавлять новые блоки --- -->
-			<div class="display_flex about_moderation">
-				<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
-					<div class="display_flex position_center about_icons background_blue">
-						<img class="background_white padding_five" src="./images/vk/icons8_vk_32.svg">
+			<!-- --- Общее меню --- -->
+			<div class="global_emaey">
+				<div class="display_flex about_moderation">
+
+					<div class="display_flex position_center qwaszx">
+						<img src="./images/outlined/icons8_outlined_48.svg">
 					</div>
-					<div class="display_flex flex_column about_content background_white border_blue" style="justify-content: space-between;">
-						<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
-							<div class="about_content_text_title">
-								Вконтакте
-							</div>
+
+					<div class="display_flex flex_column whwhwhw position_align_center">
+						<div class="display_flex menu_about">
+							menu
 						</div>
-						<div class="display_flex about_content_text position_justify_end">
-							<div class="about_content_text_description">
-								модерация
-							</div>
-						</div>
-					</div>
-				</a>
-				<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
-					<div class="display_flex position_center about_icons background_red">
-						<img class="padding_five background_white" src="./images/google/icons8-google-30.svg">
-					</div>
-					<div class="display_flex flex_row about_content background_white border_red">
-						<div class="display_flex flex_column" style="justify-content: space-between;">
-							<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
-								<div class="about_content_text_title ">
-									doctordania15@gmail.com
+						<div class="display_flex flex_column" style="align-items: center;gap: 10px;">
+							<div class="posetitelka">
+								<div class="posetitelka_">
+									<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg" style="object-fit:cover;">
+									<div class="display_flex BBB___BB1">
+
+									</div>										
+								</div>
+								<div class="display_flex content_nastr position_center">
+									Профиль
+								</div>
+								<div class="display_flex flex_column menu_customers" style="display: none;">
+									<div class="display_flex flex_row">
+										<div>
+											ahile_ford#3001
+										</div>
+										<div>
+											<img src="">
+										</div>
+										
+									</div>
+									<div class="display_flex flex_column">
+										<div>
+											Обо мне
+										</div>
+										<div>
+											Я много чего то пишу о себе ля ля ля ля
+										</div>
+									</div>
+									<div class="display_flex flex_row">
+										<div>
+											<img src="">
+										</div>
+										<div>
+											Переключиться между учётными
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="display_flex about_content_text position_justify_end">
-								<div class="about_content_text_description">
-									модерация
+							<div class="display_flex flex_column posetitelka">
+								<div class="display_flex position_center about_inoe_icons ">
+									<img class="background_white padding_five" src="./images/free-icon-live-streaming-4916674.png">
 								</div>
+								<div class="display_flex content_nastr position_center">
+									Канал
+								</div>					
+							</div>						
+							<div class="display_flex flex_column posetitelka">
+								<div class="display_flex position_center about_inoe_icons ">
+									<img class="background_white padding_five" src="./images/chat-3-svgrepo-com.svg">
+									<div class="display_flex  content_nastr_number position_center">
+										<div>
+											12
+										</div>
+									</div>									
+								</div>
+								<div class="display_flex content_nastr position_center">
+									Чат
+								</div>					
+							</div>
+							<div class="display_flex flex_column posetitelka">
+								<div class="display_flex position_center about_inoe_icons ">
+									<img class="background_white padding_five" src="./images/icons8-избранное.svg">								
+								</div>
+								<div class="display_flex content_nastr position_center">
+									Избран.
+								</div>					
 							</div>
 						</div>
-						<div class="display_flex position_center about_cope">
-							<div class="display_flex position_center about_cope_img">
-								<img src="./images/copy/icons8_copy_96.svg">
-							</div>	
-						</div>
 					</div>
-				</a>
-				<div class="display_flex position_align_center switch">
-					<div class="display_flex position_center switch_block">
-						<div class="display_flex position_align_end position_justify_center switch_block_img">
-							<img src="./images/arrow/icons8_arrow_96.svg">
-						</div>
-					</div>
-					<div class="display_flex switch_block_content">
+					<div class="display_flex flex_column">
+
 						<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
 							<div class="display_flex position_center about_icons background_orange">
 								<img class="background_white padding_five" src="./images/boosty/Dark.svg">
@@ -312,7 +368,47 @@
 								</div>
 							</div>
 						</a>
-											
+						<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
+							<div class="display_flex position_center about_icons background_blue">
+								<img class="background_white padding_five" src="./images/vk/icons8_vk_32.svg">
+							</div>
+							<div class="display_flex flex_column about_content background_white border_blue" style="justify-content: space-between;">
+								<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
+									<div class="about_content_text_title">
+										Вконтакте
+									</div>
+								</div>
+								<div class="display_flex about_content_text position_justify_end">
+									<div class="about_content_text_description">
+										модерация
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
+							<div class="display_flex position_center about_icons background_red">
+								<img class="padding_five background_white" src="./images/google/icons8-google-30.svg">
+							</div>
+							<div class="display_flex flex_row about_content background_white border_red">
+								<div class="display_flex flex_column" style="justify-content: space-between;">
+									<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
+										<div class="about_content_text_title ">
+											doctordania15@gmail.com
+										</div>
+									</div>
+									<div class="display_flex about_content_text position_justify_end">
+										<div class="about_content_text_description">
+											модерация
+										</div>
+									</div>
+								</div>
+								<div class="display_flex position_center about_cope">
+									<div class="display_flex position_center about_cope_img">
+										<img src="./images/copy/icons8_copy_96.svg">
+									</div>	
+								</div>
+							</div>
+						</a>		
 					</div>
 				</div>
 			</div>				
@@ -1059,283 +1155,7 @@
 		</div>
 
 
-		<div class="places_to_visit">
-			<div class="places_to_visit_the_whole_block">
 
-				<div id="moving_14" class="absolute_block">
-					<!-- Активная часть -->
-					<div class="absolute_flex">
-						<div class="absolute_important">
-							<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-							<div class="absolute_people">
-								<div class="absolute_people_images center">
-									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-								</div>
-								<div class="absolute_title_block">
-									<div class="absolute_title">
-										Какое то название
-									</div>
-									<div class="absolute_information">
-										<div class="absolute_block_information">
-											Саша Ахилевич Амигоданович
-										</div>
-										<div class="dop_info">
-											<div class="dop_info_open center">
-												i
-											</div>
-											<div class="hover_open_dop_info">
-												<div class="time_dop">
-													21:15
-												</div>
-												<div class="time_dop">
-													15 дек 2015
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="absolute_content_text">
-							<div class="text_abs"></div>
-						</div>
-						<div class="absolute_images_slaider">
-							<div id="moving_6" class="img_abs">
-								<div>
-									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-								</div>
-								<div>
-									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-								</div>
-								<div>
-									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-								</div>
-								<div>
-									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-								</div>	
-							</div>
-						</div>							
-					</div>
-					<!-- Подвижный элемент -->
-					<div class="ocenka">
-						<div class="flex_ocenka">
-							<div class="shaloba">
-								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-							</div>
-							<div class="ocenka_laik">
-								<div class="right_ocenka"></div>
-								<div class="left_ocenka"></div>
-							</div>
-						</div>
-					</div>								
-				</div>	
-
-				<div class="places_to_visit_evering_content">
-					<!-- Меню -->
-					<div class="places_to_visit_menu">
-						<!-- Поисковое меню -->
-						<!-- Добавить -->
-						<div class="places_to_visit_menu_exit" onclick="fixed_dop_open()">
-							<div class="center">
-								+
-							</div>
-						</div>
-
-						<div class="places_to_visit_menu_search">
-							<div class="places_to_visit_menu_search_block">
-								<div class="places_to_visit_menu_search_block_active">
-									<input type="checkbox">
-									<div class=" center">
-										Поиск по:
-									</div>
-								</div>
-							</div>
-							<div class="places_to_visit_menu_search_block">
-								<div class="places_to_visit_menu_search_block_active">
-									<input type="checkbox">
-									<div class=" center">
-										Поиск по:
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Добавить -->
-						<div class="places_to_visit_menu_add" onclick="fixed_dop_open()">
-							<div class="center">
-								+
-							</div>
-						</div>
-					</div>
-
-					<!-- Контент -->
-					<div class="places_to_visit_content">
-						<!-- Блок с блоками -->
-		
-
-
-						<div id="moving_12" class="places_to_visit_content_position">
-							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
-								<div class="places_to_visit_content_block_block_">
-									<div class="places_to_visit_content_block_block_background">
-										<img id="img" style="display: none;" src="./images/back_href/S4e09caa5880f4a01ab46102239b584961.jpg">
-										<img id="img" style="display: none;" src="./images/back_href/people_1_album_front_white_500.jpg">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<div class="places_to_visit_content_block_block_title">
-											Событие
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_link">
-										<div>
-											перейти в описание
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_background_continuation">
-										<div class="places_to_visit_content_block_block_description">
-											В этом событие произошло так много всего...2
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
-								<div class="places_to_visit_content_block_block_">
-									<div class="places_to_visit_content_block_block_background">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<div class="places_to_visit_content_block_block_title">
-											Событие
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_link">
-										<div>
-											перейти в описание
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_background_continuation">
-										<div class="places_to_visit_content_block_block_description">
-											В этом событие произошло так много всего...2
-										</div>
-									</div>
-								</div>
-							</div>						
-							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
-								<div class="places_to_visit_content_block_block_">
-									<div class="places_to_visit_content_block_block_background">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<div class="places_to_visit_content_block_block_title">
-											Событие
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_link">
-										<div>
-											перейти в описание
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_background_continuation">
-										<div class="places_to_visit_content_block_block_description">
-											В этом событие произошло так много всего...2
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
-								<div class="places_to_visit_content_block_block_">
-									<div class="places_to_visit_content_block_block_background">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
-										<div class="places_to_visit_content_block_block_title">
-											Событие
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_link">
-										<div>
-											перейти к описание
-										</div>
-									</div>
-									<div class="places_to_visit_content_block_block_background_continuation">
-										<div class="places_to_visit_content_block_block_description">
-											В этом событие произошло так много всего...2
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>		
-							</div>	
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>		
-							</div>	
-							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
-								<div class="block_position_move">
-									<div class="block_block_">
-										<div class="block_block_background one_block">
-											<div class="block_block_title">
-												Событие
-											</div>
-										</div>
-										<div class="block_block_background two_block">
-											<div class="block_block_content">
-												В этом событие произошло так много всего...2
-											</div>
-											<div class="block_block_link">
-												<div>
-													Перейти
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>		
-							</div>																																				
-						</div>
-					</div>
-				</div>
-				<div class="AAAAAA">
-					<div class="map">
-						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac00310a4bf66f8eb930db3ea03365a3b01f28d452e89b1b69b657f45dd44a4d1&amp;source=constructor" frameborder="0" seamless></iframe> 					
-					</div>
-				</div>
-			</div>	
-		</div>
 
 		<!-- 4 достопремичательности-->		
 		<div class="attractions_construction">
@@ -1395,31 +1215,86 @@
 					<div style="color:#6A2C70;"> провождения</div>
 					<div>:</div>
 				</div>
+				<div class="lets_go_for_a_walk">
+					Сейчас <span class="button_bottom_mini_icons_number ismmm">33</span> человека в поиске собеседника на прогулку: <div class="botton_lets_go_for_a_walk"><div style="z-index:2;position: relative;">выбрать случайно?</div></div>
+				</div>
 				<!-- 6-е блока начало -->
 				<div class="attractions_mini_block">
-					<div class="attractions_block" id='lol' >
-						<div class="display_flex flex_row block_absolute" style="gap:5px">
-							<div class="display_flex flex_column" style="gap: 5px;">
-								<div data-param-rest="hy" class="attract__card-name attract__card-name_rest">Ресторан</div>
-								<div data-param-2="hy2" class="attract__card-name attract__card-name_cofe">Кофейная</div>
+					<div class="attractions_block" data_param_rest='info'>
+						<img class="img_attractions_block" style="object-fit: cover;" src="./images/back_href/1984.jpg">
+						<div class="attractions_block_main_info">
+							<div class="display_flex position_center button_bottom_mini_icons_number">
+								<div>
+									12
+								</div>
 							</div>
-							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
-								<div style="color:#e49445;;">или</div>
-								<div style="color:#94715f;">же</div>
-								<div data-param-3="hy3" class="attract__card-name attract__card-name_bar">Бар</div>
+							<div class="display_flesx flex_column attractions_block_number_">
+								<div>12</div>
+								<div style="font-size:15px;">слайдов</div>
+								
+							</div>
+							<div class="display_flex attractions_block_emogi">
+								<img src="./images/beer-svgrepo-com.svg">
+							</div>
+
+							<div class="prosmotry">
+								<div class="prosmotry_img">
+									<img src="./images/glaza.svg">
+								</div>
+								<div class="display_flex position_center prosmotry_text">
+									1,2 тыс. просмотров
+								</div>
+							</div>
+
+							<div class="display_flex flex_row block_absolute" style="gap:5px">
+								<div class="display_flex flex_column" style="gap: 5px;">
+									<div style="color:#e0a219;">Ресторан</div>
+									<div style="color:#f1da8d;">Кофейная</div>
+								</div>
+								<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+									<div style="color:#e49445;;">или</div>
+									<div style="color:#94715f;">же</div>
+									<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="attractions_block" >
-						<div class="display_flex flex_row block_absolute" information="cofe" style="gap:5px">
-							<div class="display_flex flex_column" style="gap: 5px;">
-								<div style="color:#e0a219;">Ресторан</div>
-								<div style="color:#f1da8d;">Кофейная</div>
+					<div class="attractions_block" data_param_rest='info'>
+						<img class="img_attractions_block" style="object-fit: cover;" src="./images/12313123-1024x768-1-1.jpg">
+						<div class="attractions_block_main_info">
+							<div class="display_flex position_center button_bottom_mini_icons_number">
+								<div>
+									1
+								</div>
 							</div>
-							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
-								<div style="color:#e49445;;">или</div>
-								<div style="color:#94715f;">же</div>
-								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							<div class="display_flesx flex_column attractions_block_number_">
+								<div>11</div>
+								<div style="font-size:15px;">слайдов</div>
+								
+							</div>
+							<div class="display_flex attractions_block_emogi">
+								<img src="./images/music-svgrepo-com.svg">
+							</div>
+
+							<div class="prosmotry">
+								<div class="prosmotry_img">
+									<img src="./images/glaza.svg">
+								</div>
+								<div class="display_flex position_center prosmotry_text">
+									1,2 тыс. просмотров
+								</div>
+							</div>
+
+							<div class="display_flex flex_row block_absolute" style="gap:5px">
+								<div class="display_flex flex_column" style="gap: 5px;">
+									<div style="color:#e0a219;">Музыка</div>
+									<div style="color:#f1da8d;">Песни</div>
+								</div>
+								<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+									<div style="color:#e49445;;">или</div>
+									<div style="color:#94715f;">же</div>
+									<div style="font-size: 20px;color: #f3c23c;">Пение</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1582,45 +1457,123 @@
 							</div>
 						</div>
 					</div>
-					<div class="attractions_block" >
-						<div class="display_flex flex_row block_absolute" style="gap:5px">
-							<div class="display_flex flex_column" style="gap: 5px;">
-								<div style="color:#e0a219;">Ресторан</div>
-								<div style="color:#f1da8d;">Кофейная</div>
+					<div class="attractions_block" data_param_rest='info'>
+						<img class="img_attractions_block" style="object-fit: cover;" src="./images/back_href/1984.jpg">
+						<div class="attractions_block_main_info">
+							<div class="display_flex position_center button_bottom_mini_icons_number">
+								<div>
+									12
+								</div>
 							</div>
-							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
-								<div style="color:#e49445;;">или</div>
-								<div style="color:#94715f;">же</div>
-								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							<div class="display_flesx flex_column attractions_block_number_">
+								<div>12</div>
+								<div style="font-size:15px;">слайдов</div>
+								
+							</div>
+							<div class="display_flex attractions_block_emogi">
+								<img src="./images/beer-svgrepo-com.svg">
+							</div>
+
+							<div class="prosmotry">
+								<div class="prosmotry_img">
+									<img src="./images/glaza.svg">
+								</div>
+								<div class="display_flex position_center prosmotry_text">
+									1,2 тыс. просмотров
+								</div>
+							</div>
+
+							<div class="display_flex flex_row block_absolute" style="gap:5px">
+								<div class="display_flex flex_column" style="gap: 5px;">
+									<div style="color:#e0a219;">Ресторан</div>
+									<div style="color:#f1da8d;">Кофейная</div>
+								</div>
+								<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+									<div style="color:#e49445;;">или</div>
+									<div style="color:#94715f;">же</div>
+									<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="attractions_block" >
-						<div class="display_flex flex_row block_absolute" style="gap:5px">
-							<div class="display_flex flex_column" style="gap: 5px;">
-								<div style="color:#e0a219;">Ресторан</div>
-								<div style="color:#f1da8d;">Кофейная</div>
+					<div class="attractions_block" data_param_rest='info'>
+						<img class="img_attractions_block" style="object-fit: cover;" src="./images/back_href/1984.jpg">
+						<div class="attractions_block_main_info">
+							<div class="display_flex position_center button_bottom_mini_icons_number">
+								<div>
+									12
+								</div>
 							</div>
-							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
-								<div style="color:#e49445;;">или</div>
-								<div style="color:#94715f;">же</div>
-								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							<div class="display_flesx flex_column attractions_block_number_">
+								<div>12</div>
+								<div style="font-size:15px;">слайдов</div>
+								
+							</div>
+							<div class="display_flex attractions_block_emogi">
+								<img src="./images/beer-svgrepo-com.svg">
+							</div>
+
+							<div class="prosmotry">
+								<div class="prosmotry_img">
+									<img src="./images/glaza.svg">
+								</div>
+								<div class="display_flex position_center prosmotry_text">
+									1,2 тыс. просмотров
+								</div>
+							</div>
+
+							<div class="display_flex flex_row block_absolute" style="gap:5px">
+								<div class="display_flex flex_column" style="gap: 5px;">
+									<div style="color:#e0a219;">Ресторан</div>
+									<div style="color:#f1da8d;">Кофейная</div>
+								</div>
+								<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+									<div style="color:#e49445;;">или</div>
+									<div style="color:#94715f;">же</div>
+									<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="attractions_block" >
-						<div class="display_flex flex_row block_absolute" style="gap:5px">
-							<div class="display_flex flex_column" style="gap: 5px;">
-								<div style="color:#e0a219;">Ресторан</div>
-								<div style="color:#f1da8d;">Кофейная</div>
+					<div class="attractions_block" data_param_rest='info'>
+						<img class="img_attractions_block" style="object-fit: cover;" src="./images/back_href/1984.jpg">
+						<div class="attractions_block_main_info">
+							<div class="display_flex position_center button_bottom_mini_icons_number">
+								<div>
+									12
+								</div>
 							</div>
-							<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
-								<div style="color:#e49445;;">или</div>
-								<div style="color:#94715f;">же</div>
-								<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+							<div class="display_flesx flex_column attractions_block_number_">
+								<div>12</div>
+								<div style="font-size:15px;">слайдов</div>
+								
+							</div>
+							<div class="display_flex attractions_block_emogi">
+								<img src="./images/beer-svgrepo-com.svg">
+							</div>
+
+							<div class="prosmotry">
+								<div class="prosmotry_img">
+									<img src="./images/glaza.svg">
+								</div>
+								<div class="display_flex position_center prosmotry_text">
+									1,2 тыс. просмотров
+								</div>
+							</div>
+
+							<div class="display_flex flex_row block_absolute" style="gap:5px">
+								<div class="display_flex flex_column" style="gap: 5px;">
+									<div style="color:#e0a219;">Ресторан</div>
+									<div style="color:#f1da8d;">Кофейная</div>
+								</div>
+								<div class="display_flex flex_column" style="gap: 5px;font-size: 19px;margin-top: 29px;">
+									<div style="color:#e49445;;">или</div>
+									<div style="color:#94715f;">же</div>
+									<div style="font-size: 24px;color: #f3c23c;">Бар</div>
+								</div>
 							</div>
 						</div>
-					</div>					
+					</div>
 					<!-- Добавить блок -->
 					<div class="display_flex position_center attractions_block_add">
 						<div></div>
@@ -1629,6 +1582,320 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="places_to_visit">
+			<div class="places_to_visit_the_whole_block">
+
+				<div id="moving_14" class="absolute_block">
+					<!-- Активная часть -->
+					<div class="absolute_flex">
+						<div class="absolute_important">
+							<img class="absolute_important_big" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+							<div class="absolute_people">
+								<div class="absolute_people_images center">
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div class="absolute_title_block">
+									<div class="absolute_title">
+										Какое то название
+									</div>
+									<div class="absolute_information">
+										<div class="absolute_block_information">
+											Саша Ахилевич Амигоданович
+										</div>
+										<div class="dop_info">
+											<div class="dop_info_open center">
+												i
+											</div>
+											<div class="hover_open_dop_info">
+												<div class="time_dop">
+													21:15
+												</div>
+												<div class="time_dop">
+													15 дек 2015
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="absolute_content_text">
+							<div class="text_abs"></div>
+						</div>
+						<div class="absolute_images_slaider">
+							<div id="moving_6" class="img_abs">
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div>
+									<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>	
+							</div>
+						</div>							
+					</div>
+					<!-- Подвижный элемент -->
+					<div class="ocenka">
+						<div class="flex_ocenka">
+							<div class="shaloba">
+								<img src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+							</div>
+							<div class="ocenka_laik">
+								<div class="right_ocenka"></div>
+								<div class="left_ocenka"></div>
+							</div>
+						</div>
+					</div>								
+				</div>	
+
+				<div class="places_to_visit_evering_content">
+					<!-- Меню -->
+					<div class="places_to_visit_menu">
+						<!-- Поисковое меню -->
+						<!-- Добавить -->
+						<div class="places_to_visit_menu_exit" onclick="exit_main()">
+							<div class="center">
+								+
+							</div>
+						</div>
+
+						<div class="places_to_visit_menu_search">
+							<div class="places_to_visit_menu_search_block">
+								<div class="places_to_visit_menu_search_block_active">
+									<input type="checkbox">
+									<div class=" center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+							<div class="places_to_visit_menu_search_block">
+								<div class="places_to_visit_menu_search_block_active">
+									<input type="checkbox">
+									<div class=" center">
+										Поиск по:
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Добавить -->
+						<div class="places_to_visit_menu_add" onclick="fixed_dop_open()">
+							<div class="center">
+								+
+							</div>
+						</div>
+					</div>
+
+					<!-- Контент -->
+					<div class="places_to_visit_content">
+						<!-- Блок с блоками -->
+		
+
+
+						<div id="moving_12" class="places_to_visit_content_position">
+							<div class="places_to_visit_content_block_block_" onclick="block_close_open_absolute(1)">
+								<img style="object-fit: cover;" class="img_places_to_visit_content_block_block_" src="./images/back_href/9190a63f8137f469343d5e2593198317.jpg">
+								<div class="places_to_visit_content_block_block_background">
+									<img id="img" style="display: none;object-fit: cover;" src="./images/back_href/S4e09caa5880f4a01ab46102239b584961.jpg">
+									<img id="img" style="display: none;object-fit: cover;" src="./images/back_href/people_1_album_front_white_500.jpg">
+									<img id="img" style="display: none;object-fit: cover;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+								</div>
+								<div class="A1">
+									<div class="A2">
+										<img src="./images/glaza.svg">
+										<div>34</div>
+										<div style="color:green;">онлайн</div>
+									</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
+										</div>									
+										<div class="aaaa_bbbb_cccc">
+											<div style="z-index:12;position: relative;">перейти в описание</div>
+										</div>
+									</div>
+								</div>
+								<div class="places_to_visit_content_block_block_background_continuation">
+									<div class="places_to_visit_content_block_block_description">
+										В этом событие произошло так много всего...2
+									</div>
+								</div>
+								<div class="zzzzzz_1">
+									<div class="zzzzzz_2">
+										<div class="element_zzzzz_3">
+											<div class="izbrannoe display_flex position_center">
+												<img src="./images/favorite-interface-multimedia-svgrepo-com.svg">
+											</div>
+											<div class="display_flex flex_column link_linkj_link">
+												<div class="display_flex position_center link_bok_aaa">
+													<img src="./images/vk/icons8_vk_32.svg">
+												</div>
+												<div class="display_flex position_center link_bok_aaa">
+													<img src="./images/vk/icons8_vk_32.svg">
+												</div>
+												<div class="display_flex position_center link_bok_aaa">
+													<img src="./images/vk/icons8_vk_32.svg">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="display_flex position_center button_bottom_mini_icons_number">
+									<div>
+										12
+									</div>
+								</div>
+							</div>
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти в описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
+										</div>
+									</div>
+								</div>
+							</div>						
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти в описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="places_to_visit_content_position_customization" onclick="block_close_open_absolute(1)">
+								<div class="places_to_visit_content_block_block_">
+									<div class="places_to_visit_content_block_block_background">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<img id="img" style="display: none;" src="./images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png">
+										<div class="places_to_visit_content_block_block_title">
+											Событие
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_link">
+										<div>
+											перейти к описание
+										</div>
+									</div>
+									<div class="places_to_visit_content_block_block_background_continuation">
+										<div class="places_to_visit_content_block_block_description">
+											В этом событие произошло так много всего...2
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+							<div class="block events_contents_blocks_nastr" onclick="block_close_open_absolute(1)">
+								<div class="block_position_move">
+									<div class="block_block_">
+										<div class="block_block_background one_block">
+											<div class="block_block_title">
+												Событие
+											</div>
+										</div>
+										<div class="block_block_background two_block">
+											<div class="block_block_content">
+												В этом событие произошло так много всего...2
+											</div>
+											<div class="block_block_link">
+												<div>
+													Перейти
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="AAAAAA">
+					<div class="map">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac00310a4bf66f8eb930db3ea03365a3b01f28d452e89b1b69b657f45dd44a4d1&amp;source=constructor" frameborder="0" seamless></iframe> 					
+					</div>
+				</div>
+			</div>	
+		</div>
+
+
 
 		<!-- Обзор на город -->		
 		<div class="video_construction center">
