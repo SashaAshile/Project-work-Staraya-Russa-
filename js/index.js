@@ -29,6 +29,56 @@ function exit_autorization() {
 	document.querySelector('#registration_mobile').classList.remove("autorization_active");			
 }
 
+
+
+// ==
+// right side bar moving
+// ==
+
+const sideBarButtons = document.querySelectorAll('.scroll_');
+const sideBarSlides = document.querySelectorAll('.side-bar__slide');
+
+
+let sideBarMove = function(wherever) {
+
+	if (!wherever) {
+		return console.log(`Количество кнопок и слайдов не равно. Кнопок ${sideBarButtons.length}, Слайдов ${sideBarSlides.length}.`)
+	}
+
+	wherever.scrollIntoView({block: "end", behavior : "smooth"});
+}
+
+let sideBarButtonsActive = function() {
+
+	for (let i = 0; i < sideBarButtons.length; i++) {
+
+		sideBarButtons[i].classList.remove('active');
+	}
+}
+
+
+for (let i = 0; i < sideBarButtons.length; i++) {
+
+	sideBarButtons[i].addEventListener('click', () => {
+
+		sideBarButtonsActive();
+
+		sideBarButtons[i].classList.add('active');
+
+		sideBarMove(sideBarSlides[i]);
+	})
+}
+
+sideBarSlides[0].addEventListener('scroll', function(){
+    console.log('Позиция скрола у элемента: '+ this.scrollTop)
+});
+
+// ==
+// END right side bar moving
+// ==
+
+
+
 function open_lock(){
 	var lock = document.querySelectorAll("#lock")
 	for (var i = 0; i < lock.length; i++) {
@@ -50,32 +100,6 @@ function closed_lock(){
 		lock[i].setAttribute("type", "password")
 	}		
 }
-
-function scroll_blocks_1() {
-	document.querySelector('.start_construction').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
-function scroll_blocks_2() {
-	document.querySelector('.events_construction').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
-function scroll_blocks_3() {
-	document.querySelector('.places_to_visit').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
-function scroll_blocks_4() {
-	document.querySelector('.news_construction').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
-function scroll_blocks_5() {
-	console.log(document.querySelector('.attractions_construction'))
-	document.querySelector('.attractions_construction').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
-function scroll_blocks_6() {
-	document.querySelector('.video_construction').scrollIntoView({block: "end", behavior : "smooth"});
-}
-
 
 function slaider_blog(name, text, images){
 	var slaider =`

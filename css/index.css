@@ -169,7 +169,7 @@ textarea {
 
 .scroll_:hover {
 	width: 66px;
-	transition: width 0.2s;
+	transition: width 0.4s;
 }
 
 .scroll_WH_max {
@@ -242,6 +242,11 @@ textarea {
 }
 
 .scroll_number:hover:before {
+	transform: scale(100.0);
+	transition: transform 0.6s;	
+}
+
+.scroll_.active .scroll_number:before {
 	transform: scale(100.0);
 	transition: transform 0.6s;	
 }
