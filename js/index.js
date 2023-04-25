@@ -38,6 +38,7 @@ function exit_autorization() {
 const sideBarButtons = document.querySelectorAll('.scroll_');
 const sideBarSlides = document.querySelectorAll('.side-bar__slide');
 
+sideBarButtons[0].classList.add('active');
 
 let sideBarMove = function(wherever) {
 
@@ -48,7 +49,7 @@ let sideBarMove = function(wherever) {
 	wherever.scrollIntoView({block: "end", behavior : "smooth"});
 }
 
-let sideBarButtonsActive = function() {
+let sideBarButtonsRemoveActive = function() {
 
 	for (let i = 0; i < sideBarButtons.length; i++) {
 
@@ -61,7 +62,7 @@ for (let i = 0; i < sideBarButtons.length; i++) {
 
 	sideBarButtons[i].addEventListener('click', () => {
 
-		sideBarButtonsActive();
+		sideBarButtonsRemoveActive();
 
 		sideBarButtons[i].classList.add('active');
 
@@ -69,9 +70,26 @@ for (let i = 0; i < sideBarButtons.length; i++) {
 	})
 }
 
-sideBarSlides[0].addEventListener('scroll', function(){
-    console.log('Позиция скрола у элемента: '+ this.scrollTop)
-});
+for (let i = 0; i < sideBarSlides.length; i++) {
+
+	sideBarSlides[i].addEventListener('wheel', function(e) {
+
+		sideBarButtonsRemoveActive();
+
+	    if (e.deltaY > 0) {
+	    	sideBarMove(sideBarSlides[i + 1]);
+	    	sideBarButtons[i + 1].classList.add('active');
+	    } else if (e.deltaY < 0) {
+	    	sideBarMove(sideBarSlides[i - 1]);
+
+	    	if (!sideBarButtons[i - 1]) {
+	    		return
+	    	}
+
+	    	sideBarButtons[i - 1].classList.add('active');
+	    }
+	});
+}
 
 // ==
 // END right side bar moving
