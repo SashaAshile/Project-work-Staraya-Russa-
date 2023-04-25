@@ -463,13 +463,9 @@ function exit_main(){
 
 
 
-
-
-
-
-function custom_menu(){
-	document.querySelector('.custom_menu').classList.toggle('custom_menu_active');
-}
+document.querySelector(".switch").addEventListener('click', () => {
+	document.querySelector('.public_user_setup').classList.toggle('public_user_setup_active');
+});
 
 function custom_(){
 	document.querySelector('.menu_customers').classList.toggle('display');
