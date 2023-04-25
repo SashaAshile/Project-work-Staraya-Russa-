@@ -522,9 +522,6 @@ textarea {
     color: #327d71;
 }
 
-.display {
-	display: flex;
-}
 
 .menu_customers {
     position: absolute;
@@ -534,24 +531,33 @@ textarea {
     height: auto;
     gap: 10px;
     background: #e6e6e6;
-    padding: 5px;
     display: none;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid #3f51b5;
+}
+
+.display {
+	display: flex;
 }
 
 .menu_gl {
 	width: 100%;
-	height: 70px;
+	height: 50px;
 
 	background: red;
+	border-radius: 10px 10px 0px 0px;
+	align-items: flex-end;
 }
 
 .menu_images {
 	width: 25px;
-	height: 25px;
+	height: 100%;
 	border-radius: 100px;
-	background: blue;
+}
+
+.menu_images_img {
+	width: 25px;
+	height: 25px;
 }
 
 .about_moderation_icons {
@@ -561,12 +567,26 @@ textarea {
 	margin-bottom: 5px;
 }
 
+.gl_otdel {
+	padding: 0px 10px 0px 10px;
+    display: flex;
+ 	gap: 10px;
+    height: 35px; 	
+}
+
 .gl_image {
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	border-radius: 100px;
 	border: 2px solid red;
-	transform: translateY(-25px);
+	transform: translateY(-35px);
+}
+
+.img_img {
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	border-radius: 100px;
 }
 
 .gl_name {
