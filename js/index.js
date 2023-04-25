@@ -408,3 +408,26 @@ function exit_main(){
 	document.querySelector('.places_to_visit').style.display = 'none';
 	document.querySelector('.attractions_construction').style.display = 'flex';	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function custom_menu(){
+	document.querySelector('.custom_menu').classList.toggle('custom_menu_active');
+}
+
+function custom_(){
+	document.querySelector('.menu_customers').classList.toggle('display');
+}

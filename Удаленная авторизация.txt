@@ -1,0 +1,427 @@
+	<!-- авторизация -->
+<!-- 	<div id="registration_client" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/close/icons_close_48.svg">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Авторизация
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Логин...">
+				</div>
+
+				<div class="password input row">
+					<input id="lock_active_password" type="password" placeholder="Пароль...">
+					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
+						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
+					</div>
+				</div>				
+
+				<div class="fast_fast_autorization row">
+					<div class='fast_autorization_third_party center row'>
+						<a class="link_about row" href="mailto:doctordania15@gmail.com">
+							<div class="link_img_google center rotate">
+								<img src="./images/google/icons8-google-30.svg">
+							</div>
+						</a>
+						<a class="link_about row" href="https://vk.com/id705993193">
+							<div class="link_img_vk center rotate">
+								<img src="./images/vk/icons8_vk_32.svg">
+							</div>
+						</a>
+					</div>
+					<div class="registration center" onclick="registration()">
+						<div>
+							ЗАРЕГИСТРИРОВАТЬСЯ!
+						</div>
+					</div>
+				</div>
+
+				<div class="button_autorization center" onclick="exit_autorization()">
+					<div>
+						ВХОД
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_mobile" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization menu_back_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/back/icons_back_24.svg">
+					</div>
+				</div>					
+				<div class="menu_close_autorization">
+					<div>
+						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Регистрация
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Номер телефона...">
+				</div>			
+				<div class="button_autorization center" onclick="code_autorization()">
+					<div>
+						Продолжить
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_mobile_code" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization menu_back_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/back/icons_back_24.svg">
+					</div>
+				</div>				
+				<div class="menu_close_autorization">
+					<div>
+						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Подтверждение
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Введите код...">
+				</div>			
+				<div class="button_autorization center" onclick="exit_autorization(); avatar()">
+					<div>
+						Продолжить
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+	<!-- авторизация -->
+	<div id="registration_avatar" class="autorization center column">
+		<div class="menu_main_autorization">
+			<div class="menu_autorization center column">
+				<div class="menu_close_autorization">
+					<div onclick="exit_autorization()">
+						<img src="./images/close/icons_close_48.svg">
+					</div>
+				</div>				
+				<div class="menu_text_autorization center">
+					<div>
+						Создание аватара
+					</div>
+				</div>
+			</div>	
+			<div class="main_autorization center column">
+				<div class="email input">
+					<input type="email" placeholder="Придумайте логин...">
+				</div>
+				<div class="email input">
+					<input type="email" placeholder="Пароль...">
+				</div>				
+
+				<div class="password input row">
+					<input id="lock_active_password" type="password" placeholder="Пароль...">
+					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
+						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
+					</div>
+				</div>	
+				</div>				
+				<div class="button_autorization center" onclick="exit_autorization()">
+					<div>
+						Готов
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+
+/* авторизация */
+#registration_mobile_code {
+
+}
+
+#registration_mobile {
+
+}
+
+#registration_avatar {
+	
+}
+
+.autorization {
+    display: flex;    
+    position: absolute;
+
+    left: -300px;
+    width: 0%;
+    height: 100%;    
+    z-index: 999;
+
+    opacity: 0;
+	transition: opacity 0.3s, width 0s 0.3s, left 0s 0.3s;
+}
+
+.autorization_active {
+	width: 100%;
+	opacity: 1;
+	left: 0;
+	transition: opacity 0.3s, width 0s;
+}
+
+.menu_main_autorization {
+	width: 390px;
+	height: auto;
+
+	padding: 10px;	
+
+    border-radius: 10px;
+    border: 2px solid #243453;
+    background: white;
+    overflow: hidden;
+}
+
+.menu_autorization {
+    padding: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed black;    
+}
+
+.menu_text_autorization {
+	width: 100%;
+	height: 100%;
+}
+
+.menu_text_autorization div {
+	position: absolute;
+
+	font-size: 19px;
+    font-weight: 600;
+    font-family: 'header';
+    color: black;
+	letter-spacing: 0px;
+
+	transition: letter-spacing 0.2s;
+}
+
+.menu_text_autorization div:hover {
+	letter-spacing: 5px;
+	transition: letter-spacing 0.2s;
+}
+
+.menu_close_autorization {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.menu_close_autorization div {
+    width: 30px;
+    height: 30px;    
+    padding: 5px;  
+
+    border-radius: 10px;
+    background: white;
+	overflow: hidden;
+	position: absolute;
+	transition: transform 0.2s;
+}
+
+.menu_close_autorization div img {
+    z-index: 3;
+    position: relative;
+}
+
+.menu_close_autorization div:hover {
+	z-index: 3; 
+    transform: scale(1.2);
+	transition: transform 0.2s;
+	cursor: pointer;
+}
+
+.menu_close_autorization div:before {
+	content: "";
+	top: 0;
+	left: 0;	
+	width: 100%;
+	height: 0%;
+	background: #e96868;
+	position: absolute;
+	z-index: 1;
+	opacity: 0.8;
+	transition: height 0.2s;
+}
+
+.menu_close_autorization div:hover:before {
+	height: 50%;
+	transition: height 0.2s;
+}
+
+.menu_close_autorization div:after {
+	content: "";
+	top: 100%;
+	left: 0;	
+	width: 100%;
+	height: 50%;
+	background: #03a9f4;
+	position: absolute;
+	z-index: 1;
+	opacity: 0.8;
+	transition: top 0.2s;	
+}
+
+.menu_close_autorization div:hover:after {
+	top: 50%;
+	transition: top 0.2s;
+}
+
+.menu_back_autorization {
+	justify-content: flex-start;
+}
+
+.main_autorization {
+	display: flex;
+	gap: 20px;	
+
+	padding: 10px;
+}
+
+.input {
+	display: flex;
+	font-size: 18px;
+	color: black;
+	text-align: center;	
+}
+
+.email input {
+	width: 320px;
+	height: 40px;
+
+	padding: 0px 10px;
+
+    background: white;
+    border: 2px dashed;
+    border-radius: 5px;
+}
+
+.password input {
+	width: 280px;
+	height: 40px;
+
+	padding: 0px 10px;
+
+    background: white;
+    border: 2px dashed;
+    border-radius: 5px;
+}
+
+.closed_lock {
+	width: 40px;
+	height:40px;
+	padding: 0px 7px 0px 7px;
+	background: white;
+	border-radius: 0px 5px 5px 0px;	
+	border: 2px dashed;
+    border-left: none;
+}		
+}
+
+.closed_lock img {
+    width: 30px;
+    height: 30px;
+    padding: 3px;	
+}
+
+input:focus {
+  	outline: 0;
+  	box-shadow: none;
+}
+
+.fast_fast_autorization {
+	display: flex;
+	gap: 10px;	
+}
+
+.fast_autorization_third_party {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+
+	border-right: 1px solid white;
+}
+
+.google:hover {
+	background: #ff9999;
+	cursor: pointer;	
+}
+
+.vk:hover {
+	background: #99b1ff;
+	cursor: pointer;	
+}
+
+.registration div {
+    font-family: 'text_mini';
+    font-weight: 800;	
+    border: 2px dashed;
+    padding: 10px;
+    border-radius: 5px;
+    transform: scale(0.9);
+    transition: transform 0.2s;
+}
+
+.registration div:hover {
+	transform: scale(1.0);
+	background: wheat;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.button_autorization {
+    display: flex;
+    font-family: 'text_mini';
+    font-weight: 800;
+    height: 50px;
+    font-size: 20px;
+    border: 2px dashed;
+    padding: 10px;
+    border-radius: 5px;
+    transform: scale(0.9);
+    transition: transform 0.2s;   
+}
+
+.button_autorization:hover {
+	background: wheat;
+	cursor: pointer;
+	transform: scale(1.0);
+	transition: transform 0.2s;			
+}
+/* --- */
+
+

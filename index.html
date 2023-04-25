@@ -10,180 +10,22 @@
 </head>
 <body>
 
-	<!-- авторизация -->
-	<div id="registration_client" class="autorization center column">
-		<div class="menu_main_autorization">
-			<div class="menu_autorization center column">
-				<div class="menu_close_autorization">
-					<div onclick="exit_autorization()">
-						<img src="./images/close/icons_close_48.svg">
-					</div>
-				</div>				
-				<div class="menu_text_autorization center">
-					<div>
-						Авторизация
-					</div>
-				</div>
-			</div>	
-			<div class="main_autorization center column">
-				<div class="email input">
-					<input type="email" placeholder="Логин...">
-				</div>
-
-				<div class="password input row">
-					<input id="lock_active_password" type="password" placeholder="Пароль...">
-					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
-						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
-					</div>
-				</div>				
-
-				<div class="fast_fast_autorization row">
-					<div class='fast_autorization_third_party center row'>
-						<a class="link_about row" href="mailto:doctordania15@gmail.com">
-							<div class="link_img_google center rotate">
-								<img src="./images/google/icons8-google-30.svg">
-							</div>
-						</a>
-						<a class="link_about row" href="https://vk.com/id705993193">
-							<div class="link_img_vk center rotate">
-								<img src="./images/vk/icons8_vk_32.svg">
-							</div>
-						</a>
-					</div>
-					<div class="registration center" onclick="registration()">
-						<div>
-							ЗАРЕГИСТРИРОВАТЬСЯ!
-						</div>
-					</div>
-				</div>
-
-				<div class="button_autorization center" onclick="exit_autorization()">
-					<div>
-						ВХОД
-					</div>
-				</div>		
-			</div>
-		</div>
-	</div>
-
-	<!-- авторизация -->
-	<div id="registration_mobile" class="autorization center column">
-		<div class="menu_main_autorization">
-			<div class="menu_autorization center column">
-				<div class="menu_close_autorization menu_back_autorization">
-					<div onclick="exit_autorization()">
-						<img src="./images/back/icons_back_24.svg">
-					</div>
-				</div>					
-				<div class="menu_close_autorization">
-					<div>
-						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
-					</div>
-				</div>				
-				<div class="menu_text_autorization center">
-					<div>
-						Регистрация
-					</div>
-				</div>
-			</div>	
-			<div class="main_autorization center column">
-				<div class="email input">
-					<input type="email" placeholder="Номер телефона...">
-				</div>			
-				<div class="button_autorization center" onclick="code_autorization()">
-					<div>
-						Продолжить
-					</div>
-				</div>		
-			</div>
-		</div>
-	</div>
-
-	<!-- авторизация -->
-	<div id="registration_mobile_code" class="autorization center column">
-		<div class="menu_main_autorization">
-			<div class="menu_autorization center column">
-				<div class="menu_close_autorization menu_back_autorization">
-					<div onclick="exit_autorization()">
-						<img src="./images/back/icons_back_24.svg">
-					</div>
-				</div>				
-				<div class="menu_close_autorization">
-					<div>
-						<img src="./images/close/icons_close_48.svg" onclick="exit_autorization()">
-					</div>
-				</div>				
-				<div class="menu_text_autorization center">
-					<div>
-						Подтверждение
-					</div>
-				</div>
-			</div>	
-			<div class="main_autorization center column">
-				<div class="email input">
-					<input type="email" placeholder="Введите код...">
-				</div>			
-				<div class="button_autorization center" onclick="exit_autorization(); avatar()">
-					<div>
-						Продолжить
-					</div>
-				</div>		
-			</div>
-		</div>
-	</div>
-
-	<!-- авторизация -->
-	<div id="registration_avatar" class="autorization center column">
-		<div class="menu_main_autorization">
-			<div class="menu_autorization center column">
-				<div class="menu_close_autorization">
-					<div onclick="exit_autorization()">
-						<img src="./images/close/icons_close_48.svg">
-					</div>
-				</div>				
-				<div class="menu_text_autorization center">
-					<div>
-						Создание аватара
-					</div>
-				</div>
-			</div>	
-			<div class="main_autorization center column">
-				<div class="email input">
-					<input type="email" placeholder="Придумайте логин...">
-				</div>
-				<div class="email input">
-					<input type="email" placeholder="Пароль...">
-				</div>				
-
-				<div class="password input row">
-					<input id="lock_active_password" type="password" placeholder="Пароль...">
-					<div class="closed_lock center" onmouseover="open_lock()" onmouseout="closed_lock()">
-						<img id="lock" src="./images/closed_lock/icons_closed_lock_24.svg">
-					</div>
-				</div>	
-				</div>				
-				<div class="button_autorization center" onclick="exit_autorization()">
-					<div>
-						Готов
-					</div>
-				</div>		
-			</div>
-		</div>
-	</div>	
 
 	<!-- Весь контент -->
 	<div class="display_flex flex_column">
 
 		<!-- --- Перемещние по сайту --- -->
-		<div class="display_flex position_center flex_column position_align_end scroll">
+		<div class="display_flex flex_column position_center position_align_end scroll">
+			<!-- Маленький блок -->
 			<div class="display_flex position_center scroll_" onclick="scroll(1)">
 				<div class="scroll_WH_max">
 					<div class="display_flex position_center scroll_number">
 						<img src="./images/icons8-главная.svg">
 					</div>
 				</div>
+				<!-- Большой блок -->
 				<div class="scroll_next">
-					<div class="display_flex setting_position scroll_next_">
+					<div class="display_flex flex_column position_justify_between scroll_next_">
 						<div class="headers">
 							Главная страница
 						</div>
@@ -193,14 +35,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="display_flex position_center scroll_" onclick="scroll(1)">
+			<!-- Маленький блок -->			
+			<div class="display_flex position_center scroll_" onclick="scroll(2)">
 				<div class="scroll_WH_max">
 					<div class="display_flex position_center scroll_number">
 						<img src="./images/icons8-главная.svg">
 					</div>
 				</div>
+				<!-- Большой блок -->				
 				<div class="scroll_next">
-					<div class="display_flex setting_position scroll_next_">
+					<div class="display_flex flex_column position_justify_between scroll_next_">
 						<div class="headers">
 							Вторая страница
 						</div>
@@ -210,14 +54,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="display_flex position_center scroll_" onclick="scroll(1)">
+			<!-- Маленький блок -->			
+			<div class="display_flex position_center scroll_" onclick="scroll(3)">
 				<div class="scroll_WH_max">
 					<div class="display_flex position_center scroll_number">
 						<img src="./images/icons8-главная.svg">
 					</div>
 				</div>
+				<!-- Большой блок -->				
 				<div class="scroll_next">
-					<div class="display_flex setting_position scroll_next_">
+					<div class="display_flex flex_column position_justify_between scroll_next_">
 						<div class="headers">
 							Трерья страница
 						</div>
@@ -227,14 +73,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="display_flex position_center scroll_" onclick="scroll(1)">
+			<!-- Маленький блок -->			
+			<div class="display_flex position_center scroll_" onclick="scroll(4)">
 				<div class="scroll_WH_max">
 					<div class="display_flex position_center scroll_number">
 						<img src="./images/icons8-главная.svg">
 					</div>
 				</div>
+				<!-- Большой блок -->				
 				<div class="scroll_next">
-					<div class="display_flex setting_position scroll_next_">
+					<div class="display_flex flex_column position_justify_between scroll_next_">
 						<div class="headers">
 							Четвертая страница
 						</div>
@@ -244,14 +92,16 @@
 					</div>
 				</div>
 			</div>
-			<div class="display_flex position_center scroll_" onclick="scroll(1)">
+			<!-- Маленький блок -->			
+			<div class="display_flex position_center scroll_" onclick="scroll(5)">
 				<div class="scroll_WH_max">
 					<div class="display_flex position_center scroll_number">
 						<img src="./images/icons8-главная.svg">
 					</div>
 				</div>
+				<!-- Большой блок -->				
 				<div class="scroll_next">
-					<div class="display_flex setting_position scroll_next_">
+					<div class="display_flex flex_column position_justify_between scroll_next_">
 						<div class="headers">
 							Пятая страница
 						</div>
@@ -262,32 +112,40 @@
 				</div>
 			</div>
 		</div>
+		<!-- ---------------------- -->
 
 
-		<!-- --- Общее меню --- -->
-		<div class="global_emaey">
-			<div class="display_flex about_moderation">
 
-				<div class="display_flex position_center qwaszx">
-					<img src="./images/outlined/icons8_outlined_48.svg">
-				</div>
-
-				<div class="display_flex flex_column whwhwhw position_align_center">
-					<div class="display_flex menu_about">
-						menu
+		<!-- --- Пользовательское меню --- -->
+		<div class="custom_menu">
+			<div class="display_flex flex_column position_justify_between position_align_center custom_menu_">
+				<!-- Вкл \ выкл пользовательского меню -->
+				<div class="display_flex position_center custom_menu_switch" onclick="custom_menu()">
+					<div class="custom_menu_switch_position">
+						<div class="display_flex position_center custom_menu_switch_before">
+							<img src="./images/outlined/icons8_outlined_48.svg">
+						</div>
 					</div>
-					<div class="display_flex flex_column" style="align-items: center;gap: 10px;">
-						<div class="posetitelka">
-							<div class="posetitelka_">
+				</div>
+				<!-- Пользовательское меню -->
+				<div class="display_flex flex_column position_align_center disposable">
+					<div class="display_flex flex_column position_align_center" style="gap: 15px;">
+						<!-- Блок пользователя -->
+						<div class="display_flex flex_column position_align_center custom" onclick="custom_()">
+							<div class="custom_">
 								<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg" style="object-fit:cover;">
-								<div class="display_flex BBB___BB1">
+								<!-- В сети -->
+								<div class="display_flex online">
 
 								</div>										
 							</div>
-							<div class="display_flex content_nastr position_center">
-								Профиль
+							<!-- Профиль пользователя -->
+							<div class="display_flex position_center custom_description ">
+								<div style="z-index:120;">
+									Профиль
+								</div>
 							</div>
-							<div class="display_flex flex_column menu_customers" style="display: none;">
+							<div class="display_flex flex_column menu_customers">
 								<div class="display_flex flex_row">
 									<div>
 										ahile_ford#3001
@@ -334,7 +192,7 @@
 							</div>
 							<div class="display_flex content_nastr position_center">
 								Чат
-							</div>					
+							</div>			
 						</div>
 						<div class="display_flex flex_column posetitelka">
 							<div class="display_flex position_center about_inoe_icons ">
@@ -720,10 +578,14 @@
 			<div class="display_flex flex_column" style="display: contents;">
 				<div class="display_flex flex_row XXXxxxx33">
 					<div class="zzzzZZzzz11">
-						
+						<div class="display_flex position_center DDDdddDD122">
+							<div>
+								Не знаешь, где находится Старая Русса, тогда взгляни тут!
+							</div>
+						</div>
 					</div>
 					<div class="ssssSSs22">
-						<div class="start_block_title center">
+						<div class="start_block_title center ">
 							<div class="head_">
 								СТАРАЯ РУССА		    
 							</div> 
@@ -764,8 +626,8 @@
 				</div>
 				<div class="display_flex flex_row XXXxxxx44">
 					<div class="display_flex flex_column bliiii">
-						<div class="zse">
-							<div>
+						<div class="display_flex flex_column zse">
+							<div class="display_flex position_center">
 								<img src="">
 							</div>
 							<div>
@@ -777,8 +639,8 @@
 						</div>
 					</div>
 					<div class="display_flex flex_column bliiii">
-						<div class="zse">
-							<div>
+						<div class="display_flex flex_column zse">
+							<div class="display_flex position_center">
 								<img src="">
 							</div>
 							<div>
@@ -790,8 +652,8 @@
 						</div>
 					</div>
 					<div class="display_flex flex_column bliiii">
-						<div class="zse">
-							<div>
+						<div class="display_flex flex_column zse">
+							<div class="display_flex position_center">
 								<img src="">
 							</div>
 							<div>
@@ -801,7 +663,7 @@
 								Особо важный текст Особо важный текст Особо важный текст
 							</div>
 						</div>
-					</div>										
+					</div>									
 				</div>
 			</div>
 		</div>
