@@ -61,8 +61,9 @@
 .switch {
 	position: absolute;
 
-	/* Расположение якобы по центру блока */
-	top: 45%;
+	/* Расположение якобы по центру блока HEKK COMMENT: ЧТОБЫ РАЗМЕСТИТЬ ЕГО ПО ЦЕНТРУ НАДО КАК Я))  */
+	top: 50%;
+	transform: translateY(-50%);
 	left: 100%;
 
 	/* Размеры основного блока */
@@ -71,7 +72,7 @@
 
 	/* Контур переключателя, цвет как у основного фона */
 	border-top: 6px solid var(--background_global);
-	border-right: 2px solid var(--background_global);
+	border-right: 6px solid var(--background_global);
 	border-bottom: 6px solid var(--background_global);
 	border-radius: 0px 20px 20px 0px;
 
@@ -81,6 +82,8 @@
 	z-index: 102;
 
 	overflow: hidden;
+
+	cursor: pointer;
 }
 
 /* Размер изображения переключателя */
@@ -94,7 +97,7 @@
 .switch_pos {
 	position: relative;
 
-	padding: 20px 0px 20px 0px;
+	padding: 20px 2px 20px 0px;
 
 	width: 100%;
 	height: 100%;	

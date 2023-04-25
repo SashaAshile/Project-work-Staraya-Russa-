@@ -30,6 +30,19 @@ textarea {
 }
 
 
+/* variables */
+
+:root {
+	--font-arm9: 'font_arme_900';
+	--font-arm6: 'font_arme_600';
+	--font-header: 'header';
+	--font-min: 'text_mini';
+	--font-big: 'text_bigi';
+	--font-ag: 'Agency_FB_Cyrillic';
+
+	--color-black: #3c3c3c;
+	--color-white: #fff;
+}
 
 
 /* Вводные классы */
@@ -139,7 +152,52 @@ textarea {
 }
 
 
+/* == HEADER == */
 
+.header {
+	align-items: center;
+	padding: 20px 0;
+}
+
+.header__left-list {
+	display: flex;
+	gap: 20px;
+}
+
+.header__left-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header__left-item-img {
+	margin-bottom: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.header__left-item-link {
+	font-family: var(--font-arm6);
+	letter-spacing: 4px;
+	font-size: 20px;
+	color: var(--color-black);
+}
+
+.header__left-item_button {
+	justify-content: center;
+}
+
+.header__left-button {
+	transition: transform 0.3s;
+}
+
+.header__left-button:hover {
+	transform: scale(1.2);
+}
+
+/* == End OF HEADER == */
 
 
 
@@ -161,13 +219,13 @@ textarea {
 
 /* Логотип */
 .logotype_link {
+    z-index: 3;
+    align-self: end;
+    justify-self: end;
 	padding: 5px;
     font-family: 'header';
-    display: flex;
     font-size: 17px;
     color: black;
-    z-index: 3;
-    justify-content: flex-end;
 }
 
 .logotype {
@@ -574,6 +632,7 @@ textarea {
 
 /* Заголовок */
 .start_block_title {
+	margin-bottom: 15px;
     font-family: "Agency_FB_Cyrillic";
     font-size: 80px;
     font-weight: 900;
@@ -585,8 +644,9 @@ textarea {
 
 .head_ {
 	position: absolute;	
+	padding-left: 4px;
 
-    border: 2px solid #cb4646;
+/*    border: 2px solid #cb4646;*/
 
 	color: #e96868;
 }
@@ -631,6 +691,41 @@ textarea {
 }
 
 /* --- */
+
+/* == HERO == */
+
+.hero__content {
+	padding: 10px;
+	height: 55%;
+}
+
+.hero__content-left {
+	width: 35%;
+    height: 100%;
+    padding: 10px;
+}
+
+.hero__content-map {
+    padding: 10px;
+    border-radius: 28px;
+	width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #00359c;
+    text-align: center;
+    background: #03a9f4;
+}
+
+.hero__content-right {
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+    height: 100%;
+	width: 65%;
+    padding: 5px 50px 5px 5px;
+}
+
+/* == End of HERO == */
 
 .XXXxxxx33 {
 	width: 100%;
