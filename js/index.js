@@ -77,14 +77,15 @@ for (let i = 0; i < sideBarSlides.length; i++) {
 		sideBarButtonsRemoveActive();
 
 	    if (e.deltaY > 0) {
+
 	    	sideBarMove(sideBarSlides[i + 1]);
 	    	sideBarButtons[i + 1].classList.add('active');
+
 	    } else if (e.deltaY < 0) {
+
 	    	sideBarMove(sideBarSlides[i - 1]);
 
-	    	if (!sideBarButtons[i - 1]) {
-	    		return
-	    	}
+	    	if (!sideBarButtons[i - 1]) return;
 
 	    	sideBarButtons[i - 1].classList.add('active');
 	    }
