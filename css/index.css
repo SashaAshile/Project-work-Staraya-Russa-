@@ -420,23 +420,6 @@ textarea {
 	width: 100%;
 }
 
-
-.menu_about {
-    width: 100%;
-
-	justify-content: center;
-
-    color: #fcfcfc;
-    background: #6f6f6f;
-
-    font-size: 12px;
-    font-family: 'header';
-
-
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
 .custom {
     position: relative;
 
@@ -545,7 +528,6 @@ textarea {
 }
 
 
-
 .menu_customers {
     position: absolute;
     top: 0;
@@ -554,15 +536,33 @@ textarea {
     height: auto;
     gap: 10px;
     background: #e6e6e6;
-    padding: 5px;
     display: none;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 2px solid #3f51b5;
-    justify-content: space-between;
 }
 
 .display {
 	display: flex;
+}
+
+.menu_gl {
+	width: 100%;
+	height: 50px;
+
+	background: red;
+	border-radius: 10px 10px 0px 0px;
+	align-items: flex-end;
+}
+
+.menu_images {
+	width: 25px;
+	height: 100%;
+	border-radius: 100px;
+}
+
+.menu_images_img {
+	width: 25px;
+	height: 25px;
 }
 
 .about_moderation_icons {
@@ -570,6 +570,33 @@ textarea {
 	height: 50px;
 
 	margin-bottom: 5px;
+}
+
+.gl_otdel {
+	padding: 0px 10px 0px 10px;
+    display: flex;
+ 	gap: 10px;
+    height: 35px; 	
+}
+
+.gl_image {
+	width: 70px;
+	height: 70px;
+	border-radius: 100px;
+	border: 2px solid red;
+	transform: translateY(-35px);
+}
+
+.img_img {
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	border-radius: 100px;
+}
+
+.gl_name {
+	font-size: ;
+	font-family: ;
 }
 
 .about_inoe_icons {
