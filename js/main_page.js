@@ -164,7 +164,13 @@ let scrollHeight = Math.max(
 
 
 var spisokX = [
-		
+		document.querySelector("#moving_3"), 
+		document.querySelector("#moving_2"), 
+		document.querySelector("#moving_1"),
+
+		document.querySelector("#moving_5"),
+		document.querySelector("#moving_6"),
+		document.querySelector("#moving_15"),		
 ]
 
 
@@ -199,7 +205,13 @@ spisokX.forEach(function(slaider) {
 
 
 var spisokY = [
-
+		document.querySelector("#moving_7"),		
+		document.querySelector("#moving_10"),
+		document.querySelector("#moving_11"),
+		document.querySelector("#moving_12"),
+		document.querySelector("#moving_13"),
+		document.querySelector("#moving_14"),
+		document.querySelector("#moving_16"),
 ]
 
 spisokY.forEach(function(slaider) {
@@ -451,32 +463,10 @@ function exit_main(){
 
 
 
+document.querySelector(".switch").addEventListener('click', () => {
+	document.querySelector('.public_user_setup').classList.toggle('public_user_setup_active');
+});
 
-// Работа с глазами
-// Создание переменных
-var open = document.querySelector('.open_eye');
-var hidden = document.querySelector('.hidden_eye');
-
-// Отслеживание события
-document.querySelector('.cursor_setting_eye').addEventListener('click', () => {
-	open.classList.toggle("open_eye_active");
-	hidden.classList.toggle("hidden_active");
-})
-
-
-
-// Работа со сладером
-// Создание переменных
-var left = document.querySelector('.left_switch_triangle');
-var right = document.querySelector('.right_switch_triangle');
-var slaider_cursor = document.querySelector('.cursors_grid');
-
-// Отслеживание события прокрутки влево
-left.addEventListener('click', () => {
-	slaider_cursor.scrollBy({top: 0,left: -60, behavior: "smooth"});
-})
-
-// Отслеживание события прокрутки вправо
-right.addEventListener('click', () => {
-	slaider_cursor.scrollBy({top: 0,left: 60, behavior: "smooth"});
-})
+function custom_(){
+	document.querySelector('.menu_customers').classList.toggle('display');
+}

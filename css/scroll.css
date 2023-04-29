@@ -1,24 +1,24 @@
 /* Перемещние по сайту */
-/* Весь блок с элементами перемещения */
-/*
-	Примечание:  Используется 5-ть цветов;
 
-*/
 :root {
 	/* Фон под изображением */
-	--background_image: white;
+	--color_white: white;
 	/* Фон пассивного маленького блока */
-	--background_red: #e96868;
+	--color_red: #e96868;
 	/* Фон активного маленького блока */
-	--background_blue: #03a9f4;
+	--color_blue: #03a9f4;
 	/* Цвет большого текста */
-	--color_header: black;
+	--black_header: black;
 	/* Цвет маленького текста */
-	--color_cursive: black;
+	--black_cursive: black;
+	/* Шрифт */
+	--font-header: 'header';
 }
 
 .scroll {
 	position: fixed;
+
+	align-items: flex-end;
 
     top: 0;
     right: 0;
@@ -39,7 +39,7 @@
 	height: 40px;
 
 	/* Расстояние между блоками */
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 
 	z-index: 110;
 
@@ -65,7 +65,7 @@
 }
 
 /* Блок для расположение after, before */
-.scroll_WH_max div {
+.scroll_WH_max .scroll_svg {
 	position: relative;
 
 	width: 100%;
@@ -74,20 +74,30 @@
 
 /* Изображение маленького блока */
 .scroll_WH_max img {
-	width: 30px;
-	height: 30px;
+	position: relative;
 
-    padding: 3px;
-
-    border-radius: 100px;
-    /* Фон под изображением */
-	background: var(--background_image);
+	width: 100%;
+	height: 100%;
 
 	z-index: 112;
 }
 
+.scroll_WH_max .scroll_svg > div {
+	position: absolute;
+    padding: 1px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 100px;
+    /* Фон под изображением */
+	background: var(--color_white);
+
+	z-index: 111;
+}	
+
 /* Фоновое изображение (на постоянную) */
-.scroll_WH_max div:after {
+.scroll_WH_max .scroll_svg:after {
 	position: absolute;	
 	content: '';
 
@@ -98,13 +108,13 @@
 	height: 100%;
 
 	/* Фон пассивного маленького блока */
-	background: var(--background_red);	
+	background: var(--color_red);	
 
 	z-index: 109;
 }
 
 /* Фоновое изображение (на время) */
-.scroll_WH_max div:before {
+.scroll_WH_max .scroll_svg:before {
 	position: absolute;	
 	content: '';
 
@@ -115,7 +125,7 @@
 	height: 1px;
 
 	/* Фон активного маленького блока */
-	background: var(--background_blue);	
+	background: var(--color_blue);	
 	border-radius: 100px;
 
 	transform: scale(1.0);
@@ -126,7 +136,7 @@
 }
 
 /* Изменение фона (временного) */
-.scroll_WH_max div:hover:before {
+.scroll_WH_max .scroll_svg:hover:before {
 	transform: scale(100.0);
 	transition: transform 0.6s;	
 }
@@ -140,6 +150,8 @@
 /* Большие блоки управления */
 .scroll_next {
     position: absolute;
+
+    justify-content: space-between;
 
     top: 0;
     right: 100%;
@@ -175,17 +187,17 @@
 
     z-index: 100;
 
-    border: 2px solid var(--background_red);
+    border: 2px solid var(--color_red);
     backdrop-filter: blur(2px);
-    background: var(--background_white);
+    background: var(--color_white);
     border-radius: 10px 0px 0px 10px;
 }
 
 /* Заглавный текст большого блока */
 .scroll_header {
-	font-family: "header";
+	font-family: var(--font-header);
     font-size: 17px;
-    color: var(--color_header);
+    color: var(--black_header);
     white-space: nowrap;
 }
 
@@ -194,7 +206,7 @@
 	font-family: 'cursive';
     font-size: 13px;
     letter-spacing: 5px;
-    color: var(--color_cursive);
+    color: var(--black_cursive);
     white-space: nowrap;
 }
 /* ------------------------------- */

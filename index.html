@@ -14,22 +14,24 @@
 
 
 	<!-- Весь контент -->
-	<div class="display_flex flex_column">
+	<div class="column">
 
 
 
 		<!-- --- Перемещние по сайту --- -->
-		<div class="display_flex flex_column position_center position_align_end scroll">
+		<div class="column center position_align_end scroll">
 			<!-- Маленький блок -->
-			<div class="display_flex position_center scroll_">
+			<div class="column center scroll_">
 				<div class="scroll_WH_max">
-					<div class="display_flex position_center">
-						<img src="./images/icons8-главная.svg">
+					<div class="scroll_svg center">
+						<div>
+							<img style="padding: 3px;" src="./images/icons8-главная.svg">	
+						</div>
 					</div>
 				</div>
 				<!-- Большой блок -->
 				<div class="scroll_next">
-					<div class="display_flex flex_column position_justify_between scroll_next_">
+					<div class="column  scroll_next_">
 						<div class="scroll_header">
 							Главная страница
 						</div>
@@ -40,17 +42,40 @@
 				</div>
 			</div>
 			<!-- Маленький блок -->
-			<div class="display_flex position_center scroll_">
+			<div class="column center scroll_">
 				<div class="scroll_WH_max">
-					<div class="display_flex position_center">
-						<img src="./images/icons8-главная.svg">
+					<div class="scroll_svg center">
+						<div>
+							<img style="padding: 3px;" src="./images/chat.svg">	
+						</div>
 					</div>
 				</div>
 				<!-- Большой блок -->
 				<div class="scroll_next">
-					<div class="display_flex flex_column position_justify_between scroll_next_">
+					<div class="column  scroll_next_">
 						<div class="scroll_header">
-							Главная страница
+							Общий чат
+						</div>
+						<div class="scroll_cursive">
+							коммуна...
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Маленький блок -->
+			<div class="column center scroll_">
+				<div class="scroll_WH_max">
+					<div class="scroll_svg center">
+						<div>
+							<img style="padding: 3px;" src="./images/nature.svg">	
+						</div>
+					</div>
+				</div>
+				<!-- Большой блок -->
+				<div class="scroll_next">
+					<div class="column  scroll_next_">
+						<div class="scroll_header">
+							Время провождение
 						</div>
 						<div class="scroll_cursive">
 							начало - начал...
@@ -59,53 +84,17 @@
 				</div>
 			</div>
 			<!-- Маленький блок -->
-			<div class="display_flex position_center scroll_">
+			<div class="column center scroll_">
 				<div class="scroll_WH_max">
-					<div class="display_flex position_center">
-						<img src="./images/icons8-главная.svg">
+					<div class="scroll_svg center">
+						<div>
+							<img style="padding: 6px;" src="./images/free-icon-info-151776.svg">	
+						</div>
 					</div>
 				</div>
 				<!-- Большой блок -->
 				<div class="scroll_next">
-					<div class="display_flex flex_column position_justify_between scroll_next_">
-						<div class="scroll_header">
-							Главная страница
-						</div>
-						<div class="scroll_cursive">
-							начало - начал...
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Маленький блок -->
-			<div class="display_flex position_center scroll_">
-				<div class="scroll_WH_max">
-					<div class="display_flex position_center">
-						<img src="./images/icons8-главная.svg">
-					</div>
-				</div>
-				<!-- Большой блок -->
-				<div class="scroll_next">
-					<div class="display_flex flex_column position_justify_between scroll_next_">
-						<div class="scroll_header">
-							Главная страница
-						</div>
-						<div class="scroll_cursive">
-							начало - начал...
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Маленький блок -->
-			<div class="display_flex position_center scroll_">
-				<div class="scroll_WH_max">
-					<div class="display_flex position_center">
-						<img src="./images/icons8-главная.svg">
-					</div>
-				</div>
-				<!-- Большой блок -->
-				<div class="scroll_next">
-					<div class="display_flex flex_column position_justify_between scroll_next_">
+					<div class="column  scroll_next_">
 						<div class="scroll_header">
 							Главная страница
 						</div>
@@ -121,556 +110,265 @@
 
 
 		<!-- --- Пользовательское меню --- -->
-		<div class="public_user_setup">
-			<div class="display_flex flex_column position_justify_between position_align_center public_user_setup_">
-
-				<!-- Вкл \ выкл пользовательского меню -->
-				<div class="display_flex position_center switch">
-					<div class="switch_pos">
-						<div class="display_flex position_center">
-							<img src="./images/free-icon-arrowhead-thin-outline-to-the-left-32542.png">
+		<div class="row center custom">
+			<div class="row cursor">
+				<div class="row cursors_setting">
+					<div class="cursor_setting_eye">
+						<div class="open_eye">
+							<img id="open_eye" src="./images/icons8-показать-96 (1).png">
+						</div>
+						<div class="hidden_eye">
+							<img id="hidden_eye" src="./images/icons8-спрятать-96 (1).png">
 						</div>
 					</div>
-				</div>
-
-				<!-- Пользовательское меню -->
-				<div class="display_flex flex_column position_align_center">
-					<div class="display_flex flex_column position_align_center" style="gap: 15px;">
-						<!-- Блок пользователя -->
-						<div class="display_flex flex_column position_align_center custom" onclick="custom_()">
-							<div class="custom_">
-								<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg" style="object-fit:cover;">
-								<!-- В сети -->
-								<div class="display_flex online">
-
-								</div>										
-							</div>
-							<!-- Профиль пользователя -->
-							<div class="display_flex position_center custom_description ">
-								<div style="z-index:120;">
-									Профиль
-								</div>
-							</div>
-							<div class="display_flex flex_column position_justify_between menu_customers">
-								<div class="display_flex flex_column menu_gl" style="padding-right: 20px;">
-									<div class="display_flex position_center menu_images">
-										<img class="menu_images_img" src="">
-									</div>
-								</div>
-								<div class="display_flex flex_row gl_otdel">
-									<div class="gl_image">
-										<img  class="img_img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg" style="object-fit:cover;">
-									</div>									
-									<div class="gl_name">
-										ahile_ford#3001
-									</div>
-								</div>
-								<div class="display_flex flex_column">
-									<div>
-										Обо мне
-									</div>
-									<div>
-										Я много чего то пишу о себе ля ля ля ля
-									</div>
-								</div>
-								<div class="display_flex flex_row">
-									<div>
-										<img src="">
-									</div>
-									<div>
-										Переключиться между учётными
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="display_flex flex_column posetitelka">
-							<div class="display_flex position_center about_inoe_icons ">
-								<img class="background_white padding_five" src="./images/free-icon-live-streaming-4916674.png">
-							</div>
-							<div class="display_flex position_center custom_description ">
-								<div style="z-index:120;">
-									Профиль
-								</div>
-							</div>				
+					<div class="cursor_setting_friends">
+						<div class="plus">
+							<img src="./images/icons8-сложение-50.png">
 						</div>						
-						<div class="display_flex flex_column posetitelka">
-							<div class="display_flex position_center about_inoe_icons ">
-								<img class="background_white padding_five" src="./images/chat-3-svgrepo-com.svg">
-								<div class="display_flex  content_nastr_number position_center">
-									<div>
-										12
-									</div>
-								</div>									
-							</div>
-							<div class="display_flex position_center custom_description ">
-								<div style="z-index:120;">
-									Профиль
-								</div>
-							</div>		
-						</div>
-						<div class="display_flex flex_column posetitelka">
-							<div class="display_flex position_center about_inoe_icons ">
-								<img class="background_white padding_five" src="./images/icons8-избранное.svg">								
-							</div>
-							<div class="display_flex position_center custom_description ">
-								<div style="z-index:120;">
-									Профиль
-								</div>
-							</div>				
-						</div>
+						<div class="friends">
+							<img src="./images/icons8-пользователь-90.png">
+						</div>					
 					</div>
 				</div>
-				<div class="display_flex flex_column">
-
-					<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
-						<div class="display_flex position_center about_icons background_orange">
-							<img class="background_white padding_five" src="./images/boosty/Dark.svg">
-						</div>
-						<div class="display_flex flex_column about_content background_white border_orange" style="justify-content: space-between;">
-							<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
-								<div class="about_content_text_title">
-									Поддежка через boosty
-								</div>
-							</div>
-							<div class="display_flex about_content_text position_justify_end">
-								<div class="about_content_text_description">
-									модерация
-								</div>
+				<div class="row cursors">
+					<div class="cursors_grid">
+						<div class="cursors_grid_block" style="background: #da6363;">
+							<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
+							<div class="notification">
+								<div style="background: #da6363;"></div>
 							</div>
 						</div>
-					</a>
-					<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
-						<div class="display_flex position_center about_icons background_blue">
-							<img class="background_white padding_five" src="./images/vk/icons8_vk_32.svg">
+						<div class="cursors_grid_block" style="background: #7d7dff;">
+							<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
+							<div class="notification">
+								<div style="background: #7d7dff;"></div>
+							</div>					
 						</div>
-						<div class="display_flex flex_column about_content background_white border_blue" style="justify-content: space-between;">
-							<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
-								<div class="about_content_text_title">
-									Вконтакте
-								</div>
+						<div class="cursors_grid_block" style="background: #55ad55;">
+							<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
+							<div class="notification">
+								<div style="background: #55ad55;"></div>
+							</div>				
+						</div>
+						<div class="cursors_grid_block" style="background: #ff8989;">
+							<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
+							<div class="notification">
+								<div style="background: #e14756;"></div>
+							</div>					
+						</div>						
+					</div>
+					<div class="left_switch_triangle">
+						<div class="left_triangle">
+							<div class="left_element"></div>
+						</div>
+					</div>						
+					<div class="right_switch_triangle">
+						<div class="center right_other_">
+							<div>+7</div>
+						</div>							
+						<div class="right_triangle">
+							<div class="right_element"></div>						
+						</div>
+					</div>	
+				</div>
+			</div>
+			<!-- Вторая часть меню -->
+			<div class="row menu">
+				<div class="row menu_icons">
+					<div class="menu_icons_block">
+						<div>
+							<img src="./images/free-icon-live-streaming-4916674.png">
+						</div>
+						<div class="center asd">
+							<div>1</div>
+						</div>
+					</div>
+					<div class="menu_icons_block">
+						<div class="center">
+							<img src="./images/free-icon-live-streaming-4916674.png">
+						</div>						
+					</div>
+					<div class="menu_icons_block">
+						<div>
+							<img src="./images/free-icon-live-streaming-4916674.png">
+						</div>						
+					</div>
+					<div class="menu_icons_block">
+						<div>
+							<img src="./images/free-icon-live-streaming-4916674.png">
+						</div>						
+					</div>
+				</div>
+				<div class="row menu_user">
+					<div class="column menu_user_">
+						<div style="background: white;    margin-bottom: 3px;">
+							<div class="menu_user_name">
+								Саша Ахиль
 							</div>
-							<div class="display_flex about_content_text position_justify_end">
-								<div class="about_content_text_description">
-									модерация
-								</div>
+							<div class="menu_user_id">
+								#3006
 							</div>
 						</div>
-					</a>
-					<a class="display_flex flex_row about_moderation_icons" href="https://vk.com/id705993193">
-						<div class="display_flex position_center about_icons background_red">
-							<img class="padding_five background_white" src="./images/google/icons8-google-30.svg">
+						<div class="menu_user_post">
+							Модератор
 						</div>
-						<div class="display_flex flex_row about_content background_white border_red">
-							<div class="display_flex flex_column" style="justify-content: space-between;">
-								<div class="display_flex about_content_text position_justify_center flex_grow position_align_end">
-									<div class="about_content_text_title ">
-										doctordania15@gmail.com
-									</div>
-								</div>
-								<div class="display_flex about_content_text position_justify_end">
-									<div class="about_content_text_description">
-										модерация
-									</div>
-								</div>
-							</div>
-							<div class="display_flex position_center about_cope">
-								<div class="display_flex position_center about_cope_img">
-									<img src="./images/copy/icons8_copy_96.svg">
-								</div>	
-							</div>
+					</div>
+					<div class="menu_user_img">
+						<div>
+							<img src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
+							<div class="online">
+								<div></div>
+							</div>							
 						</div>
-					</a>		
+					</div>
 				</div>
 			</div>
 		</div>		
 
 		<!-- Главная страница -->
-		<div class="display_flex flex_column construction side-bar__slide">	
-		
+		<div class="column construction side-bar__slide">
 
-			<!-- Менюшка -->
-			<div class="menu_start_block header">
-
-				<div class="display_flex flex_row header__left">
-					<ul class="header__left-list">
-						<li class="header__left-item">
-							<img class="header__left-item-img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
-							<a href="#" class="header__left-item-link">Man</a>
-						</li>
-						<li class="header__left-item">
-							<img class="header__left-item-img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
-							<a href="#" class="header__left-item-link">mushic</a>
-						</li>
-						<li class="header__left-item">
-							<img class="header__left-item-img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
-							<a href="#" class="header__left-item-link">zeus</a>
-						</li>
-						<li class="header__left-item">
-							<img class="header__left-item-img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
-							<a href="#" class="header__left-item-link">Jesus</a>
-						</li>
-						<li class="header__left-item">
-							<img class="header__left-item-img" src="./images/1670482947_47-kartinkin-net-p-ayanami-rei-kartinki-vkontakte-62.jpg">
-							<a href="#" class="header__left-item-link">Rainbow</a>
-						</li>
-						<li class="header__left-item header__left-item_button">
-							<button class="header__left-button"><img src="./images/outlined/icons8_outlined_24.svg"></button>
-						</li>
-					</ul>
-				</div>
-
-				<!-- Меню -->
-				<div class="menu">
-
-					<!-- Ссылка -->
-					<div class="menu_blocks">
-						<div class="menu_blocks_title center">
-							<div>
-								События
-							</div>
-						</div>
-						<div class="menu_blocks_pluse">
-							<div class="blocks_">
-								<div id="moving_1" class="blocks_st">
-									<div class="moving_block">
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-														<div class="block_block_link">
-															<div id="time">
-																21.08.2003
-															</div>
-														</div>			
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div id="time">
-																5:00
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>	
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>		
-									</div>
-								</div>			
-								<div class="decoration">
-								</div>
-								<div class="decoration left_button">
-								</div>									
-							</div>	
-						</div>
-					</div>
-					<div class="menu_blocks">
-						<div class="menu_blocks_title center">
-							<div>
-								События
-							</div>
-						</div>
-						<div class="menu_blocks_pluse">
-							<div class="blocks_">
-								<div id="moving_2" class="blocks_st">
-									<div class="moving_block">
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>	
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>		
-									</div>
-								</div>			
-								<div class="decoration">
-								</div>
-								<div class="decoration left_button">
-								</div>									
-							</div>	
-						</div>
-					</div>
-					<div class="menu_blocks">
-						<div class="menu_blocks_title center">
-							<div>
-								События
-							</div>
-						</div>
-						<div class="menu_blocks_pluse">
-							<div class="blocks_">
-								<div id="moving_3" class="blocks_st">
-									<div class="moving_block">
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>	
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>
-										<div class="block">
-											<div class="block_position_move">
-												<div class="block_block_">
-													<div class="block_block_background one_block">
-														<div class="block_block_title">
-															Событие
-														</div>
-													</div>
-													<div class="block_block_background two_block">
-														<div class="block_block_content">
-															В этом событие произошло так много всего...2
-														</div>
-														<div class="block_block_link">
-															<div>
-																Перейти
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>		
-										</div>		
-									</div>
-								</div>			
-								<div class="decoration">
-								</div>
-								<div class="decoration left_button">
-								</div>									
-							</div>	
-						</div>
-					</div>
-
-				</div>
-			</div>	
-
-			<!-- Заголовок -->
-			<!-- Логотип -->
-
-			<div class="display_flex flex_column hero" style="display: contents;">
-				<div class="display_flex flex_row hero__content">
-					<div class="hero__content-left">
-						<div class="display_flex position_center hero__content-map">
-							<div>
-								Не знаешь, где находится Старая Русса, тогда взгляни тут!
-							</div>
-						</div>
-					</div>
-					<div class="hero__content-right">
+			<div class="row block_top">
+				<div class="column block_left">
+					<div class="column">
 						<div class="start_block_title center ">
 							<div class="head_">
-								СТАРАЯ РУССА		    
+								СТАРАЯ РУССА
 							</div> 
 							<div class="head_any">
-								СТАРАЯ РУССА		    
+								СТАРАЯ РУССА
 							</div>
 						</div>
-						<!-- Описание -->
-						<div class="description center">
-							<div>
-								Город расположен при впадении реки Порусья в реку Полисть (бассейн озера Ильмень), в 99 км от Великого Новгорода (по объездной трассе), в 48 км восточнее Шимска, в 20 км западнее Парфино и в 64 км севернее Поддорья.
+						<div class="row info_block">
+							<div class="row center block_info">
+								<div>
+									<img src="./images/free-icon-employees-2476763.png">
+								</div>
+								<div>
+									27,487 чел.
+								</div>
+							</div>
+							<div class="row center block_info">
+								<div>
+									<img src="./images/free-icon-employees-2476763.png">
+								</div>
+								<div>
+									27,487 чел.
+								</div>
+							</div>
+							<div class="row center block_info">
+								<div>
+									<img src="./images/free-icon-employees-2476763.png">
+								</div>
+								<div>
+									27,487 чел.
+								</div>
 							</div>
 						</div>
-						<div class="logotype_link center">
-							<a class="logotype" href="#">
-
-								<span style="--i:1;">:</span>
-								<span style="--i:2;">:</span> 
-								<span style="--i:3;">:</span>
-								<span style="--i:4; color:#e96868">H</span>
-								<span style="--i:5; color:#e96868">E</span>
-								<span style="--i:6; color:#e96868">L</span>
-								<span style="--i:7; color:#e96868">L</span>
-								<span style="--i:8">_</span>
-								<span style="--i:9; color:#03a9f4">C</span>
-								<span style="--i:10; color:#03a9f4">O</span>
-								<span style="--i:11; color:#03a9f4">R</span>
-								<span style="--i:11; color:#03a9f4">P</span>
-								<span style="--i:12;">:</span>
-								<span style="--i:13;">:</span>
-								<span style="--i:14;">:</span>
-								<span style="--i:15;">:</span>   
-							</a>
+					</div>
+					<!-- Описание -->
+					<div class="description center">
+						<div>
+							Город расположен при впадении реки Порусья в реку Полисть (бассейн озера Ильмень), в 99 км от Великого Новгорода (по объездной трассе), в 48 км восточнее Шимска, в 20 км западнее Парфино и в 64 км севернее Поддорья.
 						</div>
+					</div>
+					<div class="logotype_link center">
+						<a class="logotype" href="#">
 
-
+							<span style="--i:1;">:</span>
+							<span style="--i:2;">:</span> 
+							<span style="--i:3;">:</span>
+							<span style="--i:4; color:#e96868">H</span>
+							<span style="--i:5; color:#e96868">E</span>
+							<span style="--i:6; color:#e96868">L</span>
+							<span style="--i:7; color:#e96868">L</span>
+							<span style="--i:8">_</span>
+							<span style="--i:9; color:#03a9f4">C</span>
+							<span style="--i:10; color:#03a9f4">O</span>
+							<span style="--i:11; color:#03a9f4">R</span>
+							<span style="--i:11; color:#03a9f4">P</span>
+							<span style="--i:12;">:</span>
+							<span style="--i:13;">:</span>
+							<span style="--i:14;">:</span>
+							<span style="--i:15;">:</span>   
+						</a>
 					</div>
 				</div>
-				<div class="display_flex flex_row XXXxxxx44">
-					<div class="display_flex flex_column bliiii">
-						<div class="display_flex flex_column zse">
-							<div class="display_flex position_center">
-								<img src="">
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст
-							</div>
+				<div class="row blocks">
+					<div class="abs">
+						НАЖМИ МЕНЯ!!!
+					</div>
+
+					<div class="row center weather_main_content" style="padding-bottom: 15px;padding-left: 10px;">
+						<div class="celsius">
+							+14°C
+						</div>
+						<div class="weather_mood">
+							<img src="./images/pogoda/skc_d(1).svg">
+						</div>
+						<div class="column weather_feeling">
+							<div>Облачно с прояснением</div>
+							<div>Ощущается как + 11°C</div>
+						</div>
+					</div>	
+					<div class="row" style="padding-bottom: 15px;padding-left: 30px;">
+						<div class="column">
+							<div>21 апр.</div>
+							<div>14:17</div>
+						</div>
+						<div class="column">
+							<div>UTC+3:00</div>
+							<div>московоское</div>
 						</div>
 					</div>
-					<div class="display_flex flex_column bliiii">
-						<div class="display_flex flex_column zse">
-							<div class="display_flex position_center">
-								<img src="">
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст
-							</div>
-						</div>
-					</div>
-					<div class="display_flex flex_column bliiii">
-						<div class="display_flex flex_column zse">
-							<div class="display_flex position_center">
-								<img src="">
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст Особо важный текст
-							</div>
-							<div>
-								Особо важный текст Особо важный текст Особо важный текст
-							</div>
-						</div>
-					</div>									
 				</div>
+			</div>
+			<div class="row bottom" style="height: 40%;width: 100%;    align-items: center;    padding: 15px;    background: azure;">
+				<div class="column bliiii">
+					<div class="column zse">
+						<div class="center"  style="height: 50%;">
+							<img src="./images/free-icon-website-5988512.png">
+						</div>
+						<div class="column" style="height: 50%;">
+							<div>
+								Особо важный текст Особо важный текст Особо важный текст Особо важный текст 
+							</div>
+						</div>
+						<div class="center button___">
+							Нажми меня!
+						</div>						
+					</div>
+				</div>
+				<div class="column bliiii">
+					<div class="column zse">
+						<div class="center"  style="height: 50%;">
+							<img src="./images/free-icon-website-5988512.png">
+						</div>
+						<div class="column" style="height: 50%;">
+							<div>
+								Особо важный текст Особо важный текст Особо важный текст Особо важный текст 
+							</div>
+						</div>
+						<div class="center button___">
+							Нажми меня!
+						</div>						
+					</div>
+				</div>
+				<div class="column bliiii">
+					<div class="column zse">
+						<div class="center"  style="height: 50%;">
+							<img src="./images/free-icon-website-5988512.png">
+						</div>
+						<div class="column" style="height: 50%;">
+							<div>
+								Особо важный текст Особо важный текст Особо важный текст Особо важный текст 
+							</div>
+						</div>
+						<div class="center button___">
+							Нажми меня!
+						</div>						
+					</div>
+				</div>					
 			</div>
 		</div>
 

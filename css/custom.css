@@ -1,453 +1,514 @@
-/* Пользовательский блок */
 /* Пользовательское меню */
 
-/*
-	Примечанеи: Используется 5-ть цветов;
-*/
 :root {
-	/* Основной фон всего блока */
-	--background_global: #363b66;
-	/* Слегка светлее основго фона (рамки) */
-	--background_global_: #6f6fac;
-	/* Фон пассивного переключателя */
-	--background_white: white;
-	/* Фон активного переключателя */	
-	--background_orange: #ffbe5e;
 
 }
 
-/* Публичное пользовательское меню (расположение) */
-.public_user_setup {
+/* Полностью меню */
+.custom {
 	position: fixed;
 
-    top: 0;
-    left: 0; 
+	justify-content: center;
 
-	/* Основа блока (вручную) */
-    width: 60px;
-    height: 100%;
-
-    padding: 20px 0px;    
-
-    z-index: 100;
-    transform: translateX(-60px);
-    transition: transform 0.5s;
-}
-
-/* Добавляемый класс */
-.public_user_setup_active {
-    transform: translateX(0px);
-    transition: transform 0.5s;	
-}
-
-/* Публичное пользовательское меню (настройка) */
-.public_user_setup_ {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    padding: 15px 0px;
-    border-radius: 0px 10px 10px 0px; 
-    /* Основной фон */
-    background: var(--background_global);
-    border-top: 6px solid var(--background_global_);
-    border-bottom: 6px solid var(--background_global_);
-
-    z-index: 101;
-}
-
-/* Открыть, скрыть публичное пользовательское меню */
-.switch {
-	position: absolute;
-
-	/* Расположение якобы по центру блока HEKK COMMENT: ЧТОБЫ РАЗМЕСТИТЬ ЕГО ПО ЦЕНТРУ НАДО КАК Я))  */
-	top: 50%;
-	transform: translateY(-50%);
-	left: 100%;
-
-	/* Размеры основного блока */
-	width: 30px;
-	height: auto;
-
-	/* Контур переключателя, цвет как у основного фона */
-	border-top: 6px solid var(--background_global);
-	border-right: 6px solid var(--background_global);
-	border-bottom: 6px solid var(--background_global);
-	border-radius: 0px 20px 20px 0px;
-
-	/* Фон пассивного переключателя */
-	background: var(--background_white);
-
-	z-index: 102;
-
-	overflow: hidden;
-
-	cursor: pointer;
-}
-
-/* Размер изображения переключателя */
-.switch img {
-	width: 20px;
-	height: 20px;
-
-	z-index: 104;
-}
-
-.switch_pos {
-	position: relative;
-
-	padding: 20px 2px 20px 0px;
+	top: 0;
+	left: 0;
 
 	width: 100%;
-	height: 100%;	
+	height: 55px;
+
+	gap: 15px;
+
+	z-index: 100;
 }
 
-/* Активный фон */
-.switch_pos div:before {
-	content: '';
-	position: absolute;
-
-	width: 1px;
-	height: 1px;
-
-	top: -5px;
-	left: 50%;
-
-	transform: scale(1.0);
-
-	z-index: 103;
-
-	/* Фон активного переключателя */	
-	background: var(--background_orange);
-	border-radius: 100px;
-	transition: transform 0.5s;	
-}
-
-/* Активация актвиного фона */
-.switch_pos:hover div:before {
-	transform: scale(170.0);
-	transition: transform 0.5s;
-
-}
-/* ------------------------- */
-
-
-
-/* Продолжение пользовательского меню */
-.custom {
-    position: relative;
-
-    width: 50px;
-
-    cursor: pointer;    
-}
-
-.custom_ {
-	position: relative;
-
-	border-radius: 100px;
-
-	width: 45px;
-	height: 45px;
-
-	margin-bottom: 3px;	
-	background: white;
-}
-
-.custom_ img {
-	width: 100%;
+/* Левое меню */
+.cursor {
+	width: auto;
 	height: 100%;
 
-	border-radius: 100px;
-
-	transform: rotate(0deg);
-	transition: transform 0.2s;
-}
-
-.custom:hover .custom_ img {
-	animation: custom_img 0.7s alternate forwards;
-}
-
-@keyframes custom_img {
-    0%   {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}          
-}
-
-.online {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-
-    width: 15px;
-    height: 15px;
-
-    border: 3px solid #d2d2d2;
-
-    padding: 5px;
-
-    border-radius: 100px;
-    background: #00ffae;
-    color: #327d71;
-}
-
-.custom_description {
-    background: white;
-    position: relative;
-    border-radius: 3px;
-    font-family: 'text_bigi';
-    font-size: 12px;
-    padding: 2px 0px 2px 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 55px;
-}
-
-.custom_description:after{
-	position: absolute;	
-	content: '';
-
-	top: 50%;
-	left: -5px;
-
-	width: 1px;
-	height: 1px;
-
-	transform: scale(1.0);
-	border-radius: 100px;
-	background: #ffa5a5;
-
-	transition: transform 0.7s;
-}
-
-.custom:hover .custom_description:after{
-	transform: scale(180.0);
-
-	transition: transform 0.7s;
-}
-
-
-.content_nastr_number {
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    width: 20px;
-    height: 20px;
-    font-family: cursive;
-    padding: 5px;
-    font-weight: 700;
-    font-size: 12px;
-    border-radius: 100px;
-    background: #c6f2e4;
-    color: #327d71;
-}
-
-
-.menu_customers {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 330px;
-    height: auto;
-    gap: 10px;
-    background: #e6e6e6;
-    display: none;
-    border-radius: 10px;
-    border: 2px solid #3f51b5;
-}
-
-.display {
-	display: flex;
-}
-
-.menu_gl {
-	width: 100%;
-	height: 50px;
-
-	background: red;
-	border-radius: 10px 10px 0px 0px;
-	align-items: flex-end;
-}
-
-.menu_images {
-	width: 25px;
-	height: 100%;
-	border-radius: 100px;
-}
-
-.menu_images_img {
-	width: 25px;
-	height: 25px;
-}
-
-.about_moderation_icons {
-	width: 50px;
-	height: 50px;
-
-	margin-bottom: 5px;
-}
-
-.gl_otdel {
-	padding: 0px 10px 0px 10px;
-    display: flex;
- 	gap: 10px;
-    height: 35px; 	
-}
-
-.gl_image {
-	width: 70px;
-	height: 70px;
-	border-radius: 100px;
-	border: 2px solid red;
-	transform: translateY(-35px);
-}
-
-.img_img {
-	width: 100%;
-	height: 100%;
-	object-fit:cover;
-	border-radius: 100px;
-}
-
-.gl_name {
-	font-size: ;
-	font-family: ;
-}
-
-.about_inoe_icons {
-    z-index: 7;
-    margin-bottom: 3px;
-    position: relative;  
-}
-
-.about_inoe_icons img {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-	padding: 8px;    
-}
-
-.about_icons {
-	padding: 3px;
-    border-radius: 10px;
-    z-index: 7;
-    margin-bottom: 3px;
-    position: relative;   
-}
-
-.about_icons img {
-    width: 45px;
-    height: 45px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.about_icons img {
-    width: 45px;
-    height: 45px;
-    border-radius: 100px;
-    overflow: hidden;
-}
-
-.about_content {
 	align-items: center;
 
-    position: absolute;
-
-    white-space: nowrap;
-
-    max-width: 0px;
-    height: 45px;
-
-    opacity: 0;
-
-    margin-left: 10px;
-
-    border-radius: 10px;
-
-    z-index: 1;
-
-    overflow: hidden;    
-
-    transition: max-width 0.4s cubic-bezier(.66,.13,.99,.74), opacity 0s 0.4s;
+    background: #ffffff;
+	border-radius: 0px 0px 5px 5px;    
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
 }
 
-.about_content_text {
-	width: 100%;
-    padding-left: 50px;
-    padding-right: 10px;
+.cursors_setting {
+	width: auto;
+	height: 100%;
+
+	align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    border-radius: 0px 0px 0px 5px;    
 }
 
-.about_content_text_title {
-    font-family: 'text_bigi';
-    font-size: 21px;
-    color: black;
-}
-
-.about_content_text_description {
-    font-family: 'cursive';
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: black;
-}
-
-.about_moderation_icons:hover .about_content {
-	max-width: 1000px;
-    opacity: 1;	
-	transition: max-width 0.4s cubic-bezier(.66,.13,.99,.74), opacity 0s;
-}
-
-/* about дополнительные возможности */
-.about_cope {
-	width: 45px;
-	height: 45px;
-}
-
-.about_cope_img {
+/* Работа с глазом */
+.cursor_setting_eye {
 	width: 30px;
 	height: 30px;
 
 	position: relative;
+}
 
-	border-radius: 5px;
-	background: var(--background_red);
+.cursor_setting_eye img {
+	position: relative;
+	z-index: 110;
+}
+
+.open_eye {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	padding: 5px;
+
+	background:#ebffe7;
+	border-radius: 100px;
+
 	overflow: hidden;
 
-	z-index: 2;
+	z-index: 101;
+	transition: width 0.8s, height 0.8s;
 }
 
-.about_cope_img img {
-	width: 20px;
-	height: 20px;
-
-	z-index: 4;
-}
-
-.about_cope_img:before {
+.open_eye:after {
 	content: '';
-	left: -5px;
-	top: -5px;
 	position: absolute;
 
-	z-index: 3;
+	top: 0;
+	left: 0;
 
-	width: 5px;
-	height: 5px;
+	width: 0%;
+	height: 0%;
 
-	transform: scale(1.0);
+	background: #d1ffc7;
+	border-radius: 100px;	
+	z-index: 109;
+	transition: width 0.8s, height 0.8s;	
+}
+
+.cursor_setting_eye:hover .open_eye:after {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;	
+	transition: width 0.8s, height 0.8s;
+}
+
+.open_eye_active {
+	width: 0%;
+	height: 0%;
+	border-radius: 100px;	
+	z-index: 103;
+	transition: width 0.8s, height 0.8s;
+}
+
+.hidden_eye {
+	position: absolute;
+	width: 0%;
+	height: 0%;
+
+	padding: 5px;
+
+	background:#ffccbc;
+	border-radius: 100px;
+
+	overflow: hidden;
+
+	z-index: 101;
+	transition: width 0.8s, height 0.8s;	
+}
+
+.hidden_eye:after {
+	content: '';
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 0%;
+	height: 0%;
+
+	background: #feae95;
+	border-radius: 100px;	
+	z-index: 109;
+	transition: width 0.8s, height 0.8s;	
+}
+
+.cursor_setting_eye:hover .hidden_eye:after {
+	width: 100%;
+	height: 100%;
+	transition: width 0.8s, height 0.8s;
+}
+
+.hidden_active {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;	
+	z-index: 102;	
+	transition: width 0.8s, height 0.8s;	
+}
+
+/* Работа с друзьями */
+.cursor_setting_friends {
+	width: 30px;
+	height: 30px;
+
+	position: relative;
+}
+
+.cursor_setting_friends img {
+	position: relative;
+	z-index: 110;
+}
+
+.friends {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	padding: 5px;
+
+	background:#e1f5fe;
+	border-radius: 100px;
+
+	overflow: hidden;
+
+	z-index: 101;
+	transition: width 0.8s, height 0.8s;
+}
+
+.friends:after {
+	content: '';
+	position: absolute;
+
+	top: 0;
+	left: 0;
+
+	width: 0%;
+	height: 0%;
+
+	background: #c4edff;
+	border-radius: 100px;	
+	z-index: 109;
+	transition: width 0.8s, height 0.8s;	
+}
+
+.cursor_setting_friends:hover .friends:after {
+	width: 100%;
+	height: 100%;
+	transition: width 0.8s, height 0.8s;
+}
+
+.plus {
+	position: absolute;
+	top: 59%;
+	right: 0;
+
+	width: 16px;
+	height: 16px;
+
+	padding: 2px;
+    z-index: 110;
+    background: #c2ecff;
+	border-radius: 100px;	
+}
+
+/* Работа со слайдом */
+.cursors {
+	width: auto;
+	height: 100%;
+
+	align-items: center;	
+	gap: 10px;
+
+    border-left: 1px dashed #000000;
+    padding: 0px 10px;
+}
+
+.cursors_grid {
+	width: 165px;
+	height: auto;
+
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 45px 45px 45px;
+	grid-template-rows: 45px;
+	gap: 15px;
+
+	overflow: hidden;
+}
+
+.cursors_grid_block {
+	position: relative;
+
+    width: 45px;
+    height: 45px;
 
 	border-radius: 100px;
-	background: var(--background_blue);
-
-	transition: transform 0.3s;
+	padding: 2px;
 }
 
-.about_cope_img:hover:before {
-	transform: scale(20.0);
-	transition: transform 0.5s;	
+.cursors_grid_block img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 100px;
+	border: 3px solid white;
+}
+
+
+.notification {
+	position: absolute;
+    top: 60%;
+    right: 0;
+    width: 17px;
+    height: 17px;
+
+	padding: 3px;
+
+	background: white;
+	border-radius: 100px;
+}
+
+.notification div {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 100px;
+}
+
+/* Переключатели */
+/* Левый */
+.left_switch_triangle {
+	width: auto;
+	height: auto;
+}
+
+.left_triangle {
+	position: relative;
+
+    width: 0;
+    height: 0;
+
+    border-top: 10px solid transparent;
+    border-right: 20px solid #84abee;
+    border-bottom: 10px solid transparent;
+    border-radius: 3px;
+
+	transform: scale(1.0);
+	transition: transform 0.5s;    
+}
+
+.left_element {
+    position: absolute;
+    transform: translateX(17%) translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 15px solid #ffffff;
+    border-bottom: 8px solid transparent;
+    border-radius: 3px;
+}
+
+.left_switch_triangle:hover .left_triangle {
+	transform: scale(1.2);
+	transition: transform 0.5s;
+}
+
+/* Правый */
+.right_switch_triangle {
+	width: auto;
+	height: auto;
+	position: relative;
+}
+
+.right_triangle {
+	position: relative;
+	
+    width: 0;
+    height: 0;
+
+    border-top: 10px solid transparent;
+    border-left: 20px solid #84abee;
+    border-bottom: 10px solid transparent;
+    border-radius: 3px;
+
+	transform: scale(1.0);
+	transition: transform 0.5s;    
+}
+
+.right_element {
+    position: absolute;
+    transform: translateX(-118%) translateY(-50%);    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 15px solid #ffffff;
+    border-bottom: 8px solid transparent;
+    border-radius: 3px;
+}
+
+.right_other_ {
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background: #eb7070;
+    color: white;
+    font-size: 11px;
+    font-family: cursive;
+}
+
+.right_switch_triangle:hover .right_triangle {
+	transform: scale(1.2);
+	transition: transform 0.5s;
+}
+
+
+.cursor_setting_svg img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	border-radius: 100px;
+}
+
+
+.cursors_svg {
+	position: relative;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+	background: white;
+	border-radius: 10px;
 }
 
 
 
 
 
+
+
+
+
+
+
+.menu {
+	width: auto;
+	height: 100%;
+
+	align-items: center;
+	gap: 20px;
+
+	border-radius: 0px 0px 5px 5px;
+	background: whitesmoke;
+
+	padding: 0px 10px;
+}
+
+.menu_icons {
+	width: auto;
+	height: 100%;
+	align-items: center;
+	gap: 10px;		
+}
+
+.menu_icons_block {
+	position: relative;
+	width: 45px;
+	height: 45px;
+
+	border-radius: 5px;
+	background: white;
+
+	padding: 10px;
+}
+
+.asd {
+    position: absolute;
+    top: 0px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    background: red;
+    color: white;
+    font-size: 11px;
+}
+
+.menu_icons_block img {
+	width: 25px;
+	height: 25px;
+}
+
+.menu_user {
+	gap: 10px;
+}
+
+.menu_user_ {
+	justify-content: flex-start;
+    font-size: 12px;
+    font-family: 'text_bigi';
+    letter-spacing: 2px;
+	border-left: 1px solid #827c7c6b;
+    padding-left: 10px;    
+}
+
+.menu_user_name {
+	padding: 2px;
+    font-size: 13px;	
+}
+
+.menu_user_id {
+	padding: 2px;
+    font-size: 10px;	
+}
+
+.menu_user_post {
+	padding: 2px;
+	background: white;
+    font-size: 9px;
+    letter-spacing: 7px;
+}
+
+.menu_user_img {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border-radius: 100px;
+}
+
+.online {
+	position: absolute;
+    top: 60%;
+    right: 0;
+    width: 17px;
+    height: 17px;
+
+	padding: 3px;
+
+	background: whitesmoke;
+	border-radius: 100px;
+}
+
+.online div {
+	width: 100%;
+	height: 100%;
+
+	background: green;
+	border-radius: 100px;
+}
+
+.menu_user_img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+}
+
+.online {
+
+}
