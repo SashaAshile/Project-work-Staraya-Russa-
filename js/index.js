@@ -471,12 +471,59 @@ var left = document.querySelector('.left_switch_triangle');
 var right = document.querySelector('.right_switch_triangle');
 var slaider_cursor = document.querySelector('.cursors_grid');
 
+// Максимальная длина слайда
+var max = document.querySelectorAll('.cursors_grid_block');
+var max_length = 0;
+for (var i = 0; i > max.length; i++) {
+	max_length += 60
+}
+max_length -= 15
+
+
 // Отслеживание события прокрутки влево
 left.addEventListener('click', () => {
 	slaider_cursor.scrollBy({top: 0,left: -60, behavior: "smooth"});
+	if((Number(slaider_cursor.scrollLeft) - 60) <= 0){
+		switch_(document.querySelectorAll('.left'), true);
+		switch_(document.querySelectorAll('.right'), false);
+	} else {
+		switch_(document.querySelectorAll('.left'), false);
+	}
 })
 
 // Отслеживание события прокрутки вправо
 right.addEventListener('click', () => {
 	slaider_cursor.scrollBy({top: 0,left: 60, behavior: "smooth"});
+	if((Number(slaider_cursor.scrollLeft) + 60) >= max_length){
+		switch_(document.querySelectorAll('.right'), true);
+		switch_(document.querySelectorAll('.left'), false);
+	} else {
+		switch_(document.querySelectorAll('.right'), false);
+	}
 })
+
+
+// Работа с переключателями
+// Счётчик
+var counter = 1;
+
+// Автоматическая активация первого изображения при старте
+switch_(document.querySelectorAll('.left'), false);
+switch_(document.querySelectorAll('.right'), false);
+
+function switch_(name, block){
+	for (var i = 1; i < name.length; i++) {
+		name[i].style.display = "none";
+	}
+
+	if(block == true){
+		name[0].style.display = "block";
+	} else {
+		// Добавить число
+		counter++
+
+		if(counter == 4) {counter = 1;}
+		name[counter].style.display = "block";
+	}
+}
+
