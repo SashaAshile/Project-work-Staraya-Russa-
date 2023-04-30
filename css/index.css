@@ -3295,7 +3295,7 @@ img {
     letter-spacing: 2px;
 }
 
-.footer__right::after {
+/*.footer__right::after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -3303,5 +3303,5 @@ img {
 	width: 100%;
 	height: 50px;
 	background: #fff;
-}
+}*/
 /* ===== End of footer ======= */
