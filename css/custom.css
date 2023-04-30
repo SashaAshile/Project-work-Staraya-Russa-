@@ -51,6 +51,7 @@
 	height: 30px;
 
 	position: relative;
+	cursor: pointer;
 }
 
 .cursor_setting_eye img {
@@ -157,6 +158,7 @@
 	height: 30px;
 
 	position: relative;
+	cursor: pointer;
 }
 
 .cursor_setting_friends img {
@@ -249,6 +251,8 @@
 
 	border-radius: 100px;
 	padding: 2px;
+
+	cursor: pointer;
 }
 
 .cursors_grid_block img {
@@ -259,6 +263,14 @@
 	border: 3px solid white;
 }
 
+.cursors_grid_block:hover .rotate {
+	animation: rotate 0.7s alternate forwards;
+}
+
+@keyframes rotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
 
 .notification {
 	position: absolute;
@@ -285,37 +297,24 @@
 .left_switch_triangle {
 	width: auto;
 	height: auto;
+	cursor: pointer;
 }
 
 .left_triangle {
 	position: relative;
-
-    width: 0;
-    height: 0;
-
-    border-top: 10px solid transparent;
-    border-right: 20px solid #84abee;
-    border-bottom: 10px solid transparent;
-    border-radius: 3px;
-
-	transform: scale(1.0);
-	transition: transform 0.5s;    
+  	width: 30px;
+  	height: 30px;
 }
 
-.left_element {
-    position: absolute;
-    transform: translateX(17%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-right: 15px solid #ffffff;
-    border-bottom: 8px solid transparent;
-    border-radius: 3px;
-}
+.left_triangle img {
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	
+  	width: 30px;
+  	height: 30px;
 
-.left_switch_triangle:hover .left_triangle {
-	transform: scale(1.2);
-	transition: transform 0.5s;
+    transform: translateX(-50%) translateY(-50%) rotate(30deg);  	
 }
 
 /* Правый */
@@ -323,98 +322,73 @@
 	width: auto;
 	height: auto;
 	position: relative;
+	cursor: pointer;
+}
+
+.right_other_ {
+	position: absolute;
+	top: -10px;
+    right: -5px;
+
+	width: 20px;
+	height: 20px;
+	border-radius: 100px;
+    border: 2px solid #da6363;
+    color: black;
+    font-family: 'cursive';
+    font-size: 11px;
+    font-weight: 700;
+    z-index: 110;    
+	transform: scale(1.0);
+	transition: transform 0.4s;    
+}
+
+.right_other_:hover {
+	transform: scale(1.3);
+	transition: transform 0.4s;
 }
 
 .right_triangle {
 	position: relative;
-	
-    width: 0;
-    height: 0;
-
-    border-top: 10px solid transparent;
-    border-left: 20px solid #84abee;
-    border-bottom: 10px solid transparent;
-    border-radius: 3px;
-
-	transform: scale(1.0);
-	transition: transform 0.5s;    
+  	width: 30px;
+  	height: 30px;
 }
 
-.right_element {
-    position: absolute;
-    transform: translateX(-118%) translateY(-50%);    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-left: 15px solid #ffffff;
-    border-bottom: 8px solid transparent;
-    border-radius: 3px;
-}
+.right_triangle img {
+	position: absolute;
+	top: 50%;
+	left: 30%;
 
-.right_other_ {
-    position: absolute;
-    top: -15px;
-    right: -8px;
-    width: 20px;
-    height: 20px;
-    border-radius: 100px;
-    background: #eb7070;
-    color: white;
-    font-size: 11px;
-    font-family: cursive;
-}
+  	width: 30px;
+  	height: 30px;
 
-.right_switch_triangle:hover .right_triangle {
-	transform: scale(1.2);
-	transition: transform 0.5s;
-}
-
-
-.cursor_setting_svg img {
-	width: 100%;
-	height: 100%;
-
-	object-fit: cover;
-	border-radius: 100px;
-}
-
-
-.cursors_svg {
-	position: relative;
-    width: 25px;
-    height: 25px;
-    padding: 3px;
-	background: white;
-	border-radius: 10px;
+    transform: translateX(-50%) translateY(-50%) rotate(-30deg);  	  	
 }
 
 
 
-
-
-
-
-
-
-
-
+/* Продолжение Меню */
 .menu {
 	width: auto;
 	height: 100%;
 
 	align-items: center;
-	gap: 20px;
 
 	border-radius: 0px 0px 5px 5px;
-	background: whitesmoke;
-
-	padding: 0px 10px;
+	background: white;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;	
 }
 
 .menu_icons {
 	width: auto;
 	height: 100%;
 	align-items: center;
-	gap: 10px;		
+
+	padding: 0px 10px;
+
+	gap: 10px;
 }
 
 .menu_icons_block {
@@ -423,20 +397,135 @@
 	height: 45px;
 
 	border-radius: 5px;
-	background: white;
-
-	padding: 10px;
+	cursor: pointer;
 }
 
+.dsa1 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.menu_icons_block:hover .dsa1:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.dsa1:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+
+	top: 101%;
+	left: 0;
+
+	border-radius: 100px;
+	background: #da636326;
+
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+.dsa2 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.menu_icons_block:hover .dsa2:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.dsa2:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+
+	top: 101%;
+	left: 0;
+
+	border-radius: 100px;
+	background: #7d7dff2b;
+
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+.dsa3 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.menu_icons_block:hover .dsa3:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.dsa3:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+
+	top: 101%;
+	left: 0;
+
+	border-radius: 100px;
+	background: #55ad5529;
+
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+.dsa4 {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.menu_icons_block:hover .dsa4:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.dsa4:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+
+	top: 101%;
+	left: 0;
+
+	border-radius: 100px;
+	background: #e9b65d3b;
+
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+
 .asd {
-    position: absolute;
-    top: 0px;
+	position: absolute;
+    top: -6px;
     right: -5px;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 100px;
-    background: red;
-    color: white;
+    background: white;
+    color: #050000;
     font-size: 11px;
 }
 
@@ -447,10 +536,12 @@
 
 .menu_user {
 	gap: 10px;
+    padding: 0px 10px 0px 0px;
+    height: 100%;	
 }
 
 .menu_user_ {
-	justify-content: flex-start;
+	justify-content: center;
     font-size: 12px;
     font-family: 'text_bigi';
     letter-spacing: 2px;
@@ -460,11 +551,11 @@
 
 .menu_user_name {
 	padding: 2px;
-    font-size: 13px;	
+    font-size: 15px;	
 }
 
 .menu_user_id {
-	padding: 2px;
+	padding: 0px;
     font-size: 10px;	
 }
 
@@ -480,6 +571,9 @@
 	width: 45px;
 	height: 45px;
 	border-radius: 100px;
+	height: 100%;
+	display: flex;
+    align-items: center;	
 }
 
 .online {
@@ -491,7 +585,7 @@
 
 	padding: 3px;
 
-	background: whitesmoke;
+	background: white;
 	border-radius: 100px;
 }
 
@@ -499,7 +593,7 @@
 	width: 100%;
 	height: 100%;
 
-	background: green;
+	background: #55ad55;
 	border-radius: 100px;
 }
 
