@@ -70,31 +70,44 @@ for (let i = 0; i < sideBarButtons.length; i++) {
 	})
 }
 
-for (let i = 0; i < sideBarSlides.length; i++) {
+// for (let i = 0; i < sideBarSlides.length; i++) {
 
-	sideBarSlides[i].addEventListener('wheel', function(e) {
+// 	sideBarSlides[i].addEventListener('wheel', function(e) {
 
-		sideBarButtonsRemoveActive();
+// 		sideBarButtonsRemoveActive();
 
-	    if (e.deltaY > 0) {
+// 	    if (e.deltaY > 0) {
 
-	    	sideBarMove(sideBarSlides[i + 1]);
-	    	sideBarButtons[i + 1].classList.add('active');
+// 	    	sideBarMove(sideBarSlides[i + 1]);
+// 	    	sideBarButtons[i + 1].classList.add('active');
 
-	    } else if (e.deltaY < 0) {
+// 	    } else if (e.deltaY < 0) {
 
-	    	sideBarMove(sideBarSlides[i - 1]);
+// 	    	sideBarMove(sideBarSlides[i - 1]);
 
-	    	if (!sideBarButtons[i - 1]) return;
+// 	    	if (!sideBarButtons[i - 1]) return;
 
-	    	sideBarButtons[i - 1].classList.add('active');
-	    }
-	});
-}
+// 	    	sideBarButtons[i - 1].classList.add('active');
+// 	    }
+// 	});
+// }
 
 // ==
 // END right side bar moving
 // ==
+
+
+
+// ==
+// Slider 4 slide
+// ==
+
+
+
+// ==
+// END OF Slider 4 slide
+// ==
+
 
 
 
