@@ -411,15 +411,15 @@ document.addEventListener('keydown', function(e) {
 	    e.preventDefault();
 
 		document.querySelector('.textarea').value = '';
-		document.querySelector(".textarea").style.height = "80px";
+		document.querySelector(".textarea").style.height = "40px";
 	}
 });
 
 
 
 function auto_height(elem) {
-    elem.style.height = "80px";
-    document.querySelector(".textarea").style.height = "88px";
+    elem.style.height = "40px";
+    document.querySelector(".textarea").style.height = "40px";
 
     elem.style.height = (elem.scrollHeight)+"px";
     document.querySelector(".textarea").style.height = (elem.scrollHeight)+"px";
