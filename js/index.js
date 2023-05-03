@@ -555,9 +555,9 @@ function switch_(name, block){
 
 // Активация after в зависимости от положения активации
 var element = document.querySelector('.subject_matter_');
-element.addEventListener( "click", (event)=> {
-
-	console.log(event)
+element.addEventListener( "mouseover", (event)=> {
+	console.log(event.offsetX)
+	
     // document.documentElement.style.setProperty('--top_subject_matter__', `${event.offsetX}px`)
     // document.documentElement.style.setProperty('--left_subject_matter__', `${event.offsetY}px`)
 });
