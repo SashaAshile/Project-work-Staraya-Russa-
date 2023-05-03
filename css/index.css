@@ -3295,13 +3295,25 @@ img {
     letter-spacing: 2px;
 }
 
-/*.footer__right::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
+.footer__bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 15px;
+}
+
+.footer__bottom-list {
+	display: flex;
+}
+
+.footer__bottom-link {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+
+.footer__bottom-img {
 	width: 100%;
-	height: 50px;
-	background: #fff;
-}*/
+	height: 100%;
+	object-fit: cover;
+}
 /* ===== End of footer ======= */
