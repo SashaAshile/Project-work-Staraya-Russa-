@@ -28,4 +28,10 @@
 	src: url(../font/Agency_FB_Cyrillic.ttf); 
 }
 
+@font-face {
+	font-family: 'ofont'; 
+	src: url(../font/ofont.ru_ft13.ttf); 
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
