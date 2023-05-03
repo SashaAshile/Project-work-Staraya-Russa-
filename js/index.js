@@ -554,10 +554,18 @@ function switch_(name, block){
 
 
 // Активация after в зависимости от положения активации
-var element = document.querySelector('.subject_matter_');
-element.addEventListener( "mouseover", (event)=> {
-	console.log(event.offsetX)
-	
-    // document.documentElement.style.setProperty('--top_subject_matter__', `${event.offsetX}px`)
-    // document.documentElement.style.setProperty('--left_subject_matter__', `${event.offsetY}px`)
+let element123 = document.querySelector('.subject_matter_');
+
+element123.addEventListener( "mousemove", function(e) {
+
+  	if(e.target.closest('.subject_matter_')) {
+
+	  let target = e.target.closest('.subject_matter_');
+
+	  let targetCoords = target.getBoundingClientRect();
+	  let xCoord = e.clientX - targetCoords.left;
+	  let yCoord = e.clientY - targetCoords.top;
+
+	  console.log(xCoord, yCoord)
+	}
 });
