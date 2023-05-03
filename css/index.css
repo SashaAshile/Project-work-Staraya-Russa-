@@ -51,6 +51,9 @@ img {
 	--color-red: #e96868;
 	--color-orange: #F15F2C;
 	--color-light-purpur: #b9adf6ab;
+
+	--top_subject_matter__: -1px;
+	--left_subject_matter__: -1px;	
 }
 
 
@@ -1744,8 +1747,8 @@ img {
 .subject_matter__:after {
 	content: '';
 	position: absolute;
-	top: 50%;
-	left: -1px;
+	top: var(--top_subject_matter__);
+	left: var(--left_subject_matter__);
 	width: 1px;
 	height: 1px;
 
@@ -2471,6 +2474,763 @@ img {
 	font-size: 16px;
     font-family: 'header';
 }
+
+/* фильтр */
+.filter {
+	position: relative;
+
+	width: 100%;
+	height: 100vh;
+}
+
+.filter_ {
+	width: 100%;
+	height: 100%;
+	padding: 60px 50px 20px 50px;
+}
+
+.filter_title {
+	flex-grow: 1;
+    padding: 0px 0px 20px 0px;	
+}
+
+.filter_title_ {
+	width: 100%;
+	height: auto;
+
+	padding: 5px;
+
+    font-family: "header";
+    font-size: 22px;
+
+    white-space: pre;
+}    
+	
+.lets_go_for_a_walk {
+	padding: 0px 5px 10px 10px;
+    font-family: monospace;
+    font-size: 15px;
+    color: #7d2d8a;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.lets_go_for_a_walk_ {
+	padding: 5px;
+	margin-left: 5px;
+    background: #c6f2e4;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'header';
+    color: #327d71;
+    position: relative;
+    overflow: hidden;
+}
+
+.lets_go_for_a_walk_:before {
+	content: '';
+
+	z-index: 1;
+
+	position: absolute;
+	top: 101%;
+	left: 101%;
+
+	width: 1px;
+	height: 1px;
+	border-radius: 100px;
+	transform: scale(1.0);
+	background: #c5ff43;
+	transition: transform 0.5s;
+}
+
+.lets_go_for_a_walk_:hover:before {
+	transform: scale(200.0);
+	transition: transform 0.5s;	
+}
+
+.lets_go_for_a_walk__changes {
+	position: relative;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+
+.filter_blocks {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-auto-flow: column;
+    flex-grow: 1;
+    padding-bottom: 10px;
+    padding-top: 10px;    
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: start;    
+}
+
+.filter_block {
+	width: 100px;
+    height: 100%;
+    background: #dedede;
+    border-radius: 10px;
+
+    position: relative;
+
+    transition: width 0.2s;    
+}
+
+.filter_block:hover {
+	width: 200px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0 24%, rgba(0, 0, 0, 0) 50% 100%), url(../images/back_href/1984.jpg);    
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: width 0.2s;	
+}
+
+.filter_block_image {
+	width: 100%;
+	height: 100%;
+    border-radius: 10px;	
+}
+
+.filter_block_information {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+    justify-content: space-evenly;
+    align-items: center;
+	font-family: 'header';
+    padding: 15px 10px 5px 15px;
+    font-size: 20px;
+}
+
+.filter_block_information__number {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: auto;
+    font-family: 'header';
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 100px;
+    transform: translateX(10px) translateY(-10px);
+    background: #c6f2e4;
+    color: #327d71;
+}
+
+.filter_block_information__number_ {
+	font-family: 'header';
+	font-size: 80px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.filter_block__emogi {
+    width: 80px;
+    height: 80px;
+}
+
+.filter_block:hover .filter_block__views {
+	max-width: 300px;
+	padding: 5px;
+	transition: max-width 0.2s, padding 0.2s;
+}
+
+.filter_block__views {
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px;
+    bottom: 10px;
+    left: 10px;
+    align-items: center;
+    /* gap: 5px; */
+    overflow: hidden;
+    transition: max-width 0.2s;  
+}
+
+.filter_block__views__image {
+    width: 30px;
+    height: 30px;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.filter_block__views__text {
+    max-width: 0px;
+    font-family: cursive;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    background: white;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0px;
+	transition: max-width 0.2s, padding 0.2s;    
+}
+
+.filter_block__title {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -100%;
+	left: 0;
+	padding: 15px;
+	transition: top 0.3s;
+	overflow: hidden;
+}
+
+.filter_block:hover .filter_block__title {
+	top: 0%;
+	transition: top 0.3s;	
+}
+
+/* Добавить блок */
+.filter_block_add {
+	width: 100px;
+    height: 100%;
+    background: #dedede;
+    border-radius: 10px;
+
+    position: relative;
+
+    overflow: hidden;	
+}
+
+.filter_block_add div {
+	z-index: 1;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1px;
+    height: 1px;
+    background: #adadad;
+    border-radius: 100px;
+    transform: scale(1.0);
+    transition: transform 0.7s;
+}
+
+.filter_block_add:hover div {
+	transform: scale(500);
+    transition: transform 0.7s;	
+}
+
+.filter_block_add img {
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+	transform: scale(1.0);
+	transition: transform 0.7s;
+}
+
+.filter_block_add:hover img {
+	transform: scale(1.5);
+    transition: transform 0.7s;	
+}
+
+/* места для посещения */
+.places_to_visit {
+	width: 100%;
+	height: 100vh;
+
+    padding: 60px 50px 20px 20px;
+	background: white;
+    z-index: 10;
+    position: relative;
+    display: none;
+}
+
+.places_to_visit_the_whole_block {
+	display: flex;
+	flex-direction: row;
+
+	width: 100%;
+	height: 100%;
+    border: 2px solid #703B94;
+	border-radius: 5px;
+    overflow: hidden;    		
+}
+
+.places_to_visit_evering_content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    border-right: 2px solid #703B94;
+    overflow: hidden;   
+}	
+
+.places_to_visit_menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+	height: 60px;
+
+    padding: 0px 20px;	
+
+	border-bottom: 2px dashed #243453;
+}
+
+.places_to_visit_menu_exit {
+	width: 40px;
+	height: 40px;
+
+	padding: 5px;
+
+	position: relative;
+
+	border-radius: 100px;
+
+	overflow: hidden;
+
+	z-index: 2;
+}
+
+.places_to_visit_menu_exit:before {
+	content: "";
+	top: 0;
+	left: 0;	
+	width: 100%;
+	height: 0%;
+
+	position: absolute;	
+
+	background: #03a9f4;
+
+	z-index: 1;
+
+	transition: height 0.2s;
+}
+
+.places_to_visit_menu_exit:hover:before {
+	height: 100%;
+	transition: height 0.2s;
+}
+
+.places_to_visit_menu_exit div {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	background: #e96868;
+    border-radius: 20px;
+
+    font-size: 20px;
+
+	z-index: 2;
+
+	cursor: pointer;
+}
+/* --- */
+
+.places_to_visit_menu_search {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+
+	position: relative;
+
+	padding: 3px;
+
+	border-radius: 5px;
+}
+
+.places_to_visit_menu_search_block {
+	position: relative;	
+
+    padding: 5px;
+
+    background: #03a9f4;    
+    border-radius: 5px;	
+
+	overflow: hidden;
+}
+
+.places_to_visit_menu_search_block_active {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.places_to_visit_menu_search_block_active:before {
+	content: "";
+
+	top: 0;
+	left: 0;
+
+	width: 0%;
+	height: 100%;
+
+	position: absolute;	
+
+	background: #BE74BE;
+
+	z-index: 2;
+
+	transition: width 0.3s;
+}
+
+ .places_to_visit_menu_search_block:hover .places_to_visit_menu_search_block_active:before {
+	width: 100%;
+
+	transition: width 0.3s;
+}
+
+.places_to_visit_menu_search_block_active input {
+	width: 15px;
+	height: 15px;
+
+	z-index: 3;
+}
+
+.places_to_visit_menu_search_block_active div {
+	color: white;
+	font-family: "header";
+    font-size: 12px;
+
+    transform: translateY(2px);
+
+	z-index: 3;
+}
+
+.places_to_visit_menu_add {
+	width: 40px;
+	height: 40px;
+
+	padding: 5px;
+
+	position: relative;
+
+	border-radius: 100px;
+
+	overflow: hidden;
+
+	z-index: 2;
+}
+
+.places_to_visit_menu_add:before {
+	content: "";
+	top: 0;
+	left: 0;	
+	width: 100%;
+	height: 0%;
+
+	position: absolute;	
+
+	background: #03a9f4;
+
+	z-index: 1;
+
+	transition: height 0.2s;
+}
+
+.places_to_visit_menu_add:hover:before {
+	height: 100%;
+	transition: height 0.2s;
+}
+
+.places_to_visit_menu_add div {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+
+	background: #e96868;
+    border-radius: 20px;
+
+    font-size: 20px;
+
+	z-index: 2;
+
+	cursor: pointer;
+}
+/* --- */
+
+
+
+.places_to_visit_content {
+	width: 100%;
+	flex-grow: 1;
+
+	position: relative;
+
+    overflow: hidden;
+}
+
+.places_to_visit_content_position {
+	display: grid;
+    grid-template-columns: 260px 260px;
+    grid-template-rows: 290px 290px;
+	gap: 10px;
+	width: 100%;
+	height: 100%;
+
+	padding: 10px;
+
+	overflow-y: scroll;
+    justify-content: space-evenly;	
+}
+
+
+.places_to_visit_content_block_block_ {
+    width: 100%;
+    height: 100%;
+
+    background: #a9a9a9;
+
+	position: relative;	
+
+    border-radius: 10px 10px 0px 0px;
+}
+
+.img_places_to_visit_content_block_block_ {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+
+.zzzzzz_1 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.zzzzzz_2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.element_zzzzz_3 {
+	position: absolute;
+	top: 25%;
+	left: 100%;
+	transform: translateX(-15px);
+	width: 30px;
+	height: auto;
+	background: red;
+	overflow: hidden;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.izbrannoe {
+	width: 30px;
+	height: 30px;
+	padding: 3px;
+}
+
+.link_linkj_link {
+	gap: 5px;
+}
+
+.link_bok_aaa {
+	padding: 3px;
+}
+
+.places_to_visit_content_block_block_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+
+    display: inline-flex;
+ 
+}
+
+.places_to_visit_content_block_block_title {
+    width: 100%;
+    height: auto;
+
+    font-family: 'Agency_FB_Cyrillic';
+    font-size: 21px;
+    padding: 30px 5px 5px 5px;
+    color: white;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 100%);
+}
+
+.places_to_visit_content_block_block_background_continuation {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    opacity: 0;
+
+    background: url("../images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png");
+    background-size: cover;
+    z-index: 2;
+	z-index: 4;
+	transition: z-index 0s 0.5s; 
+	background: linear-gradient(black, black), url(../images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png);
+
+    opacity: 0;
+
+    padding: 0px;    
+
+    z-index: 0;
+
+    height: 0px;
+
+    overflow: hidden;
+
+    background-blend-mode: saturation;
+
+	transition: height 0.5s, opacity 0s 0.5s, z-index 0s 0.5s, padding 0.5s;	    
+}	
+
+/* активация второго блока */
+.places_to_visit_content_block_block_background_continuation {
+	opacity: 0;
+
+	z-index: 4;
+
+	height: 270px;
+
+    padding: 5px;	
+
+	transition: height 0.5s 0.2s, opacity 0s 0.2s, z-index 0s 0.2s, padding 0.5s;	
+}
+
+.places_to_visit_content_block_block_description {
+    padding: 2px 5px;
+
+    font-family: 'text_mini';
+    font-size: 14px;   
+	color: white;
+
+	background: #000000a1;
+    border-radius: 5px;
+}    
+
+.places_to_visit_content_block_block_link {
+    display: flex;
+    flex-direction: column;
+}
+
+.A1 {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	justify-content: space-between;
+}
+
+.A2 {
+	display: flex;
+	flex-direction: row;
+	padding: 3px;
+	gap: 3px;
+}
+
+.A2 img {
+	width: 25px;
+	height: 25px;
+
+}
+
+
+.aaaa_bbbb_cccc {
+	font-family: 'Agency_FB_Cyrillic';
+    font-weight: 900;
+    font-size: 18px;
+    color: #634317;
+    padding: 0px;
+    background: #ffc763;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 3px;
+}
+
+.aaaa_bbbb_cccc:before {
+	content: '';
+	position: absolute;
+	z-index: 11;
+	top: -5px;
+	left: -5px;
+	width: 1px;
+	height: 1px;
+	background: #f1da8d;
+	transform: scale(1.0);
+	border-radius: 100px;
+	transition: transform 0.5s;
+}
+
+.aaaa_bbbb_cccc:after {
+	content: '';
+	position: absolute;
+	z-index: 11;
+	top: 101%;
+	left: 101%;
+	width: 1px;
+	height: 1px;	
+	background: #e0a219;
+	transform: scale(1.0);
+	border-radius: 100px;	
+	transition: transform 0.5s;
+}
+
+.aaaa_bbbb_cccc:hover:before {
+    transform: scale(200.0);
+    transition: transform 0.5s;
+}
+
+.aaaa_bbbb_cccc:hover:after {
+    transform: scale(200.0);
+    transition: transform 0.5s;
+}
+
+.AAAAAA {
+	width: 40%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Менюшка */
 .menu_start_block {
@@ -3723,486 +4483,6 @@ img {
 
 
 
-/* Вводная информация */
-.places_to_visit {
-	width: 100%;
-	height: 100vh;
-
-	padding: 20px 20px 20px 20px;
-	background: white;
-    z-index: 10;
-    position: relative;
-    display: none;
-}
-
-.places_to_visit_the_whole_block {
-	display: flex;
-	flex-direction: row;
-
-	width: 100%;
-	height: 100%;
-    border: 2px solid #703B94;
-	border-radius: 5px;
-    overflow: hidden;    		
-}
-
-.places_to_visit_evering_content {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    height: 100%;
-    border-right: 2px solid #703B94;
-    overflow: hidden;   
-}	
-
-.places_to_visit_menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-    align-items: center;
-
-    position: relative;
-
-    width: 100%;
-	height: 60px;
-
-    padding: 0px 20px;	
-
-	border-bottom: 2px dashed #243453;
-}
-
-.places_to_visit_menu_exit {
-	width: 40px;
-	height: 40px;
-
-	padding: 5px;
-
-	position: relative;
-
-	border-radius: 100px;
-
-	overflow: hidden;
-
-	z-index: 2;
-}
-
-.places_to_visit_menu_exit:before {
-	content: "";
-	top: 0;
-	left: 0;	
-	width: 100%;
-	height: 0%;
-
-	position: absolute;	
-
-	background: #03a9f4;
-
-	z-index: 1;
-
-	transition: height 0.2s;
-}
-
-.places_to_visit_menu_exit:hover:before {
-	height: 100%;
-	transition: height 0.2s;
-}
-
-.places_to_visit_menu_exit div {
-	width: 100%;
-	height: 100%;
-
-	position: relative;
-
-	background: #e96868;
-    border-radius: 20px;
-
-    font-size: 20px;
-
-	z-index: 2;
-
-	cursor: pointer;
-}
-/* --- */
-
-.places_to_visit_menu_search {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-
-	position: relative;
-
-	padding: 3px;
-
-	border-radius: 5px;
-}
-
-.places_to_visit_menu_search_block {
-	position: relative;	
-
-    padding: 5px;
-
-    background: #03a9f4;    
-    border-radius: 5px;	
-
-	overflow: hidden;
-}
-
-.places_to_visit_menu_search_block_active {
-	display: flex;
-	flex-direction: row;
-	gap: 5px;
-}
-
-.places_to_visit_menu_search_block_active:before {
-	content: "";
-
-	top: 0;
-	left: 0;
-
-	width: 0%;
-	height: 100%;
-
-	position: absolute;	
-
-	background: #BE74BE;
-
-	z-index: 2;
-
-	transition: width 0.3s;
-}
-
- .places_to_visit_menu_search_block:hover .places_to_visit_menu_search_block_active:before {
-	width: 100%;
-
-	transition: width 0.3s;
-}
-
-.places_to_visit_menu_search_block_active input {
-	width: 15px;
-	height: 15px;
-
-	z-index: 3;
-}
-
-.places_to_visit_menu_search_block_active div {
-	color: white;
-	font-family: "header";
-    font-size: 12px;
-
-    transform: translateY(2px);
-
-	z-index: 3;
-}
-
-.places_to_visit_menu_add {
-	width: 40px;
-	height: 40px;
-
-	padding: 5px;
-
-	position: relative;
-
-	border-radius: 100px;
-
-	overflow: hidden;
-
-	z-index: 2;
-}
-
-.places_to_visit_menu_add:before {
-	content: "";
-	top: 0;
-	left: 0;	
-	width: 100%;
-	height: 0%;
-
-	position: absolute;	
-
-	background: #03a9f4;
-
-	z-index: 1;
-
-	transition: height 0.2s;
-}
-
-.places_to_visit_menu_add:hover:before {
-	height: 100%;
-	transition: height 0.2s;
-}
-
-.places_to_visit_menu_add div {
-	width: 100%;
-	height: 100%;
-
-	position: relative;
-
-	background: #e96868;
-    border-radius: 20px;
-
-    font-size: 20px;
-
-	z-index: 2;
-
-	cursor: pointer;
-}
-/* --- */
-
-
-
-.places_to_visit_content {
-	width: 100%;
-	flex-grow: 1;
-
-	position: relative;
-
-    overflow: hidden;
-}
-
-.places_to_visit_content_position {
-	display: grid;
-    grid-template-columns: 260px 260px;
-    grid-template-rows: 290px 290px;
-	gap: 10px;
-	width: 100%;
-	height: 100%;
-
-	padding: 10px;
-
-	overflow-y: scroll;
-    justify-content: space-evenly;	
-}
-
-
-.places_to_visit_content_block_block_ {
-    width: 100%;
-    height: 100%;
-
-    background: #a9a9a9;
-
-	position: relative;	
-
-    border-radius: 10px 10px 0px 0px;
-}
-
-.img_places_to_visit_content_block_block_ {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-
-.zzzzzz_1 {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-.zzzzzz_2 {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-.element_zzzzz_3 {
-	position: absolute;
-	top: 25%;
-	left: 100%;
-	transform: translateX(-15px);
-	width: 30px;
-	height: auto;
-	background: red;
-	overflow: hidden;
-	border-radius: 5px;
-	display: flex;
-	flex-direction: column;
-
-}
-
-.izbrannoe {
-	width: 30px;
-	height: 30px;
-	padding: 3px;
-}
-
-.link_linkj_link {
-	gap: 5px;
-}
-
-.link_bok_aaa {
-	padding: 3px;
-}
-
-.places_to_visit_content_block_block_background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 1;
-
-    display: inline-flex;
- 
-}
-
-.places_to_visit_content_block_block_title {
-    width: 100%;
-    height: auto;
-
-    font-family: 'Agency_FB_Cyrillic';
-    font-size: 21px;
-    padding: 30px 5px 5px 5px;
-    color: white;
-    background: linear-gradient(0deg, rgba(0,0,0,1) 50%, rgba(0,0,0,0.2) 100%);
-}
-
-.places_to_visit_content_block_block_background_continuation {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    position: absolute;
-    opacity: 0;
-
-    background: url("../images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png");
-    background-size: cover;
-    z-index: 2;
-	z-index: 4;
-	transition: z-index 0s 0.5s; 
-	background: linear-gradient(black, black), url(../images/back_href/1676648004_catherineasquithgallery-com-p-emodzi-na-zelenom-fone-186.png);
-
-    opacity: 0;
-
-    padding: 0px;    
-
-    z-index: 0;
-
-    height: 0px;
-
-    overflow: hidden;
-
-    background-blend-mode: saturation;
-
-	transition: height 0.5s, opacity 0s 0.5s, z-index 0s 0.5s, padding 0.5s;	    
-}	
-
-/* активация второго блока */
-.places_to_visit_content_block_block_background_continuation {
-	opacity: 0;
-
-	z-index: 4;
-
-	height: 270px;
-
-    padding: 5px;	
-
-	transition: height 0.5s 0.2s, opacity 0s 0.2s, z-index 0s 0.2s, padding 0.5s;	
-}
-
-.places_to_visit_content_block_block_description {
-    padding: 2px 5px;
-
-    font-family: 'text_mini';
-    font-size: 14px;   
-	color: white;
-
-	background: #000000a1;
-    border-radius: 5px;
-}    
-
-.places_to_visit_content_block_block_link {
-    display: flex;
-    flex-direction: column;
-}
-
-.A1 {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	justify-content: space-between;
-}
-
-.A2 {
-	display: flex;
-	flex-direction: row;
-	padding: 3px;
-	gap: 3px;
-}
-
-.A2 img {
-	width: 25px;
-	height: 25px;
-
-}
-
-
-.aaaa_bbbb_cccc {
-	font-family: 'Agency_FB_Cyrillic';
-    font-weight: 900;
-    font-size: 18px;
-    color: #634317;
-    padding: 0px;
-    background: #ffc763;
-    text-align: center;
-    width: 100%;
-    z-index: 10;
-    position: relative;
-    overflow: hidden;
-    letter-spacing: 3px;
-}
-
-.aaaa_bbbb_cccc:before {
-	content: '';
-	position: absolute;
-	z-index: 11;
-	top: -5px;
-	left: -5px;
-	width: 1px;
-	height: 1px;
-	background: #f1da8d;
-	transform: scale(1.0);
-	border-radius: 100px;
-	transition: transform 0.5s;
-}
-
-.aaaa_bbbb_cccc:after {
-	content: '';
-	position: absolute;
-	z-index: 11;
-	top: 101%;
-	left: 101%;
-	width: 1px;
-	height: 1px;	
-	background: #e0a219;
-	transform: scale(1.0);
-	border-radius: 100px;	
-	transition: transform 0.5s;
-}
-
-.aaaa_bbbb_cccc:hover:before {
-    transform: scale(200.0);
-    transition: transform 0.5s;
-}
-
-.aaaa_bbbb_cccc:hover:after {
-    transform: scale(200.0);
-    transition: transform 0.5s;
-}
-
-.AAAAAA {
-	width: 40%;
-	height: 100%;
-
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-
 
 
 
@@ -4333,233 +4613,10 @@ img {
 
 
 
-/* 4 достопремичательности */
-.attractions_construction {
-	display: flex;
-	flex-direction: column;
-
-	position: relative;
-
-	width: 100%;
-	height: 100vh;
-
-	/* Выравнивание */
-	padding: 20px 70px 20px 70px;
-
-	/* фоновая конструкция */
-}
-
-.picnic {
-	flex-direction: column;
-    display: flex;
-	flex-grow: 1;
-    padding: 0px 0px 20px 0px;	
-}
-
-.attractions_construction_title {
-	width: 100%;
-	height: auto;
-
-	padding: 5px;
-
-    font-family: "header";
-    font-size: 22px;
-
-    justify-content: flex-start;
-    white-space: pre;
-}    
-	
-.lets_go_for_a_walk {
-	padding: 0px 5px 10px 10px;
-    font-family: monospace;
-    font-size: 15px;
-    color: #7d2d8a;
-    font-weight: 900;
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-}
 
 
-.botton_lets_go_for_a_walk {
-	padding: 5px;
-	margin-left: 5px;
-    background: #c6f2e4;
-    border-radius: 5px;
-    font-size: 12px;
-    font-family: 'header';
-    color: #327d71;
-    position: relative;
-    overflow: hidden;
-}
-
-.botton_lets_go_for_a_walk:before {
-	content: '';
-
-	z-index: 1;
-
-	position: absolute;
-	top: 101%;
-	left: 101%;
-
-	width: 1px;
-	height: 1px;
-	border-radius: 100px;
-	transform: scale(1.0);
-	background: #c5ff43;
-	transition: transform 0.5s;
-}
 
 
-.botton_lets_go_for_a_walk:hover:before {
-	transform: scale(200.0);
-	transition: transform 0.5s;	
-}
-
-
-.attractions_mini_block {
-    display: grid;
-    justify-content: center;
-    gap: 10px;
-    grid-auto-flow: column;
-    flex-grow: 1;
-    padding-bottom: 10px;
-    padding-top: 10px;    
-
-    overflow-y: hidden;
-    overflow-x: scroll;
-    justify-content: start;    
-}
-
-.attractions_block {
-	width: 100px;
-    height: 100%;
-    background: #dedede;
-    border-radius: 10px;
-
-    position: relative;
-
-    transition: width 0.2s;    
-}
-
-.attractions_block:hover {
-	width: 200px;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0 24%, rgba(0, 0, 0, 0) 50% 100%), url(../images/back_href/1984.jpg);    
-    background-size: cover;
-    background-position: 50% 50%;
-    transition: width 0.2s;	
-}
-
-.img_attractions_block {
-	width: 100%;
-	height: 100%;
-    border-radius: 10px;	
-}
-
-
-.attractions_block_main_info {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-	font-family: 'header';
-    padding: 15px 10px 5px 15px;
-    font-size: 20px;
-
-}
-
-.attractions_block_number_ {
-	font-family: 'header';
-	font-size: 80px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.attractions_block_emogi {
-    width: 80px;
-    height: 80px;
-}
-
-.attractions_block:hover .prosmotry_text {
-	max-width: 300px;
-	padding: 5px;
-	transition: max-width 0.2s, padding 0.2s;
-}
-
-.prosmotry {
-    position: absolute;
-    /* width: 30px; */
-    /* height: 30px; */
-    /* background: white; */
-    border-radius: 5px;
-    padding: 5px;
-    bottom: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* gap: 5px; */
-    overflow: hidden;
-    transition: max-width 0.2s;  
-}
-
-.prosmotry_img {
-    width: 30px;
-    height: 30px;
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.prosmotry_text {
-    max-width: 0px;
-    font-family: cursive;
-    font-size: 13px;
-    overflow: hidden;
-    white-space: nowrap;
-    background: white;
-    border-radius: 5px;
-    height: 30px;
-    padding: 0px;
-	transition: max-width 0.2s, padding 0.2s;    
-}
-
-.block_absolute {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: -100%;
-	left: 0;
-	padding: 15px;
-	transition: top 0.3s;
-	overflow: hidden;
-}
-
-.attractions_block:hover .block_absolute {
-	top: 0%;
-	transition: top 0.3s;	
-}
-
-
-.button_bottom_mini_icons_number {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30px;
-    height: auto;
-    font-family: 'header';
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 100px;
-    transform: translateX(10px) translateY(-10px);
-    background: #c6f2e4;
-    color: #327d71;
-}
 
 .description_attractions {
 	width: 100%;
@@ -4576,49 +4633,7 @@ img {
 }
 
 
-/* Добавить блок */
-.attractions_block_add {
-	width: 100px;
-    height: 100%;
-    background: #dedede;
-    border-radius: 10px;
 
-    position: relative;
-
-    overflow: hidden;	
-}
-
-.attractions_block_add div {
-	z-index: 1;
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 1px;
-    height: 1px;
-    background: #adadad;
-    border-radius: 100px;
-    transform: scale(1.0);
-    transition: transform 0.7s;
-}
-
-.attractions_block_add:hover div {
-	transform: scale(500);
-    transition: transform 0.7s;	
-}
-
-.attractions_block_add img {
-	width: 50px;
-	height: 50px;
-	z-index: 2;
-	transform: scale(1.0);
-	transition: transform 0.7s;
-}
-
-.attractions_block_add:hover img {
-	transform: scale(1.5);
-    transition: transform 0.7s;	
-}
 
 
 /* Погода */
@@ -4887,13 +4902,6 @@ img {
 }
 
 
-
-.ismmm {
-	position: relative;
-	margin-right: 5px;
-	margin-left: 5px;
-	transform:translateX(0px) translateY(0px);
-}
 
 
 

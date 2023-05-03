@@ -334,28 +334,28 @@ function fixed_dop_close_cosdanie() {
 
 
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+// function startTimer(duration, display) {
+//     var timer = duration, minutes, seconds;
+//     setInterval(function () {
+//         minutes = parseInt(timer / 60, 10);
+//         seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//         minutes = minutes < 10 ? "0" + minutes : minutes;
+//         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+//         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
+//         if (--timer < 0) {
+//             timer = duration;
+//         }
+//     }, 1000);
+// }
 
-window.onload = function () {
-    var fiveMinutes = 60 * 5,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-};
+// window.onload = function () {
+//     var fiveMinutes = 60 * 5,
+//         display = document.querySelector('#time');
+//     startTimer(fiveMinutes, display);
+// };
 
 
 
@@ -450,12 +450,22 @@ for (let i = 0; i < elems.length; i++) {
 
 function exit_main(){
 	document.querySelector('.places_to_visit').style.display = 'none';
-	document.querySelector('.attractions_construction').style.display = 'flex';	
+	document.querySelector('.filter_block').style.display = 'flex';	
 }
 
 
+function exit_main(){
+	document.querySelector('.places_to_visit').style.display = 'none';
+	document.querySelector('.filter_block').style.display = 'flex';	
+}
 
-
+var max = document.querySelectorAll('.filter_block');
+for (var i = 0; i < max.length; i++) {
+	max[i].addEventListener('click', ()=>{
+			document.querySelector('.places_to_visit').style.display = 'flex';
+			document.querySelector('.filter').style.display = 'none';
+	})
+}
 
 
 
@@ -540,3 +550,14 @@ function switch_(name, block){
 	}
 }
 
+
+
+
+// Активация after в зависимости от положения активации
+var element = document.querySelector('.subject_matter_');
+element.addEventListener( "click", (event)=> {
+
+	console.log(event)
+    // document.documentElement.style.setProperty('--top_subject_matter__', `${event.offsetX}px`)
+    // document.documentElement.style.setProperty('--left_subject_matter__', `${event.offsetY}px`)
+});
