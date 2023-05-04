@@ -479,11 +479,13 @@ for (var i = 0; i < max.length; i++) {
 // Создание переменных
 var open = document.querySelector('.open_eye');
 var hidden = document.querySelector('.hidden_eye');
+var cursors = document.querySelector('.cursors');
 
 // Отслеживание события
 document.querySelector('.cursor_setting_eye').addEventListener('click', () => {
 	open.classList.toggle("open_eye_active");
 	hidden.classList.toggle("hidden_active");
+	cursors.classList.toggle('__none');
 })
 
 
@@ -586,10 +588,4 @@ document.querySelector('.places__finished').addEventListener("click", function()
 })
 
 
-// Переключатель картинок
-var switch_ = document.querySelectorAll('.switch');
-for (var i = 0; i < switch_.length; i++) {
-	switch_[i].addEventListener('click', function() {
 
-	})
-}

@@ -74,6 +74,10 @@ img {
 	align-items: center;
 }
 
+.__none {
+	display: none;
+}
+
 :root {
 	--background_blue: #03a9f4;
 	--background_red: #e96868;

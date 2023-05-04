@@ -59,23 +59,34 @@
 	z-index: 110;
 }
 
+/* Зелёный глаз */
 .open_eye {
 	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	z-index: 101;
+}
+
+.open_eye__ {
+    pointer-events: none;
+    user-select: none;
+
 	width: 100%;
 	height: 100%;
 
 	padding: 5px;
 
 	background:#ebffe7;
+    position: relative;		
+
 	border-radius: 100px;
 
 	overflow: hidden;
-
-	z-index: 101;
-	transition: width 0.8s, height 0.8s;
+	transition: width 0.8s, height 0.8s;		
 }
 
-.open_eye:after {
+.open_eye__:after {
 	content: '';
 	position: absolute;
 
@@ -91,10 +102,9 @@
 	transition: width 0.8s, height 0.8s;	
 }
 
-.cursor_setting_eye:hover .open_eye:after {
+.cursor_setting_eye:hover .open_eye__:after {
 	width: 100%;
 	height: 100%;
-	border-radius: 100px;	
 	transition: width 0.8s, height 0.8s;
 }
 
@@ -102,27 +112,63 @@
 	width: 0%;
 	height: 0%;
 	border-radius: 100px;	
-	z-index: 103;
-	transition: width 0.8s, height 0.8s;
+	z-index: 103;	
+	transition: width 0.8s, height 0.8s;	
 }
 
+.open_eye__text {
+	display: none;
+
+    position: absolute;
+
+    font-family: 'header';    
+    font-size: 12px;
+    white-space: nowrap;
+    color: #007e00;
+
+    margin-top: 20px;
+    padding: 5px;
+
+    border-radius: 5px;    
+    background: white;
+    border: 2px solid #55ad55;
+
+    transform: translateX(-40%);
+}
+
+.open_eye__text div {
+    transform: translateY(2px);
+}	
+
+.open_eye:hover .open_eye__text {
+	display: block;
+}
+
+/* Красный глаз */
 .hidden_eye {
 	position: absolute;
 	width: 0%;
 	height: 0%;
 
+	z-index: 101;
+}
+
+.hidden_eye__ {
+	width: 100%;
+	height: 100%;
+
 	padding: 5px;
 
 	background:#ffccbc;
+    position: relative;		
+
 	border-radius: 100px;
 
 	overflow: hidden;
-
-	z-index: 101;
-	transition: width 0.8s, height 0.8s;	
+	transition: width 0.8s, height 0.8s;		
 }
 
-.hidden_eye:after {
+.hidden_eye__:after {
 	content: '';
 	position: absolute;
 
@@ -138,7 +184,7 @@
 	transition: width 0.8s, height 0.8s;	
 }
 
-.cursor_setting_eye:hover .hidden_eye:after {
+.cursor_setting_eye:hover .hidden_eye__:after {
 	width: 100%;
 	height: 100%;
 	transition: width 0.8s, height 0.8s;
@@ -150,6 +196,34 @@
 	border-radius: 100px;	
 	z-index: 102;	
 	transition: width 0.8s, height 0.8s;	
+}
+
+.hidden_eye__text {
+	display: none;
+
+    position: absolute;
+
+    font-family: 'header';    
+    font-size: 12px;
+    white-space: nowrap;
+    color: #690000;
+
+    margin-top: 20px;
+    padding: 5px;
+
+    border-radius: 5px;    
+    background: white;
+    border: 2px solid #da6363;
+
+    transform: translateX(-40%);
+}
+
+.hidden_eye__text div {
+    transform: translateY(2px);
+}	
+
+.hidden_active:hover .hidden_eye__text {
+	display: block;
 }
 
 /* Работа с друзьями */
@@ -217,6 +291,217 @@
     background: #c2ecff;
 	border-radius: 100px;	
 }
+
+/* Список выбора друзей */
+.friends_add__cursors {
+	position: absolute;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 20px;
+    transform: translateX(-43%);
+}
+
+
+.friends_add__cursors_menu {
+	width: 100%;
+    height: 60px;
+
+    border-bottom: 2px dashed black;
+    padding: 5px;	
+}
+
+.friends_add__cursors_menu_one {
+	width: 100%;
+	height: 30px;
+
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 5px 0px 5px;
+}
+
+.friends_add__cursors_menu_one__text {
+	font-family: 'header';
+	font-size: 16px;
+	color: #6a6a6a;
+
+	margin-left: 10px;
+}
+
+.friends_add__cursors_menu_one__text_ {
+	position: relative;
+
+	width: 30px;
+	height: 30px;
+}
+
+.friends_add__cursors_menu_one__text__ {
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+	overflow: hidden;
+	position: relative;
+}
+
+.friends_add__cursors_menu_one__text__:after {
+	content: '';
+	position: absolute;
+
+	top: -1px;
+	left: -1px;
+
+	width: 1px;
+	height: 1px;
+
+	background: whitesmoke;
+	border-radius: 100px;
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+.friends_add__cursors_menu_one__text_:hover .friends_add__cursors_menu_one__text__:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.friends_add__cursors_menu_one__text_ img {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	z-index: 100;
+}
+
+.friends_add__cursors_menu_two {
+	width: 100%;
+	height: 20px;
+
+	justify-content: space-evenly;
+}
+
+.friends_add__cursors_menu_two_ {
+	width: auto;
+	height: 100%;
+
+	align-items: center;
+	gap: 5px;
+}
+
+.friends_add__cursors_menu_two_ img {
+	width: 20px;
+	height: 20px;
+}
+
+.friends_add__cursors_menu_two_ div {
+	font-family: 'header';
+    font-size: 13px;
+    color: #55ad55;
+}
+
+.quantity {
+	font-family: 'header';
+    font-size: 16px;
+    color: #6a6a6a;
+}
+
+/* Контент */
+.friends_add__cursors_content {
+	flex-grow: 1;
+	padding-top: 5px;
+	overflow: hidden;
+}
+
+.friends_add__cursors_content_ {
+	align-items: center;
+    padding: 0px 5px;
+    border-bottom: 2px dashed;
+}
+
+.friends_add__cursors_content__image {
+	position: relative;
+	padding: 5px;
+}
+
+.friends_add__cursors_content__image img {
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+    z-index: 99;	
+}
+
+.friends_add__cursors_content__image div {
+	width: 20px;
+	height: 20px;
+
+	border-radius: 100px;
+	border: 5px solid white;
+	background: green;
+    z-index: 100;
+	top: 65%;
+    left: 65%;
+    position: absolute;
+}
+
+.friends_add__cursors_content__ {
+	gap: 5px;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+.friends_add__cursors_content__header {
+	font-family: 'header';
+	font-size: 13px;
+}
+
+.friends_add__cursors_content__cursive {
+	font-family: cursive;
+    font-size: 13px;
+}
+
+.friends_add__cursors_content__button {
+	width: 40px;
+	height: 40px;
+	background: #daffda;
+	border-radius: 100px;	
+}
+
+.friends_add__cursors_content__button_ {
+	width: 100%;
+	height: 100%;
+
+	position: relative;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+.friends_add__cursors_content__button_:after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+
+	top: -1px;
+	left: -1px;
+
+	background: #b8f0b8;
+	border-radius: 100px;
+	transform: scale(1.0);
+	transition: transform 0.8s;
+}
+
+.friends_add__cursors_content__button:hover .friends_add__cursors_content__button_:after {
+	transform: scale(100.0);
+	transition: transform 0.8s;	
+}
+
+.friends_add__cursors_content__button img {
+	width: 30px;
+	height: 30px;
+}
+
 
 /* Работа со слайдом */
 .cursors {
