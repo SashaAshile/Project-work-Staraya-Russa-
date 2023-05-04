@@ -449,20 +449,20 @@ for (let i = 0; i < elems.length; i++) {
 }
 
 function exit_main(){
-	document.querySelector('.places_to_visit').style.display = 'none';
+	document.querySelector('.places').style.display = 'none';
 	document.querySelector('.filter_block').style.display = 'flex';	
 }
 
 
 function exit_main(){
-	document.querySelector('.places_to_visit').style.display = 'none';
+	document.querySelector('.places').style.display = 'none';
 	document.querySelector('.filter_block').style.display = 'flex';	
 }
 
 var max = document.querySelectorAll('.filter_block');
 for (var i = 0; i < max.length; i++) {
 	max[i].addEventListener('click', ()=>{
-			document.querySelector('.places_to_visit').style.display = 'flex';
+			document.querySelector('.places').style.display = 'flex';
 			document.querySelector('.filter').style.display = 'none';
 	})
 }
@@ -554,18 +554,42 @@ function switch_(name, block){
 
 
 // Активация after в зависимости от положения активации
-let element123 = document.querySelector('.subject_matter_');
+var index = document.querySelectorAll('.expanding_circle_')
+for (var i = 0; i < index.length; i++) {
+	index[i].addEventListener("mouseover", function(e) {
+		let target = e.currentTarget;
 
-element123.addEventListener( "mousemove", function(e) {
+		let targetCoords = target.getBoundingClientRect();
+		let xCoord = e.clientX - targetCoords.left;
+		let yCoord = e.clientY - targetCoords.top;
 
-  	if(e.target.closest('.subject_matter_')) {
+		document.documentElement.style.setProperty('--top_subject_matter__', `${Math.ceil(yCoord)}px`)
+		document.documentElement.style.setProperty('--left_subject_matter__', `${Math.ceil(xCoord)}px`)
+	})
+}
 
-	  let target = e.target.closest('.subject_matter_');
 
-	  let targetCoords = target.getBoundingClientRect();
-	  let xCoord = e.clientX - targetCoords.left;
-	  let yCoord = e.clientY - targetCoords.top;
+// Переключатель цвета
+var red = document.querySelector('.places__fire__text');
+document.querySelector('.places__fire').addEventListener("click", function() {
+	red.classList.toggle('places__fire__text_active');
+})
 
-	  console.log(xCoord, yCoord)
-	}
-});
+var blue = document.querySelector('.places__new__text');
+document.querySelector('.places__new').addEventListener("click", function() {
+	blue.classList.toggle('places__new__text_active');
+})
+
+var green = document.querySelector('.places__finished__text');
+document.querySelector('.places__finished').addEventListener("click", function() {
+	green.classList.toggle('places__finished__text_active');
+})
+
+
+// Переключатель картинок
+var switch_ = document.querySelectorAll('.switch');
+for (var i = 0; i < switch_.length; i++) {
+	switch_[i].addEventListener('click', function() {
+
+	})
+}
