@@ -589,3 +589,27 @@ document.querySelector('.places__finished').addEventListener("click", function()
 
 
 
+
+
+// Работа с друзьями
+// Создание переменных
+var friends_green = document.querySelector('.friends_add__green');
+var friends_red = document.querySelector('.friends_add__red');
+
+// Отслеживание события
+document.querySelector('.friends_add__cursors_content__button').addEventListener('click', () => {
+	friends_green.classList.toggle("friends_add__green_active");
+	friends_red.classList.toggle("friends_add__red_active");
+})
+
+
+
+
+
+
+// Кол-во курсоров
+var number__blocks = document.querySelector('#number__blocks')
+var cursors_grid_block = document.querySelectorAll('.cursors_grid_block')
+
+
+number__blocks.innerText = `${cursors_grid_block.length}`;
