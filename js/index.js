@@ -479,11 +479,13 @@ for (var i = 0; i < max.length; i++) {
 // Создание переменных
 var open = document.querySelector('.open_eye');
 var hidden = document.querySelector('.hidden_eye');
+var cursors = document.querySelector('.cursors');
 
 // Отслеживание события
 document.querySelector('.cursor_setting_eye').addEventListener('click', () => {
 	open.classList.toggle("open_eye_active");
 	hidden.classList.toggle("hidden_active");
+	cursors.classList.toggle('__none');
 })
 
 
@@ -586,10 +588,28 @@ document.querySelector('.places__finished').addEventListener("click", function()
 })
 
 
-// Переключатель картинок
-var switch_ = document.querySelectorAll('.switch');
-for (var i = 0; i < switch_.length; i++) {
-	switch_[i].addEventListener('click', function() {
 
-	})
-}
+
+
+// Работа с друзьями
+// Создание переменных
+var friends_green = document.querySelector('.friends_add__green');
+var friends_red = document.querySelector('.friends_add__red');
+
+// Отслеживание события
+document.querySelector('.friends_add__cursors_content__button').addEventListener('click', () => {
+	friends_green.classList.toggle("friends_add__green_active");
+	friends_red.classList.toggle("friends_add__red_active");
+})
+
+
+
+
+
+
+// Кол-во курсоров
+var number__blocks = document.querySelector('#number__blocks')
+var cursors_grid_block = document.querySelectorAll('.cursors_grid_block')
+
+
+number__blocks.innerText = `${cursors_grid_block.length}`;
