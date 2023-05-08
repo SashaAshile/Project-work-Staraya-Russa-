@@ -234,7 +234,7 @@ img {
 /* Описание */
 .description {
     font-family: 'text_mini';
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 900;
     color: #243453;
 }
@@ -351,7 +351,7 @@ img {
 
     height: 60px;
 
-	gap: 5px;
+	gap: 20px;
 	padding-bottom: 15px;
 	padding-left: 20px;
 	margin-left: 20px;
@@ -528,6 +528,7 @@ img {
 .manual_block_informing {
 	font-family: 'text_mini';
     font-size: 16px;
+    font-weight: 700;    
     text-align: center;
 	padding: 5px 10px 5px 10px ;
 }
