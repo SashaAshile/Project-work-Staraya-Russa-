@@ -613,3 +613,40 @@ var cursors_grid_block = document.querySelectorAll('.cursors_grid_block')
 
 
 number__blocks.innerText = `${cursors_grid_block.length}`;
+
+
+
+
+
+//  Время
+clock_2()
+
+function clock_2(){
+
+	var date = new Date();
+
+	var day = date.getDate();
+	var month = date.getMonth();
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var seconds = date.getSeconds();
+
+    var months = ['янв.', 'фебр.', 'март', 'апр.', 'май', 'июнь', 'июль', 'авг.', 'сент.', 'окт.', 'нояб.', 'дек.'];
+
+	if(day < 10)
+		day = "0" + day;
+	if(hours < 10)
+		hours = "0" + hours;
+	if(minutes < 10)
+		minutes = "0" + minutes;
+	if(seconds < 10)
+		seconds = "0" + seconds;	
+
+	var day_staray_russa = day + " " + months[month];
+    document.getElementById("day_staray_russa").innerHTML = day_staray_russa;
+
+	var time_staray_russa = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("time_staray_russa").innerHTML = time_staray_russa;
+
+	setTimeout("clock_2()", 1000);
+};
