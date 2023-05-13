@@ -485,7 +485,7 @@ var cursors = document.querySelector('.cursors');
 document.querySelector('.cursor_setting_eye').addEventListener('click', () => {
 	open.classList.toggle("open_eye_active");
 	hidden.classList.toggle("hidden_active");
-	cursors.classList.toggle('__none');
+	cursors.classList.toggle('cursors_active');
 })
 
 
@@ -650,3 +650,62 @@ function clock_2(){
 
 	setTimeout("clock_2()", 1000);
 };
+
+
+
+
+// let box = document.querySelector('.box');
+
+// box.addEventListener("click", function() {
+//   box.classList.add('box_animate_2');
+// });
+
+// // Отслеживаем окончание анимации
+// box.addEventListener("animationend", AnimationHandler, false);
+
+// function AnimationHandler () {
+//   // Удаляем класс с анимацией
+//   box.classList.remove('box_animate_2');
+  
+// }
+
+
+
+
+var cursors_grid_block = document.querySelector('.cursors_grid_block');
+var cursors_grid_block__name = document.querySelector('.cursors_grid_block__name');
+
+cursors_grid_block.addEventListener('mousemove', (e)=>{
+	cursors_grid_block__name.style.position = 'fixed';
+	console.log(e.clientY, e.clientX)
+	cursors_grid_block__name.style.top = String(Number(e.clientY) + 25 ) + 'px';
+	cursors_grid_block__name.style.left = e.clientX + 'px';		
+})
+
+
+cursors_grid_block.addEventListener('mouseout', (e)=>{
+	cursors_grid_block__name.style.position = 'absolute';
+})
+
+
+
+
+
+
+// 
+var manual_title_after = document.querySelector('.manual_title_after');
+manual_title_after.addEventListener('click', ()=>{
+	manual_title_after.classList.toggle('manual_title_after_active');
+})
+
+
+// 
+var description_ = document.querySelector('.description_');
+var description__ = document.querySelector('.description__');
+description_.addEventListener('click', ()=>{
+	description__.classList.add('description__active');
+})
+
+description__.addEventListener('mouseout', ()=>{
+	description__.classList.remove('description__active');
+})

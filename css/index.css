@@ -100,7 +100,7 @@ img {
 }
 
 .blocks_left_right {
-	width: 40%;
+	width: 50%;
 	height: 100%;
 
 	padding: 60px 10px 10px 20px;
@@ -111,7 +111,7 @@ img {
 /* Заголовок */
 .title {
 	font-family: 'ofont';
-    font-size: 68px;
+    font-size: 99px;
     font-weight: 900;
     white-space: nowrap;
     letter-spacing: 15px;
@@ -233,19 +233,124 @@ img {
 
 /* Описание */
 .description {
+	position: relative;
+}
+
+.description_position {
+	width: 70px;
+	height: 70px;
+}
+
+.description_ {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 100px;
+	background: #f2f2f2;
+	position: relative;
+	transform: scale(1.0);
+	transition: transform 0.5s;
+	cursor: pointer;
+}
+
+.description_:after {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	width: 1px;
+	height: 1px;
+
+	border-radius: 100px;
+	background: #e5e5e5;
+
+	transform: scale(1.0);
+	transition: transform 0.5s;
+}
+
+.description_:hover:after {
+	transform: scale(100.0);
+	transition: transform 0.5s;
+}
+
+.description_:hover {
+	transform: scale(1.2);
+	transition: transform 0.5s;
+}
+
+
+.description_ img {
+	position: relative;
+	z-index: 100;
+	width: 30px;
+	height: 30px;
+}
+
+.description_text {
+	margin-top: 10px;
+	font-family: cursive;
+	font-size: 16px;
+}
+
+.description__ {
+	display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    text-align: center;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 101;
+    transform: translateY(-50%) translateX(-50%);
     font-family: 'text_mini';
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 900;
     color: #243453;
 }
 
+.description__ img {
+	border-radius: 10px 10px 0px 0px;
+}
+
+.description__icon {
+	position: relative;
+}
+
+.description__icon_absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    font-family: 'header';
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.description__text {
+	padding: 5px;
+}
+
+.description__:hover {
+	display: block;
+}
+
+.description__active {
+	display: block;
+}
+
 /* Логотип */
 .logotype_link {
-    justify-content: flex-start;
 	padding: 5px;
+    display: flex;
     font-family: 'header';
-    font-size: 17px;
+    font-size: 20px;
     color: black;
+    margin-top: 15px;
 }
 
 .logotype {
@@ -275,7 +380,7 @@ img {
 
 /* Правый блок */
 .map {
-    width: 60%;
+    width: 50%;
     height: 100%;
 	position: relative;
 }
@@ -317,9 +422,35 @@ img {
 }
 
 .map_information_weather {
-	gap: 5px;
-	padding-bottom: 15px;
-	padding-left: 10px;	
+    gap: 5px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.map_information_weather___ {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 50%;
+
+	transform: translateY(-60%);
+	background: white;
+	border-radius: 5px;
+	border: 1px solid black;
+
+	font-family: cursive;
+	font-size: 14px;
+	gap: 10px;
+	padding: 3px;
+}
+
+.map_information_weather:hover .map_information_weather___ {
+	display: flex;
 }
 
 .map_information_weather_celsius {
@@ -347,15 +478,13 @@ img {
 /* 2 */
 .map_time {
 	display: flex;
-	align-items: center;
-
+    align-items: center;
     height: 60px;
 
-	gap: 20px;
-	padding-bottom: 15px;
-	padding-left: 20px;
-	margin-left: 20px;
-	border-left: 1px solid black;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: space-around;
+    margin-top: 10px;
 }
 
 .map_time_ {
@@ -379,19 +508,103 @@ img {
 	font-size: 14px;	
 }
 
+.data_year {
+	font-family: 'header';
+	font-size: 25px;
+}
+
+/**/
+.mini_block {
+	flex-grow: 1;
+	gap: 10px;
+	padding: 10px 0px;
+}
+
+.mini_block_ {
+    flex-grow: 1;
+    height: 100%;
+    background: #ff8989;
+    border: 3px solid #b86868;
+    border-radius: 10px;
+   	transform: scale(1.0);
+	transition: transform 0.5s; 
+}
+
+.mini_block_:hover {
+	transform: scale(1.1);
+	transition: transform 0.5s;
+}
+
+.mini_block__ {
+	width: 100%;
+	height: 70%;
+}
+
+.mini_block__ img {
+	width: 50px;
+	height: 50px;
+}
+
+.mini_block__text {
+	width: 100%;
+	height: 30%;	
+    font-family: 'header';
+    font-size: 16px;
+    color: white;
+}
+
 /* Нижний блок */
 /* Блок с инструкциями о сайте */
-.manual {
-	width: 100%;	
-	height: 40%;
-	padding: 15px 0px 15px 0px;	
+.separation {
+	width: 100%;
+    height: 40%;
+}
 
-	border-top: 1px solid black;
+.separation_ {
+	width: 30%;
+	height: 100%;
+
+	padding: 10px;
+}
+
+.manual {
+	width: 70%;
+    height: 100%;
+
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 10px 0px 0px 0px;
+    position: relative;
+}
+
+.manual_title_after {
+    font-size: 22px;
+    font-family: 'header';
+    top: 0;
+    left: 10%;
+    transform: translateY(-100%);
+    position: absolute;
+
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px 5px;
+    background: white;
+    color: #60c900;
+
+    transition: left 0.8s cubic-bezier(.59,-0.01,.68,.62);
+}
+
+.manual_title_after_active {
+    left: 60%;
+    transition: left 0.8s cubic-bezier(.59,-0.01,.68,.62);
 }
 
 .manual_ {
 	width: 100%;
 	height: 100%;
+    padding: 15px 0px 15px 0px;
 
 	gap: 15px;
     justify-content: center;
@@ -410,6 +623,8 @@ img {
 	overflow: hidden;
 
 	position: relative;
+	transform: scale(1.0);
+	transition: transform 0.3s;	
 }
 
 .manual_block1:after {
@@ -433,6 +648,11 @@ img {
 	transition: transform 0.8s;
 }
 
+.manual_block1:hover{
+	transform: scale(1.1);
+	transition: transform 0.3s;
+}
+
 .manual_block2 {
 	display: grid;
 	grid-auto-flow: row;
@@ -446,6 +666,8 @@ img {
 	overflow: hidden;
 
 	position: relative;
+	transform: scale(1.0);
+	transition: transform 0.3s;	
 }
 
 .manual_block2:after {
@@ -469,6 +691,11 @@ img {
 	transition: transform 0.8s;
 }
 
+.manual_block2:hover{
+	transform: scale(1.1);
+	transition: transform 0.3s;
+}
+
 .manual_block3 {
 	display: grid;
 	grid-auto-flow: row;
@@ -482,6 +709,8 @@ img {
 	overflow: hidden;
 
 	position: relative;
+	transform: scale(1.0);
+	transition: transform 0.3s;	
 }
 
 .manual_block3:after {
@@ -505,7 +734,10 @@ img {
 	transition: transform 0.8s;
 }
 
-
+.manual_block3:hover{
+	transform: scale(1.1);
+	transition: transform 0.3s;
+}
 
 .manual_block_ {
 	width: 100%;
