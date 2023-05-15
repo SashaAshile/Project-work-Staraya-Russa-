@@ -393,7 +393,7 @@
     min-width: 180px;
     max-width: 200px;
     color: #4e4e4e;
-    margin-top: 20px;
+    margin-top: 2px;
     padding: 5px;
     border-radius: 5px;
     background: white;
@@ -643,6 +643,7 @@
 	height: 100%;
 
 	z-index: 101;
+	transition: width 0.8s, height 0.8s;	
 }
 
 .friends_add__green__ {
@@ -750,14 +751,25 @@
 
 /* Работа со слайдом */
 .cursors {
-	width: auto;
+	max-width: 300px;
 	height: 100%;
 
 	align-items: center;	
 	gap: 10px;
 
+	overflow: hidden;
+
     border-left: 1px dashed #000000;
     padding: 0px 10px;
+    transition: max-width 0.5s, padding 0.5s, border-left 0.5s 0s;
+}
+
+.cursors_active {
+	max-width: 0px;
+
+    border-left: none;
+    padding: 0px 0px;
+    transition: max-width 0.5s, padding 0.5s, border-left 0.5s 0s;
 }
 
 .cursors_grid {
