@@ -570,7 +570,6 @@ for (var i = 0; i < index.length; i++) {
 	})
 }
 
-
 // Переключатель цвета
 var red = document.querySelector('.places__fire__text');
 document.querySelector('.places__fire').addEventListener("click", function() {
@@ -588,9 +587,6 @@ document.querySelector('.places__finished').addEventListener("click", function()
 })
 
 
-
-
-
 // Работа с друзьями
 // Создание переменных
 var friends_green = document.querySelector('.friends_add__green');
@@ -601,10 +597,6 @@ document.querySelector('.friends_add__cursors_content__button').addEventListener
 	friends_green.classList.toggle("friends_add__green_active");
 	friends_red.classList.toggle("friends_add__red_active");
 })
-
-
-
-
 
 
 // Кол-во курсоров
@@ -709,3 +701,29 @@ description_.addEventListener('click', ()=>{
 description__.addEventListener('mouseout', ()=>{
 	description__.classList.remove('description__active');
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// управление воспроизведением gif
+// <canvas id="my-canvas" width="240" height="240" ></canvas>
+// <img width="32" height="32" id="my-image" src=
+
+const image = document.getElementById('my-image');
+const canvas = document.getElementById('my-canvas');
+const ctx = canvas.getContext("2d");
+// context.drawImage(img, x, y, width, height);
+ctx.drawImage(image, 0, 0);
